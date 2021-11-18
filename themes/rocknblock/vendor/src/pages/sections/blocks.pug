@@ -1,0 +1,162 @@
+mixin block-title(title, titleText)
+    .block-header
+      h2.primary-header= title
+      if titleText
+        h3.secondary-header= titleText
+      if block
+        block
+
+mixin hero-main
+  section.about.container
+    .background-img.background-img-first
+      img(src='../../img/background/about-1.png' alt='about one')
+    .background-img.background-img-second
+      img(src='../../img/background/about-2.png' alt='about two')
+    .background-img.background-img-third
+      img(src='../../img/background/about-3.png' alt='about three')
+    h2.about__header Your Blockchain Developers
+    .about__content
+      .about__content-item
+        p.about__description
+          | Since 2017 Rock&rsquo;n&rsquo;Block developed 
+          b 250+
+          | solutions of
+          | different complexity.
+          br
+          | Ready to bring your idea to life.
+        section.about__buttons
+          a.about__buttons-call.btn.btn-hollow.btn-rounded(href='https://calendly.com/alex-tka' rel='noreferrer nofollow' target='_blank')
+            | Book A Call
+          a.about__buttons-contact.btn.btn-orange.btn-rounded(href='#contact-us')
+            | Contact Us
+            img(src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      .about__achievements
+        img(src='../../img/achievements.svg' alt='our achievements')
+
+mixin why-us
+  .why-us.container
+    +block-title('Why us?', false)
+    .why-us__content
+      .why-us__card
+        p.why-us__card__primary
+          span.why-us__card-numbers 250+
+          span.why-us__card-units Projects
+        p.why-us__card__secondary created on a turn-key basis
+      .why-us__card
+        p.why-us__card__primary
+          span.why-us__card-numbers 15 000+
+          span.why-us__card-units
+        p.why-us__card__secondary smart contracts deployed
+      .why-us__card
+        p.why-us__card__primary
+          span.why-us__card-numbers 100+
+          span.why-us__card-units Team
+        p.why-us__card__secondary 60+ developers
+      .why-us__card
+        p.why-us__card__primary
+          span.why-us__card-numbers 1Bn+
+          span.why-us__card-units Dollars
+        p.why-us__card__secondary capitalization of built projects
+      .why-us__card
+        p.why-us__card__primary
+          span.why-us__card-numbers 15+
+          span.why-us__card-units Years
+        p.why-us__card__secondary of development experience
+      .why-us__card
+        p.why-us__card__primary
+          span.why-us__card-numbers ANY
+          span.why-us__card-units Blockchain
+        p.why-us__card__secondary integration and development
+
+mixin areas-of-expertise
+  - var cards = [{source: "blockchain",title: "BLOCKCHAIN",text: "Smart contracts of any complexity on any blockchain. From custom token creation to decentralized exchange on-a-turn-key basis."},{source: "bridge",title: "LAYER TWO",text: "From multiple blockchain bridges to complete Layer 2 solution tailored for your project."},{source: "mobile",title: "MOBILE AND WEB",text: "Android/iOS applications, project management interfaces, investors cabinets, top-notch UX/UI, etc."},{source: "wallet",title: "WALLETS",text: "High security level browser and mobile crypto wallets with generation system, private keys storage, stable (and other types) coin support and crypto/fiat acquiring."},{source: "audit",title: "AUDIT",text: "Full review of your system’s architecture and codebase. We make sure, that your distributed systems work as you intended."},{source: "documentation",title: "DOCUMENTATION",text: "Project architecture development. Technical specifications and decompositions of your ideas. Whitepapers, lightpapers and etc."}];
+
+  #services.areas-of-expertise.container
+    .background-img
+      img(src='../../img/background/areas.png' alt='areas')
+    +block-title('Areas Of Expertise', false)
+    .areas-of-expertise__cards
+      .areas-of-expertise__cards__scroll
+        each card in cards.length ? cards : ['No values']
+          .areas-of-expertise__card
+            .icon-container
+              img.icon(src='../../img/icons/icon-area-'+card.source+'-mask.svg' alt=card.source)
+            h3.areas-of-expertise__card-name= card.title
+            p.areas-of-expertise__card-description= card.text
+
+mixin what-we-do-best
+  - var cards = [{source: "icon-do-best-smart-contracts",alt: "crypto icons",text: "Smart contracts on various blockchains"},{source: "icon-do-best-bank",alt: "bank icon",text: "Custom token creation (incl. NFTs)"},{source: "icon-do-best-swap",alt: "swap icon",text: "Token SWAP"},{source: "icon-do-best-rock",alt: "rock sign icon",text: "Airdrop"},{source: "icon-do-best-bridges",alt: "Bridges icon",text: "Bridges development"},{source: "icon-do-best-l2",alt: "L2 icon",text: "L2 implementation"},{source: "icon-do-best-tangem",alt: "phone with card icon",text: "NFT card support"},{source: "icon-do-best-DAPPs",alt: "DAPPs icon",text: "DAPPs development"},{source: "icon-do-best-moon",alt: "moon icon",text: "Fiat On-Ramp Integration"},{source: "icon-do-best-OTC",alt: "graph icon",text: "Decentralized OTC development"},{source: "icon-do-best-wallet",alt: "wallet icon",text: "Multiple wallets management tool"},{source: "icon-do-best-anon",alt: "anon icon",text: "Anonymized exchange"},{source: "icon-do-best-contract",alt: "contract icon",text: "Smart contract audit"},{source: "icon-do-best-phone",alt: "phone icon",text: "iOS / Android App development"},{source: "icon-do-best-shield",alt: "shield icon",text: "Explorers for private blockchain"}];
+
+    .what-we-do-best.container
+      +block-title('What we do Best', 'We are ready to take on a blockchain project of any complexity, from the stage of idea development to final implementation. Here are the most popular requests we receive regularly:')
+      .scroll
+        .what-we-do-best__cards
+          each card in cards.length ? cards : ['No values']
+            .what-we-do-best__card
+              img.icon(src='../../img/icons/'+card.source+'.png' alt=card.alt)
+              p.what-we-do-best__description= card.text
+
+mixin our-partners
+  - var partners = ["binance","quras","changelly","polygon","axion","okex","neo","waves","ducatus","enq","tron","bw"];
+  - var achievements = [{name:"techreviewer rock-n-block",url:"https://techreviewer.co/companies/rock-n-block"},{name:"topappdevelopmentcompanies blockchain developers russia",url:"https://topappdevelopmentcompanies.com/ru/directory/blockchain-developers/russia"},{name:"itfirms top blockchain development companies",url:"https://www.itfirms.co/top-blockchain-development-companies/"},{name:"designrush blockchain development companies",url:"https://www.designrush.com/agency/blockchain-development-companies"}];
+
+  #partners.our-partners.container
+    +block-title('Our partners', false)
+      ul.our-partners__partners
+        each partner in partners.length ? partners : ['No values']
+          li.our-partners__partner
+            .img-container
+              img(src=`../../img/logo/logo-partners-${partner}.png` alt=partner)
+      .achievements
+        each achieve, index in achievements.length ? achievements : ['No values']
+          a.achieve(href=achieve.url rel="noreferrer nofollow" target="_blank")
+            img(src=`../../img/achievements/achieve-${index+1}.png` alt=achieve.name)
+
+mixin contact-us
+  #contact-us.contact-us.container
+      //- {isImgAvailable && 
+      //-     <Fragment>
+      //-       <div className={style['background-img']}>
+      //-         <img src="../../assets/img/background-partners.png" alt="background-img" />
+      //-       </div>
+      //-       <div className={style['background-img']}>
+      //-         <img src="../../assets/img/background-contact.png" alt="background-img" />
+      //-       </div>
+      //-     </Fragment>
+      //- }
+      +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
+      form.contact-us__form(name='contact-us-form')
+        input#g-recaptcha-response(type='hidden' name='g-recaptcha-response')
+        input(type='hidden' name='action' value='validate_captcha')
+        input.contact-us__form__input( type='text' placeholder='Name' value='')
+        
+        label.visually-hidden Enter your name
+
+        DIV
+          .block
+            .socBlock.socialsType
+              img.socIcon(src='../../../img/icons/email.svg')
+              label.socName E-mail
+              img.downIcon(src='../../../img/icons/down.svg')
+
+        .inputBlock.socialsBlock
+          input.contact-us__form__input(placeholder='Your contact' value='')
+        .inputBlock.socialsBlock
+          input.contact-us__form__input(placeholder='Your contact' value='')
+
+        textarea.contact-us__form__input.contact-us__form__input-textarea(rows='1' placeholder='Briefly describe your project or idea')
+        
+        label.visually-hidden Briefly describe your project or idea
+        p.terms By using the service, you accept the 
+          a(href='/terms-of-service' target='_top') Terms of Service
+        button.contact-us__form__submit-btn.btn.btn-orange.btn-rounded(type="submit") Submit request
+      
+      //- #contact-us-popup.contact-us__popup-container.shoaw
+      #contact-us-popup.contact-us__popup-container
+        .contact-us__popup.popup
+          h3.popup__title Thanks for your request!
+          button.btn.btn-orange.btn-rounded.popup__button-ok Close
+          .background-img.background-img-left
+            img(src='../../img/background-popup-left.png' alt='background-popup-left')
+          .background-img.background-img-right
+            img(src='../../img/background-popup-right.png' alt='background-popup-right')

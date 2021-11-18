@@ -1,2 +1,15 @@
 header
     .container
+        nav.main-nav
+            section.main-nav__mobile
+                a.logo(href='/')
+                    img(src='../../img/logo.svg' alt="Rock'n'Block logo")
+            //- .burger.icon.icon-burger
+            //-     img(src=`../../assets/img/icons/icon-header-burger${burger}-mask.svg`)
+            section#nav-pages.nav-pages
+                a.nav-pages__link(href='#services') Services
+                a.nav-pages__link(href='#cases') Cases
+                a.nav-pages__link(href='#team') Team
+                a.nav-pages__link(href='#partners') Partners
+                a.nav-pages__link(href='/blog') Blog
+                a.nav-pages__contact-button.nav-pages__link__contact-us(href='#contact-us') CONTACT US

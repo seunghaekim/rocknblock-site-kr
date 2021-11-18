@@ -13,7 +13,6 @@
     display: $display;
     width: $width;
     height: $height;
-
     background-repeat: no-repeat;
 
     @content;
@@ -22,7 +21,6 @@
 
 @mixin after-img($display: block, $width: 100%, $height: 100%, $position: r) {
   @at-root #{&}:after {
-
     content: '';
 
     @if $position==a {
@@ -36,9 +34,16 @@
     display: $display;
     width: $width;
     height: $height;
-
     background-repeat: no-repeat;
 
     @content;
+  }
+}
+
+@mixin theme-mask($className, $iconPath, $iconType) {
+  .icon-#{$className} {
+    &::before {
+      mask: url("../../assets/img/icons/icon-#{$iconPath}-mask.#{$iconType}") no-repeat 100% 100%;
+    }
   }
 }
