@@ -1,0 +1,183 @@
+@import "../plugins/normalize.css/normalize";
+@import "mixins/mixins";
+@import "theme/theme";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: 'TTNorms', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0 auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--body-background-color);
+  cursor: default;
+  overflow-x: hidden;
+  color: white;
+
+  @include b('tablet') {
+    padding: 0 15px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a,
+p,
+.button,
+span {
+  transition: 0.4s ease;
+  outline: none;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  //padding: 0 12px;
+  margin: 0 auto;
+
+  @include b('tablet') {
+    width: 100%;
+  }
+}
+
+h1 {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.background-img {
+  position: absolute;
+}
+
+.block-header {
+  .primary-header {
+    margin: 0;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+
+    @include b('tablet') {
+      font-size: 40px;
+      line-height: 47px;
+    }
+
+    @include b('mobile') {
+      font-size: 32px;
+      line-height: 37px;
+    }
+  }
+
+  .secondary-header {
+    margin: 0;
+    font-family: "TT Commons", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    opacity: 0.4;
+  }
+}
+
+.tablinks {
+  display: flex;
+
+  &__link {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    padding-bottom: 22px;
+    border-bottom: 2px solid #2e2e35;
+    font-family: "TT Norms", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    opacity: 0.6;
+    transition: 0.4s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:last-child {
+      margin-left: 2px;
+    }
+  }
+
+  .link-active {
+    color: #DC2C2C;
+    font-weight: 700;
+    border-bottom: 3px solid #DC2C2C;
+    opacity: 1;
+  }
+}
+
+.gray-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 6px;
+    margin-top: 6px;
+    padding: 3px 8px;
+    color: #fff;
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    font-feature-settings: 'liga' off;
+    background: #34313b;
+    border-radius: 4px;
+  }
+}
+
+.icon {
+  &::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+

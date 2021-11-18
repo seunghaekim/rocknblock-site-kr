@@ -1,0 +1,52 @@
+@import "../mixins/media";
+
+header {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // padding: 50px 10px;
+  // z-index: 3;
+
+  // @include bb(endmobile, 0) {
+  //   padding: 10px 0;
+  // }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .nav {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+  // .menu-toggle {
+  //   margin-left: 40px;
+  //   width: 35px;
+  //   cursor: pointer;
+
+  //   &:hover {
+  //     .menu-toggle-line:nth-child(2) {
+  //       margin-left: 10px;
+  //       background-color: var(--color-orange-accent);
+  //     }
+  //   }
+
+  //   &-line {
+  //     width: 100%;
+  //     display: block;
+  //     height: 2px;
+  //     border-radius: 10px;
+  //     background-color: var(--text-color);
+  //     margin-bottom: 5px;
+  //     transition: 0.4s ease;
+
+  //     &:nth-child(2) {
+  //       max-width: 25px;
+  //     }
+  //   }
+  // }
+}

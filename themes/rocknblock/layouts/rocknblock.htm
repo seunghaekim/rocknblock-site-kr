@@ -1,0 +1,29 @@
+description = "Main template"
+==
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    	{% partial "template/head" %}
+    	{% styles %}
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <main id="layout-content">
+            {% page %}
+        </main>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        {% partial "template/styles-scripts" %}
+        {% partial "template/scripts-seo" %}
+        {% scripts %}
+    </body>
+</html>

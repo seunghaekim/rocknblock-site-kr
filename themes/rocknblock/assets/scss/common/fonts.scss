@@ -1,0 +1,31 @@
+@import "../mixins/main";
+
+//TTCommons
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-Thin', 100);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-ExtraLight', 200);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-Light', 300);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-Regular', normal);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-Medium', 500);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-DemiBold', 600);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-Bold', 700);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-ExtraBold', 800);
+@include font-face('TTCommons', '../../assets/fonts/TTCommons/TTCommons-Black', 900);
+
+// TTNorms
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Thin', 100);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-ExtraLight', 200);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Light', 300);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Regular', normal);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Medium', 500);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Bold', 700);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-ExtraBold', 800);
+@include font-face('TTNorms', '../../assets/fonts/TTNorms/TTNorms-Black', 900);
+
+// Karla
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-ExtraLight', 200);
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-Light', 300);
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-Regular', normal);
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-Medium', 500);
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-SemiBold', 600);
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-Bold', 700);
+@include font-face('Karla', '../../assets/fonts/Karla/Karla-ExtraBold', 800);

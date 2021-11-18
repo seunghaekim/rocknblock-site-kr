@@ -1,0 +1,38 @@
+include ../seo/favicons
+
+doctype html
+html(lang="en")
+    head
+        base(href="/")
+        meta(charset="utf-8")
+        meta(content="index, nofollow" name="robots")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        link(rel="preload" as="style" href="css/style.min.css")
+        link(rel="manifest" href="/manifest.webmanifest")
+        +head-favicon
+        meta(name='twitter:card' content='summary')
+        meta(property='og:type' content='website')
+        block head
+            title Rock`n`Block
+            meta(name="description" content='Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups.')
+        block twitter
+            meta(name='twitter:creator' content='@rocknblock')
+            meta(name='twitter:site' content='https://rocknblock.io/')
+            meta(name='twitter:url' content='https://rocknblock.io/')
+            meta(name='twitter:image' content='https://rocknblock.io/img/share.png')
+            meta(name='twitter:title' content='Rock`n`Block Website')
+            meta(name='twitter:description' content='Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups.')
+        block open-graph
+            meta(property='og:url' content='https://rocknblock.io/')
+            meta(property='og:image' content='https://rocknblock.io/img/share.png')
+            meta(property='og:title' content='Rock`n`Block Website')
+            meta(property='og:description' content='Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups.')
+
+    body
+        block header
+        block content
+        block footer
+        block scripts
+            link(rel="stylesheet", href="css/style.min.css")
+            script(defer, src='js/main.min.js')

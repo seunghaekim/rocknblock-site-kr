@@ -1,0 +1,78 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  transition: 0.4s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.progress,
+  &:disabled {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.5;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &.icon {
+    justify-content: space-between;
+
+    &-reverse {
+      flex-direction: row-reverse;
+    }
+
+    &:before {
+      margin-left: 15px;
+      transition: 0.4s ease;
+    }
+  }
+
+  &-circle {
+    border-radius: 60px;
+  }
+
+  &-center {
+    margin: 0 auto;
+  }
+
+  &-border {
+    background-color: transparent;
+  }
+
+  &-fill {
+    border-color: transparent;
+  }
+
+  &-orange {
+    color: var(--button-orange-color);
+    border: 2px solid var(--button-orange-border-color);
+    background-color: var(--button-orange-background-color);
+  }
+
+  &-white {
+    color: var(--button-white-color);
+    border: 2px solid var(--button-white-border-color);
+    background-color: var(--button-white-background-color);
+
+    &.btn-border {
+      color: var(--button-white-border-text-color);
+    }
+  }
+}
