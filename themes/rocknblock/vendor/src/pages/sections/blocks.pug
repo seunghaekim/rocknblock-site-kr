@@ -1,3 +1,8 @@
+mixin webpImg(loading, src, type, alt, useclass)
+  picture(class=useclass)
+    source(type="image/webp", srcset=src+'.webp')
+    img(loading=loading, src=src+'.'+type, alt=alt)
+
 mixin block-title(title, titleText)
     .block-header
       h2.primary-header= title
@@ -9,11 +14,14 @@ mixin block-title(title, titleText)
 mixin hero-main
   section.about.container
     .background-img.background-img-first
-      img(src='../../img/background/about-1.png' alt='about one')
+      //- img(loading='lazy' src='../../img/background/about-1.png' alt='about one')
+      +webpImg('lazy',`../../img/background/about-1`,'png','about one')
     .background-img.background-img-second
-      img(src='../../img/background/about-2.png' alt='about two')
+      //- img(loading='lazy' src='../../img/background/about-2.png' alt='about two')
+      +webpImg('lazy',`../../img/background/about-2`,'png','about two')
     .background-img.background-img-third
-      img(src='../../img/background/about-3.png' alt='about three')
+      //- img(loading='lazy' src='../../img/background/about-3.png' alt='about three')
+      +webpImg('lazy',`../../img/background/about-3`,'png','about three')
     h2.about__header Your Blockchain Developers
     .about__content
       .about__content-item
@@ -29,9 +37,9 @@ mixin hero-main
             | Book A Call
           a.about__buttons-contact.btn.btn-orange.btn-rounded(href='#contact-us')
             | Contact Us
-            img(src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+            img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
       .about__achievements
-        img(src='../../img/achievements.svg' alt='our achievements')
+        img(loading='lazy' src='../../img/achievements.svg' alt='our achievements')
 
 mixin why-us
   .why-us.container
@@ -73,7 +81,8 @@ mixin areas-of-expertise
 
   #services.areas-of-expertise.container
     .background-img
-      img(src='../../img/background/areas.png' alt='areas')
+      //- img(loading='lazy' src='../../img/background/areas.png' alt='areas')
+      +webpImg('lazy',`../../img/background/areas`,'png','areas')
     +block-title('Areas Of Expertise', false)
     .areas-of-expertise__cards
       .areas-of-expertise__cards__scroll
@@ -93,7 +102,8 @@ mixin what-we-do-best
         .what-we-do-best__cards
           each card in cards.length ? cards : ['No values']
             .what-we-do-best__card
-              img.icon(src='../../img/icons/'+card.source+'.png' alt=card.alt)
+              //- img.icon(src='../../img/icons/'+card.source+'.png' alt=card.alt)
+              +webpImg('lazy','../../img/icons/'+card.source,'png',card.alt, 'icon')
               p.what-we-do-best__description= card.text
 
 mixin our-partners
@@ -106,11 +116,13 @@ mixin our-partners
         each partner in partners.length ? partners : ['No values']
           li.our-partners__partner
             .img-container
-              img(src=`../../img/logo/logo-partners-${partner}.png` alt=partner)
+              //- img(loading='lazy' src=`../../img/logo/logo-partners-${partner}.png` alt=partner)
+              +webpImg('lazy',`../../img/logo/logo-partners-${partner}`,'png',partner)
       .achievements
         each achieve, index in achievements.length ? achievements : ['No values']
           a.achieve(href=achieve.url rel="noreferrer nofollow" target="_blank")
-            img(src=`../../img/achievements/achieve-${index+1}.png` alt=achieve.name)
+            //- img(loading='lazy' src=`../../img/achievements/achieve-${index+1}.png` alt=achieve.name)
+            +webpImg('lazy',`../../img/achievements/achieve-${index+1}`,'png',achieve.name)
 
 mixin team 
   //- .tabs
@@ -128,7 +140,8 @@ mixin team
 
   #team.team.container
     .background-img
-      img(src="../../img/background/team.png" alt="background-img")
+      //- img(loading='lazy' src="../../img/background/team.png" alt="background-img")
+      +webpImg('lazy',`../../img/background/team-`,'png','background-img')
     +block-title('Team', 'A team of highly qualified specialists:')
     .tabs
       .tabs-buttons
@@ -148,7 +161,7 @@ mixin team
                     .content__card
                       picture
                         source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
-                        img(src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
+                        img(loading='lazy' src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
                       h3.content__card__post= developer.post
                       h4.content__card__name= developer.name
                       .content__card__exp
@@ -173,7 +186,7 @@ mixin team
                     .content__card
                       picture
                         source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
-                        img(src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
+                        img(loading='lazy' src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
                       h3.content__card__post= developer.post
                       h4.content__card__name= developer.name
                       .content__card__exp
@@ -192,7 +205,7 @@ mixin team
                     .content__card__mng
                       picture
                         source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
-                        img(src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
+                        img(loading='lazy' src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
                       .description
                         .description__name= manager.name
                         .description__post= manager.post
@@ -203,9 +216,10 @@ mixin team
           .tab-content.content-1
             each developer in developers.length ? developers : ['No values']
               .content__card
-                picture
-                  source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
-                  img(src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
+                +webpImg('lazy',`../../img/team/team-${developer.img}-min`,'png',developer.name)
+                //- picture
+                //-   source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
+                //-   img(loading='lazy' src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
                 h3.content__card__post= developer.post
                 h4.content__card__name= developer.name
                 .content__card__exp
@@ -222,9 +236,10 @@ mixin team
           .tab-content.content-2
             each manager in managers.length ? managers : ['No values']
               .content__card__mng
-                picture
-                  source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
-                  img(src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
+                +webpImg('lazy',`../../img/team/team-${manager.img}-min`,'png','image of manager')
+                //- picture
+                //-   source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
+                //-   img(loading='lazy' src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
                 .description
                   .description__name= manager.name
                   .description__post= manager.post
@@ -248,8 +263,10 @@ mixin clients-feedback
           .swiper-slide.clients-feedback__cards
             a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=client.twitter)
               .clients-feedback__cards_item_images
-                img(src=`../../img/logo/${client.imgClient}` alt=client.altClient)
-                img(src=`../../img/social/icon-${client.logo}.svg` alt=client.logo)
+                //- +webpImg('lazy',`../../img/logo/${client.imgClient}`,'png',client.altClient)
+                //- +webpImg('lazy',`../../img/social/${client.logo}`,'SVG',client.LOGO)
+                img(loading='lazy' src=`../../img/logo/${client.imgClient}` alt=client.altClient)
+                img(loading='lazy' src=`../../img/social/icon-${client.logo}.svg` alt=client.logo)
               .clients-feedback__cards_item_desc
                 h2= client.title
                 h3= client.desc
@@ -266,18 +283,21 @@ mixin bottom-slide
           .swiper-slide.slide
               article.site
                 figure.site__imageWrapper
-                  img.site__image(src=`../../../img/farming/${slide.image}.png` alt=slide.title)
+                  //- img.site__image(src=`../../../img/farming/${slide.image}.png` alt=slide.title)
+                  +webpImg('lazy',`../../../img/farming/${slide.image}`,'png',slide.title, 'site__image')
                 h4.site__title= slide.title 
                 a.site__link(href=`${slide.link}`) Click here
                   i.site__linkIcon
-                    img(src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
 
 mixin contact-us
   #contact-us.contact-us.container
     .background-img
-      img(src='../../img/background/partners.png' alt='partners')
+      //- img(loading='lazy' src='../../img/background/partners.png' alt='partners')
+      +webpImg('lazy',`../../img/background/partners`,'png','partners')
     .background-img
-      img(src='../../img/background/contact.png' alt='contact')
+      //- img(loading='lazy' src='../../img/background/contact.png' alt='contact')
+      +webpImg('lazy',`../../img/background/contact`,'png','contact')
 
     +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
     form.contact-us__form(name='contact-us-form')
@@ -312,6 +332,6 @@ mixin contact-us
         h3.popup__title Thanks for your request!
         button.btn.btn-orange.btn-rounded.popup__button-ok Close
         //- .background-img.background-img-left
-          //- img(src='../../img/background/popup-left.png' alt='background-popup-left')
+          //- img(loading='lazy' src='../../img/background/popup-left.png' alt='background-popup-left')
         //- .background-img.background-img-right
-          //- img(src='../../img/background/popup-right.png' alt='background-popup-right')
+          //- img(loading='lazy' src='../../img/background/popup-right.png' alt='background-popup-right')
