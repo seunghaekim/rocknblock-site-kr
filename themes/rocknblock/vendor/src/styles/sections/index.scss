@@ -82,9 +82,11 @@
     @include b("tablet") {
       margin-top: 90px;
       width: 300px;
+
       @include text-gradient(
         linear-gradient(86.23deg, #ffffff 54.52%, #171628 100%)
       );
+
       font-size: 40px;
       line-height: 40px;
     }
@@ -157,7 +159,8 @@
       }
 
       &:hover {
-        background: linear-gradient(
+        background:
+          linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.3) 0%,
             rgba(255, 255, 255, 0) 100%
@@ -486,7 +489,8 @@
     }
 
     &:hover {
-      background: linear-gradient(
+      background:
+        linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.1) 0%,
           rgba(255, 255, 255, 0) 100%
@@ -735,6 +739,7 @@ header {
     border-bottom: none;
     padding: 24px 0;
   }
+
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
   &__mobile {
@@ -1006,7 +1011,8 @@ header {
       outline: 0 none;
 
       &:hover {
-        background: linear-gradient(
+        background:
+          linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.25) 0%,
             rgba(255, 255, 255, 0) 100%
@@ -1088,7 +1094,8 @@ header {
         text-align: center;
 
         &:hover {
-          background: linear-gradient(
+          background:
+            linear-gradient(
               180deg,
               rgba(255, 255, 255, 0.25) 0%,
               rgba(255, 255, 255, 0) 100%
@@ -1261,6 +1268,7 @@ header {
 
     &__copyright {
       text-align: center;
+
       @include b("mobile") {
         width: 240px;
       }
@@ -1268,6 +1276,7 @@ header {
 
     &__copyright-mobile {
       display: none;
+
       @include b("tablet") {
         display: block;
         padding-top: 2em;
@@ -1276,6 +1285,7 @@ header {
 
     &__copyright-desktop {
       display: block;
+
       @include b("tablet") {
         display: none;
       }
@@ -1291,6 +1301,7 @@ header {
 
       @include b("tablet") {
         justify-content: center;
+
         .tab {
           display: none;
         }
@@ -1307,6 +1318,7 @@ header {
 
     a:not(:last-child) {
       margin-right: 1em;
+
       @include b("tablet") {
         margin-right: 3em;
       }
@@ -1368,7 +1380,7 @@ header {
   // }
 
   &__title {
-    background: linear-gradient(87.05deg, #ffffff 51.97%, #171628 106.38%);
+    background: linear-gradient(87.05deg, #fff 51.97%, #171628 106.38%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -1381,7 +1393,7 @@ header {
     @include b("tablet") {
       font-size: 32px;
       line-height: 39px;
-      background: linear-gradient(87.05deg, #ffffff 51.97%, #171628 127.38%);
+      background: linear-gradient(87.05deg, #fff 51.97%, #171628 127.38%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -1707,6 +1719,7 @@ header {
         @include text-gradient(
           linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
         );
+
         padding: 0 15px;
         font-style: normal;
         font-weight: 800;
@@ -1759,6 +1772,7 @@ header {
           @include text-gradient(
             linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
           );
+
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
@@ -1915,7 +1929,8 @@ header {
         text-align: center;
         color: #fff;
         mix-blend-mode: normal;
-        background: linear-gradient(
+        background:
+          linear-gradient(
             180deg,
             rgba(255, 255, 255, 0.1) 0%,
             rgba(255, 255, 255, 0) 100%
