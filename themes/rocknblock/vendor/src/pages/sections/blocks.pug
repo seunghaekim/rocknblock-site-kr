@@ -112,56 +112,165 @@ mixin our-partners
           a.achieve(href=achieve.url rel="noreferrer nofollow" target="_blank")
             img(src=`../../img/achievements/achieve-${index+1}.png` alt=achieve.name)
 
+mixin team 
+  //- .tabs
+  //-   input#tab-btn-1(type='radio' name='tab-btn' checked)
+  //-   label(for='tab-btn-1') Development
+  //-   input#tab-btn-2(type="radio" name="tab-btn")
+  //-   label(for='tab-btn-2') Managment
+
+  //-   #content-1 Содержимое 1...
+  //-   #content-2 Содержимое 2...
+
+  - var developers = [{img: 'dev-1',post: 'Backend Team Lead',name: 'Maksim Strenk',skills: ['Development experience 6 years, in blockchain 4 years','MyWish Backend (4 years)','Implementation of UTREEXO and HTLC for the Bitcoin network','Made the current Ducatus Exchange','Experienced in deploying and syncing Ethereum and Bitcoin full nodes'],stacks: ['Python','Solidity','JavaScript','C','OpenZeppelin','GSN','NPM','Docker Hub','Gunicorn','Supervisord','PyPi','USWSGI','PostgreSQL','MongoDB']},{img: 'dev-2',post: 'Blockchain Team Lead',name: 'Rita Tsepeleva',skills: ['smart contract development collaterized stable coin','Anonymizer powered by ZK proof','development of OTC exchange','yeild-farming / staking contracts development'],stacks: ['Solidity','OpenZeppelin','Truffle','npm','C++','web3']},{img: 'dev-3',post: 'Frontend Team Lead',name: 'Nikita Sireishikov',skills: ['manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js','development of nodes for interacting with the blockchain on node.js','development of web-wallets in Angular','frontend development for interacting with smart contracts through the backend'],stacks: ['Express','Apollo','TypeScript','GraphQL','Angular','Vue','JS','MobX','NodeJS','Vuex','iOS Developing (Swiftui)','web3']}];
+  - var managers = [{img: 'mng-1',name: 'Dmitry Ershov',post: 'CEO'},{img: 'mng-2',name: 'Alex Tkachev',post: 'CBDO'},{img: 'mng-3',name: 'Olya Kulakova',post: 'CMO'}];
+  - var overview = [{number: 23,primary: 'Backend team',},{number: 27,primary: 'Frontend team',},{number: 19,primary: 'Smart Contracts team',},{number: 13,primary: 'Project managers',},{number: 5,primary: 'Designers',},{number: 3,primary: 'Analysts',}];
+
+  #team.team.container
+    .background-img
+      img(src="../../img/background/team.png" alt="background-img")
+    +block-title('Team', 'A team of highly qualified specialists:')
+    .tabs
+      .tabs-buttons
+        input#tab-btn-1(type='radio' name='tab-btn' checked)
+        label(for='tab-btn-1') Development
+        input#tab-btn-2(type="radio" name="tab-btn")
+        label(for='tab-btn-2') Managment
+    //- .tabs
+      .tabs-buttons
+        label(for='tab-btn-1') Development
+          input#tab-btn-1(type='radio' name='tab-btn' checked)
+          .team__tabs
+            .scroll
+              .team__development-tab.team__content.content
+                .tab-content.content-1
+                  each developer in developers.length ? developers : ['No values']
+                    .content__card
+                      picture
+                        source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
+                        img(src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
+                      h3.content__card__post= developer.post
+                      h4.content__card__name= developer.name
+                      .content__card__exp
+                        DIV
+                          h5.content__card__exp__title Experience:
+                          ul.content__card__exp__list
+                            each skill in developer.skills.length ? developer.skills : ['No values']
+                              li.content__card__exp__list__item= skill
+                        .content__card__exp__stacks.stacks
+                          h5.stacks__title Stack:
+                          ul.gray-list
+                            each skill in developer.stacks.length ? developer.stacks : ['No values']
+                              li.stacks__item.gray-list__item= stack
+                
+        label(for='tab-btn-2') Managment
+          input#tab-btn-2(type="radio" name="tab-btn")
+          .team__tabs
+            .scroll
+              .team__development-tab.team__content.content
+                .tab-content.content-1
+                  each developer in developers.length ? developers : ['No values']
+                    .content__card
+                      picture
+                        source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
+                        img(src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
+                      h3.content__card__post= developer.post
+                      h4.content__card__name= developer.name
+                      .content__card__exp
+                        DIV
+                          h5.content__card__exp__title Experience:
+                          ul.content__card__exp__list
+                            each skill in developer.skills.length ? developer.skills : ['No values']
+                              li.content__card__exp__list__item= skill
+                        .content__card__exp__stacks.stacks
+                          h5.stacks__title Stack:
+                          ul.gray-list
+                            each skill in developer.stacks.length ? developer.stacks : ['No values']
+                              li.stacks__item.gray-list__item= stack
+                .tab-content.content-2
+                  each manager in managers.length ? managers : ['No values']
+                    .content__card__mng
+                      picture
+                        source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
+                        img(src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
+                      .description
+                        .description__name= manager.name
+                        .description__post= manager.post
+
+    .team__tabs
+      .scroll
+        .team__development-tab.team__content.content
+          .tab-content.content-1
+            each developer in developers.length ? developers : ['No values']
+              .content__card
+                picture
+                  source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
+                  img(src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
+                h3.content__card__post= developer.post
+                h4.content__card__name= developer.name
+                .content__card__exp
+                  DIV
+                    h5.content__card__exp__title Experience:
+                    ul.content__card__exp__list
+                      each skill in developer.skills.length ? developer.skills : ['No values']
+                        li.content__card__exp__list__item= skill
+                  .content__card__exp__stacks.stacks
+                    h5.stacks__title Stack:
+                    ul.gray-list
+                      each skill in developer.stacks.length ? developer.stacks : ['No values']
+                        li.stacks__item.gray-list__item= stack
+          .tab-content.content-2
+            each manager in managers.length ? managers : ['No values']
+              .content__card__mng
+                picture
+                  source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
+                  img(src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
+                .description
+                  .description__name= manager.name
+                  .description__post= manager.post
+            
+    ul.team__overview
+      each item in overview.length ? overview : ['No values']
+        li.team__overview__item
+          .team__overview__item__number= item.number
+          .team__overview__item__primary-text.text= item.primary
+
+
 mixin clients-feedback
+  - var clients = [{title: 'DucatusX',desc: 'When it comes to the development of our blockchain and smart contracts, we trust only those trusted by experts. Rock’N’Block, developers  of the Ducatus wallet and the DucatusX blockchain, recognized by industry experts globally. #blockchain #rocknblock #ducatus #technology',imgClient: 'icon-client-feedback-ducatusx.svg',altClient: 'client feedback',logo: 'twitter',twitter: 'https://twitter.com/DucatusX/status/1448162748370620423'},{title: 'Kephi',desc: 'Con nuestro objetivo de convertirnos en un #NFTmarketplace de última generación, nos hemos asociado con el gigante blockchain @RocknBlock2 que ha crecido hasta convertirse en socio de actores como @binance @0xPolygon @Tronfoundation @Changelly_team',imgClient: 'icon-client-feedback-kephi.svg',altClient: 'client kephi',logo: 'twitter',twitter: 'https://twitter.com/KephiGallery/status/1428363220645933061'},{title: 'MyWish',desc: 'Make your blockchain project ideas come true! Our friends from @RocknBlock2 do blockchain development of any complexity: from custom token creation to NFT marketplaces and many more 💪 Visit http://rocknblock.io to get a unique solution for your project.\n',imgClient: 'icon-client-feedback-mywish.svg',altClient: 'client mywish',logo: 'twitter',twitter: 'https://twitter.com/mywishplatform/status/1441070124274884617'},{title: 'StrongHands',desc: 'Did you ever noticed #iSHND is born already audited?Have a look at the@RocknBlockDev report and see how we are starting! https://github.com/stronghands-of...',imgClient: 'icon-client-feedback-stronghands.svg',altClient: 'client stronghands',logo: 'twitter',twitter: 'https://twitter.com/SHNDcoin/status/1447757903977455621'}];
 
-  #clients-feedback.container
-    +block-title('What our clients tell about us', false)
-
-    .swiper-container
+  .clients-feedback.container
+    //- +block-title('What our clients tell about us', false)
+    h2.clients-feedback__title What our clients tell about us
+    .swiper.swiper-feedback
       .swiper-wrapper
-        .swiper-slide Slide 1
-        .swiper-slide Slide 2
-        .swiper-slide Slide 3
-        .swiper-slide Slide 4
-        .swiper-slide Slide 5
-        .swiper-slide Slide 6
-        .swiper-slide Slide 7
-        .swiper-slide Slide 8
-        .swiper-slide Slide 9
-        .swiper-slide Slide 10
-    
-    //- .clients-feedback__cards.desktop
-    //-   button.switchIcon_left
-    //-     img(src='../../assets/img/icons/icon-arrow-black-left.svg' alt='switch left icon')
+        each client in clients.length ? clients : ['No values']
+          .swiper-slide.clients-feedback__cards
+            a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=client.twitter)
+              .clients-feedback__cards_item_images
+                img(src=`../../img/logo/${client.imgClient}` alt=client.altClient)
+                img(src=`../../img/social/icon-${client.logo}.svg` alt=client.logo)
+              .clients-feedback__cards_item_desc
+                h2= client.title
+                h3= client.desc
+      .swiper-button-next
+      .swiper-button-prev
 
-    //-   a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=item.twitter)
-    //-     .clients-feedback__cards_item_images
-    //-       img(src=item.imgClient alt=item.altClient)
-    //-       img(src=item.imgLogo alt=item.altLogo)
-    //-     .clients-feedback__cards_item_desc
-    //-       h2= item.title
-    //-       h3= item.desc
+mixin bottom-slide
+  - var slides = [{image: 'icon-site1',title: 'NFT Marketplace',link: '/marketplace',},{image: 'icon-site2',title: 'Farming',link: '/farming',},{image: 'icon-site3',title: '10k nft generator',link: '/10knft',},{image: 'icon-site4',title: 'Crowdsale',link: '/crowdsale',},{image: 'icon-site5',title: 'Vesting',link: '/vesting',},{image: 'icon-site6',title: 'Staking',link: '/staking',}];
 
-    //-   a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=item.twitter)
-    //-     .clients-feedback__cards_item_images
-    //-       img(src=item.imgClient alt=item.altClient)
-    //-       img(src=item.imgLogo alt=item.altLogo)
-    //-     .clients-feedback__cards_item_desc
-    //-       h2= item.title
-    //-       h3= item.desc
-
-    //-   button.switchIcon_right
-    //-     img(src='../../img/icons/icon-arrow-black-right.svg' alt='switch right icon')
-
-    //- .clients-feedback__cards.mobile
-    //-   .clients-feedback__cards_item
-    //-     DIV
-    //-       .clients-feedback__cards_item_images
-    //-         img(src=item.imgClient alt=item.altClient)
-    //-         img(src=item.imgLogo alt=item.altLogo)
-    //-       .clients-feedback__cards_item_desc
-    //-         h2= item.title
-    //-         h3= item.desc
+  .sliderWrapper
+    .swiper.swiper-slider
+      .swiper-wrapper
+        each slide in slides.length ? slides : ['No values']
+          .swiper-slide.slide
+              article.site
+                figure.site__imageWrapper
+                  img.site__image(src=`../../../img/farming/${slide.image}.png` alt=slide.title)
+                h4.site__title= slide.title 
+                a.site__link(href=`${slide.link}`) Click here
+                  i.site__linkIcon
+                    img(src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
 
 mixin contact-us
   #contact-us.contact-us.container
@@ -202,7 +311,7 @@ mixin contact-us
       .contact-us__popup.popup
         h3.popup__title Thanks for your request!
         button.btn.btn-orange.btn-rounded.popup__button-ok Close
-        .background-img.background-img-left
-          img(src='../../img/background-popup-left.png' alt='background-popup-left')
-        .background-img.background-img-right
-          img(src='../../img/background-popup-right.png' alt='background-popup-right')
+        //- .background-img.background-img-left
+          //- img(src='../../img/background/popup-left.png' alt='background-popup-left')
+        //- .background-img.background-img-right
+          //- img(src='../../img/background/popup-right.png' alt='background-popup-right')

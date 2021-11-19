@@ -1317,3 +1317,630 @@ header {
     }
   }
 }
+
+// Clients feedback
+
+.clients-feedback {
+  max-width: 1000px;
+  margin: 120px auto 0 auto;
+  padding: 0 12px;
+
+  &.container {
+    overflow: hidden;
+  }
+
+  // .desktop {
+  //   display: flex;
+  //   @include b("tablet") {
+  //     display: none;
+  //   }
+  // }
+
+  // .mobile {
+  //   display: none;
+  //   @include b("tablet") {
+  //     display: flex;
+  //     overflow-x: auto;
+  //   }
+  // }
+
+  // .switchIcon {
+  //   &_right,
+  //   &-left {
+  //     cursor: pointer;
+  //     -ms-flex-align: center;
+  //     align-items: center;
+  //     width: 48px;
+  //     min-width: 20px;
+  //     background-color: transparent;
+  //     border: none;
+  //   }
+
+  //   &_right {
+  //     margin-left: 20px;
+  //   }
+
+  //   &_left {
+  //     margin-right: 20px;
+  //     background-color: transparent;
+  //     border: none;
+  //   }
+  // }
+
+  &__title {
+    background: linear-gradient(87.05deg, #ffffff 51.97%, #171628 106.38%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 75px;
+    text-align: center;
+    font-feature-settings: "liga" off;
+
+    @include b("tablet") {
+      font-size: 32px;
+      line-height: 39px;
+      background: linear-gradient(87.05deg, #ffffff 51.97%, #171628 127.38%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__cards {
+    width: 100%;
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+
+    @include b("tablet") {
+      justify-content: flex-start;
+    }
+
+    &_container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_item {
+      width: 100%;
+      background: #2c2c33;
+      border-radius: 20px;
+      padding: 20px 30px 30px 30px;
+      margin: 0 1em 0 1em;
+
+      // @include b("tablet") {
+      //   min-width: 300px;
+      // }
+
+      &_desc {
+        h2 {
+          padding: 15px 0 10px 0;
+          font-family: TT Commons, sans-serif;
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 25px;
+        }
+
+        h3 {
+          font-family: TT Commons, sans-serif;
+          font-weight: normal;
+          // font-size: 18px;
+          // line-height: 21px;
+          // opacity: 0.4;
+
+          opacity: 0.5;
+          line-height: 1.5;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+
+      &_images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// bottom slider
+.site {
+  background: linear-gradient(30.15deg, #191111 14.13%, #272525 64.22%);
+  border-radius: 4px;
+  height: 360px;
+}
+
+.site__imageWrapper {
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.site__image {
+  display: block;
+  max-width: none;
+}
+
+.site__title {
+  text-align: center;
+  margin-top: 34px;
+  text-transform: uppercase;
+  font-family: TTNorms;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.site__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 25px;
+  width: 194px;
+  border: 2px solid #dc2c2c;
+  color: white;
+  margin: 50px auto 0;
+  font-size: 18px;
+  position: relative;
+  top: 0;
+  transition: top 0.15s ease-in;
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    top: -5px;
+    text-decoration: none;
+  }
+}
+
+.site__linkIcon {
+  margin-left: 25px;
+}
+
+.sectionSites {
+  margin-top: 100px;
+}
+
+.sectionSites__title {
+  margin-bottom: 40px;
+}
+
+.slide {
+  width: 420px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: content-box;
+}
+
+.sliderWrapper {
+  margin-top: 60px;
+}
+
+// Team
+
+.team__tabs {
+  .tab-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  // .content-1 {
+  //   display: none;
+  // }
+
+  // .content-2 {
+  //   display: none;
+  // }
+}
+
+// #tab-btn-1 {
+//   &:checked {
+//     ~ {
+//       .content-1 {
+//         display: flex;
+//       }
+//     }
+//   }
+// }
+
+// #tab-btn-2 {
+//   &:checked {
+//     ~ {
+//       .content-2 {
+//         display: flex;
+//       }
+//     }
+//   }
+// }
+
+// input {
+//   &:checked {
+//     ~ .team__tabs {
+//       display: flex;
+//     }
+
+//     // ~.checkmark {
+//     //   &:after {
+//     //     display: block;
+//     //   }
+//     // }
+//   }
+// }
+
+#tab-btn-1:checked ~ .team__tabs ~ .content-1,
+#tab-btn-2:checked ~ .team__tabs ~ .content-2 {
+  display: flex;
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 40px;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    font-feature-settings: "liga" off;
+    all: unset;
+    border-bottom: 2px solid #2e2e35;
+    cursor: pointer;
+    font-family: TT Norms, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    opacity: 0.6;
+    padding-bottom: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.4s ease;
+    width: 100%;
+
+    &:not(:first-of-type) {
+      border-left: none;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    border-bottom: 3px solid #dc2c2c;
+    color: #dc2c2c;
+    font-weight: 700;
+    opacity: 1;
+  }
+}
+
+.team {
+  position: relative;
+  margin-top: 100px;
+  scroll-margin-top: 120px;
+
+  .primary-header {
+    @include text-gradient(
+      linear-gradient(87.05deg, #ffffff 50.97%, #171628 62.38%)
+    );
+
+    @include b("tablet") {
+      @include text-gradient(
+        linear-gradient(to right, #ffffff 51.97%, #171628 77.38%)
+      );
+    }
+  }
+
+  @include b("mobile") {
+    margin-top: 50px;
+  }
+
+  .background-img {
+    top: 184px;
+    left: 933px;
+    width: 186px;
+    z-index: -1;
+
+    @include b(1215) {
+      display: none;
+    }
+  }
+
+  .block-header {
+    .secondary-header {
+      margin-top: 7px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 41px;
+
+    @include b("mobile") {
+      margin-top: 30px;
+    }
+  }
+
+  .scroll {
+    @include b("desktop") {
+      overflow-x: auto;
+    }
+  }
+
+  &__content {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include b("tablet") {
+      display: inline-flex;
+      overflow-x: scroll;
+    }
+
+    .content__card {
+      margin: 5px;
+      width: 320px;
+      height: 1050px;
+      background: #17141c;
+      border: 2px solid #33333a;
+      box-sizing: border-box;
+      border-radius: 20px;
+
+      @include b("mobile") {
+        margin-top: 30px;
+      }
+
+      img {
+        margin: 3px 3px 30px;
+        border-radius: 17px;
+        text-align: center;
+        width: 98%;
+      }
+
+      &__post {
+        @include text-gradient(
+          linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
+        );
+        padding: 0 15px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 30px;
+        font-feature-settings: "liga" off;
+      }
+
+      &__name {
+        margin-top: 5px;
+        padding: 0 15px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #dc2c2c;
+      }
+
+      &__description {
+        margin-top: 20px;
+        padding: 0 15px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        font-feature-settings: "liga" off;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+
+      &__exp {
+        margin-top: 30px;
+        padding: 0 15px;
+        height: 608px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include b("tablet") {
+          height: initial;
+        }
+
+        div {
+          @include b("tablet") {
+            height: 300px;
+          }
+        }
+
+        &__title {
+          @include text-gradient(
+            linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
+          );
+          font-style: normal;
+          font-weight: 800;
+          font-size: 16px;
+          line-height: 19px;
+          font-feature-settings: "liga" off;
+        }
+
+        &__list {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+
+          &__item {
+            position: relative;
+            margin-top: 10px;
+            padding-left: 17px;
+            color: #8b898d;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            font-feature-settings: "liga" off;
+            mix-blend-mode: normal;
+
+            &::before {
+              position: absolute;
+              top: 6px;
+              left: 0;
+              content: "";
+              display: inline-block;
+              min-width: 10px;
+              min-height: 10px;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              margin-right: 7px;
+            }
+          }
+        }
+
+        &__stacks {
+          vertical-align: bottom;
+          height: 312px;
+
+          .stacks__title {
+            margin-top: 20px;
+
+            @include text-gradient(
+              linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
+            );
+
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          .gray-list {
+            height: min-content;
+            margin-top: 7px;
+            display: flex;
+            flex-direction: row;
+            justify-self: flex-end;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      &__mng {
+        margin: 30px 5px 0;
+        padding: 0;
+        width: 322px;
+        height: 466px;
+        background: #17141c;
+        border: 1px solid #33333a;
+        box-sizing: border-box;
+        border-radius: 23px;
+
+        img {
+          margin: 3px 3px 40px;
+          border-radius: 20px;
+          text-align: center;
+          width: 98%;
+        }
+
+        .description {
+          margin: 0 20px;
+          display: flex;
+          flex-direction: column;
+          font-family: "TT Norms", sans-serif;
+
+          &__name {
+            font-style: normal;
+            font-weight: 800;
+            color: #fff;
+          }
+
+          &__post {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            color: #dc2c2c;
+          }
+        }
+      }
+    }
+
+    @include b("mobile") {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__overview {
+    margin-top: 79px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include b("tablet") {
+      justify-content: center;
+    }
+
+    @include b("mobile") {
+      margin: 30px auto;
+      justify-content: space-around;
+    }
+
+    &__item {
+      margin: 10px;
+      width: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-style: normal;
+      font-weight: bold;
+      font-feature-settings: "liga" off;
+
+      @include b("mobile") {
+        width: 133px;
+      }
+
+      &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+        line-height: 26px;
+
+        /* identical to box height */
+
+        text-align: center;
+        color: #fff;
+        mix-blend-mode: normal;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #dc2c2c;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+      }
+
+      .text {
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        font-feature-settings: "liga" off;
+      }
+
+      &__primary-text {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      &__secondary-text {
+        opacity: 0.5;
+        text-align: center;
+      }
+    }
+  }
+}

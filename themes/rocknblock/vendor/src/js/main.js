@@ -19,5 +19,28 @@ $(document).ready(() => {
   // eslint-disable-next-line no-console
   console.log(`document ready`);
 
-  var swiper = new Swiper(".swiper-container");
+  const sliderFeedback = new Swiper(".swiper-feedback", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const sliderBottom = new Swiper(".swiper-slider", {
+    slidesPerView: "auto",
+    loop: true,
+  });
 });
