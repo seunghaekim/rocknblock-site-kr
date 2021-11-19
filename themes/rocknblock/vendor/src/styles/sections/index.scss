@@ -1208,6 +1208,8 @@ header {
       }
 
       .icon {
+        display: flex;
+
         &-tw {
           padding-top: 4px;
         }

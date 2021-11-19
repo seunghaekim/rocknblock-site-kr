@@ -112,51 +112,97 @@ mixin our-partners
           a.achieve(href=achieve.url rel="noreferrer nofollow" target="_blank")
             img(src=`../../img/achievements/achieve-${index+1}.png` alt=achieve.name)
 
+mixin clients-feedback
+
+  #clients-feedback.container
+    +block-title('What our clients tell about us', false)
+
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide Slide 1
+        .swiper-slide Slide 2
+        .swiper-slide Slide 3
+        .swiper-slide Slide 4
+        .swiper-slide Slide 5
+        .swiper-slide Slide 6
+        .swiper-slide Slide 7
+        .swiper-slide Slide 8
+        .swiper-slide Slide 9
+        .swiper-slide Slide 10
+    
+    //- .clients-feedback__cards.desktop
+    //-   button.switchIcon_left
+    //-     img(src='../../assets/img/icons/icon-arrow-black-left.svg' alt='switch left icon')
+
+    //-   a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=item.twitter)
+    //-     .clients-feedback__cards_item_images
+    //-       img(src=item.imgClient alt=item.altClient)
+    //-       img(src=item.imgLogo alt=item.altLogo)
+    //-     .clients-feedback__cards_item_desc
+    //-       h2= item.title
+    //-       h3= item.desc
+
+    //-   a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=item.twitter)
+    //-     .clients-feedback__cards_item_images
+    //-       img(src=item.imgClient alt=item.altClient)
+    //-       img(src=item.imgLogo alt=item.altLogo)
+    //-     .clients-feedback__cards_item_desc
+    //-       h2= item.title
+    //-       h3= item.desc
+
+    //-   button.switchIcon_right
+    //-     img(src='../../img/icons/icon-arrow-black-right.svg' alt='switch right icon')
+
+    //- .clients-feedback__cards.mobile
+    //-   .clients-feedback__cards_item
+    //-     DIV
+    //-       .clients-feedback__cards_item_images
+    //-         img(src=item.imgClient alt=item.altClient)
+    //-         img(src=item.imgLogo alt=item.altLogo)
+    //-       .clients-feedback__cards_item_desc
+    //-         h2= item.title
+    //-         h3= item.desc
+
 mixin contact-us
   #contact-us.contact-us.container
-      //- {isImgAvailable && 
-      //-     <Fragment>
-      //-       <div className={style['background-img']}>
-      //-         <img src="../../assets/img/background-partners.png" alt="background-img" />
-      //-       </div>
-      //-       <div className={style['background-img']}>
-      //-         <img src="../../assets/img/background-contact.png" alt="background-img" />
-      //-       </div>
-      //-     </Fragment>
-      //- }
-      +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
-      form.contact-us__form(name='contact-us-form')
-        input#g-recaptcha-response(type='hidden' name='g-recaptcha-response')
-        input(type='hidden' name='action' value='validate_captcha')
-        input.contact-us__form__input( type='text' placeholder='Name' value='')
-        
-        label.visually-hidden Enter your name
+    .background-img
+      img(src='../../img/background/partners.png' alt='partners')
+    .background-img
+      img(src='../../img/background/contact.png' alt='contact')
 
-        DIV
-          .block
-            .socBlock.socialsType
-              img.socIcon(src='../../../img/icons/email.svg')
-              label.socName E-mail
-              img.downIcon(src='../../../img/icons/down.svg')
-
-        .inputBlock.socialsBlock
-          input.contact-us__form__input(placeholder='Your contact' value='')
-        .inputBlock.socialsBlock
-          input.contact-us__form__input(placeholder='Your contact' value='')
-
-        textarea.contact-us__form__input.contact-us__form__input-textarea(rows='1' placeholder='Briefly describe your project or idea')
-        
-        label.visually-hidden Briefly describe your project or idea
-        p.terms By using the service, you accept the 
-          a(href='/terms-of-service' target='_top') Terms of Service
-        button.contact-us__form__submit-btn.btn.btn-orange.btn-rounded(type="submit") Submit request
+    +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
+    form.contact-us__form(name='contact-us-form')
+      input#g-recaptcha-response(type='hidden' name='g-recaptcha-response')
+      input(type='hidden' name='action' value='validate_captcha')
+      input.contact-us__form__input( type='text' placeholder='Name' value='')
       
-      //- #contact-us-popup.contact-us__popup-container.shoaw
-      #contact-us-popup.contact-us__popup-container
-        .contact-us__popup.popup
-          h3.popup__title Thanks for your request!
-          button.btn.btn-orange.btn-rounded.popup__button-ok Close
-          .background-img.background-img-left
-            img(src='../../img/background-popup-left.png' alt='background-popup-left')
-          .background-img.background-img-right
-            img(src='../../img/background-popup-right.png' alt='background-popup-right')
+      label.visually-hidden Enter your name
+
+      //- DIV
+      //-   .block
+      //-     .socBlock.socialsType
+      //-       img.socIcon(src='../../../img/icons/email.svg')
+      //-       label.socName E-mail
+      //-       img.downIcon(src='../../../img/icons/down.svg')
+
+      //- .inputBlock.socialsBlock
+        input.contact-us__form__input(placeholder='Your contact' value='')
+        
+      input.contact-us__form__input(placeholder='Your contact' value='')
+
+      textarea.contact-us__form__input.contact-us__form__input-textarea(rows='1' placeholder='Briefly describe your project or idea')
+      
+      label.visually-hidden Briefly describe your project or idea
+      p.terms By using the service, you accept the 
+        a(href='/terms-of-service' target='_top') Terms of Service
+      button.contact-us__form__submit-btn.btn.btn-orange.btn-rounded(type="submit") Submit request
+    
+    //- #contact-us-popup.contact-us__popup-container.shoaw
+    #contact-us-popup.contact-us__popup-container
+      .contact-us__popup.popup
+        h3.popup__title Thanks for your request!
+        button.btn.btn-orange.btn-rounded.popup__button-ok Close
+        .background-img.background-img-left
+          img(src='../../img/background-popup-left.png' alt='background-popup-left')
+        .background-img.background-img-right
+          img(src='../../img/background-popup-right.png' alt='background-popup-right')
