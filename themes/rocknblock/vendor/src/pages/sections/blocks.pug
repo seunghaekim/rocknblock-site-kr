@@ -146,7 +146,67 @@ mixin cases
               label.content-item(for=`tab-btn-case-1-${index+1}`)
                 img.content-item__img(src=`../../img/logo/${tabsCaseOne.source}.svg`, alt=tabsCaseOne.alt)
                 span.content-item__name= tabsCaseOne.name
-
+            .scroll
+              .content-tab.content-case-1-1
+                .case-studies__dropdown.dropdown
+                  h3.dropdown__title Pion
+                  .dropdown__img
+                    DIV
+                      .switch
+                        button.switchIcon
+                          img(src='../../img/icons/icon-switch-left.svg' alt='switch left icon')
+                        +webpImg('lazy',`../../img/case/pion-1`,'png','pion 1')
+                        //- +webpImg('lazy',`../../img/case/pion-2`,'png','pion 2')
+                        button.switchIcon
+                          img(src='../../img/icons/icon-switch-right.svg' alt='switch right icon')
+                  .case-studies__description
+                    p
+                      | A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br>A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br>Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.
+                  .dropdown__insights.insight
+                    .dropdown__insights-insight
+                      h5.insight__title Features
+                      ul.gray-list
+                        li.gray-list__item Multicomponent system
+                        li.gray-list__item Stablecoin
+                        li.gray-list__item Liquidity Pool Staking
+                    .dropdown__insights-insight.insight-stacks
+                      h5.insight__title Stacks:
+                      ul.gray-list
+                        li.gray-list__item Solidity
+              .content-tab.content-case-1-2
+                .case-studies__dropdown.dropdown
+                  h3.dropdown__title Inflationary Staking
+                  .dropdown__img
+                    DIV
+                      .switch
+                        button.switchIcon
+                          img(src='../../img/icons/icon-switch-left.svg' alt='switch left icon')
+                        +webpImg('lazy',`../../img/case/inflat-1`,'png','pion 1')
+                        //- +webpImg('lazy',`../../img/case/pion-2`,'png','pion 2')
+                        button.switchIcon
+                          img(src='../../img/icons/icon-switch-right.svg' alt='switch right icon')
+                  .case-studies__description
+                    p
+                      | A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br>A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br>Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.
+                  .dropdown__insights.insight
+                    .dropdown__insights-insight
+                      h5.insight__title Features
+                      ul.gray-list
+                        li.gray-list__item Multicomponent system
+                        li.gray-list__item Stablecoin
+                        li.gray-list__item Liquidity Pool Staking
+                    .dropdown__insights-insight.insight-stacks
+                      h5.insight__title Stacks:
+                      ul.gray-list
+                        li.gray-list__item Solidity
+              .content-tab.content-case-1-3
+                | Content tab 1 3
+              .content-tab.content-case-1-4
+                | Content tab 1 4
+              .content-tab.content-case-1-5
+                | Content tab 1 5
+              .content-tab.content-case-1-6
+                | Content tab 1 6
 
         .content-tab.content-case-2
           .tabs-case
@@ -158,60 +218,15 @@ mixin cases
               label.content-item(for=`tab-btn-case-2-${index+1}`)
                 img.content-item__img(src=`../../img/logo/${tabsCaseOne.source}.svg`, alt=tabsCaseOne.alt)
                 span.content-item__name= tabsCaseOne.name
-
-  //- #cases.case-studies.container
-  //-   +block-title('Case Studies')
-  //-       .case-studies__tabs
-  //-         .tabs__tablinks.tablinks
-  //-           //- BTNS
-  //-         .scroll
-  //-           <div id="case-studies__firs-tab" className={style['case-studies__content']}>
-  //-             {content[activeTab].map((item: CaseStudiesContentI, index: number) => (
-  //-                 <CaseStudiesContent
-  //-                     key={`${index}_${item.name}`}
-  //-                     style={style}
-  //-                     source={item.source}
-  //-                     alt={item.alt}
-  //-                     name={item.name}
-  //-                     number={item.number}
-  //-                     activeBtn={activeBtn}
-  //-                     setBtn={setBtn}
-  //-                 />
-  //-             ))}
-  //-           </div>
-  //-         </div>
-  //-       </div>
-  //-       <div
-  //-           className={`${style['case-studies__dropdown']} ${style.dropdown}`}
-  //-           key={activeDropdown.key}
-  //-       >
-  //-         <h3 className={style['dropdown__title']}>{activeDropdown.title}</h3>
-  //-         <div className={style['dropdown__img']}>
-  //-           {dropdownImg()}
-  //-         </div>
-  //-         <div className={activeDropdown.description ? style['case-studies__description'] : undefined}>
-  //-           {activeDropdown.description}
-  //-         </div>
-  //-         <div className={style['dropdown__insights']}>
-  //-           <div className={`${style['dropdown__insights-insight']} ${style['insight-features']}`}>
-  //-             <h5 className={style['insight__title']}>Features:</h5>
-  //-             <ul className={style['gray-list']}>
-  //-               {activeDropdown.features.map((feature: string) => (
-  //-                   <li className={`${style['features__item']} ${style['gray-list__item']}`} key={feature}>{feature}</li>
-  //-               ))}
-  //-             </ul>
-  //-           </div>
-  //-           <div className={`${style['dropdown__insights-insight']} ${style['insight-stacks']}`}>
-  //-             <h5 className={style['insight__title']}>Stacks:</h5>
-  //-             <ul className={style['gray-list']}>
-  //-               {activeDropdown.stacks.map((stack: string) => (
-  //-                   <li className={`${style['features__item']} ${style['gray-list__item']}`} key={stack}>{stack}</li>
-  //-               ))}
-  //-             </ul>
-  //-           </div>
-  //-         </div>
-  //-       </div>
-  //-     </div>
+            .scroll
+              .content-tab.content-case-2-1
+                | Content tab 2 1
+              .content-tab.content-case-2-2
+                | Content tab 2 2
+              .content-tab.content-case-2-3
+                | Content tab 2 3
+              .content-tab.content-case-2-4
+                | Content tab 2 4
 
 mixin team 
   - var developers = [{img: 'dev-1',post: 'Backend Team Lead',name: 'Maksim Strenk',skills: ['Development experience 6 years, in blockchain 4 years','MyWish Backend (4 years)','Implementation of UTREEXO and HTLC for the Bitcoin network','Made the current Ducatus Exchange','Experienced in deploying and syncing Ethereum and Bitcoin full nodes'],stacks: ['Python','Solidity','JavaScript','C','OpenZeppelin','GSN','NPM','Docker Hub','Gunicorn','Supervisord','PyPi','USWSGI','PostgreSQL','MongoDB']},{img: 'dev-2',post: 'Blockchain Team Lead',name: 'Rita Tsepeleva',skills: ['smart contract development collaterized stable coin','Anonymizer powered by ZK proof','development of OTC exchange','yeild-farming / staking contracts development'],stacks: ['Solidity','OpenZeppelin','Truffle','npm','C++','web3']},{img: 'dev-3',post: 'Frontend Team Lead',name: 'Nikita Sireishikov',skills: ['manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js','development of nodes for interacting with the blockchain on node.js','development of web-wallets in Angular','frontend development for interacting with smart contracts through the backend'],stacks: ['Express','Apollo','TypeScript','GraphQL','Angular','Vue','JS','MobX','NodeJS','Vuex','iOS Developing (Swiftui)','web3']}];
