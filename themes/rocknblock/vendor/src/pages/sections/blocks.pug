@@ -14,13 +14,10 @@ mixin block-title(title, titleText)
 mixin hero-main
   section.about.container
     .background-img.background-img-first
-      //- img(loading='lazy' src='../../img/background/about-1.png' alt='about one')
       +webpImg('lazy',`../../img/background/about-1`,'png','about one')
     .background-img.background-img-second
-      //- img(loading='lazy' src='../../img/background/about-2.png' alt='about two')
       +webpImg('lazy',`../../img/background/about-2`,'png','about two')
     .background-img.background-img-third
-      //- img(loading='lazy' src='../../img/background/about-3.png' alt='about three')
       +webpImg('lazy',`../../img/background/about-3`,'png','about three')
     h2.about__header Your Blockchain Developers
     .about__content
@@ -81,7 +78,6 @@ mixin areas-of-expertise
 
   #services.areas-of-expertise.container
     .background-img
-      //- img(loading='lazy' src='../../img/background/areas.png' alt='areas')
       +webpImg('lazy',`../../img/background/areas`,'png','areas')
     +block-title('Areas Of Expertise', false)
     .areas-of-expertise__cards
@@ -102,7 +98,6 @@ mixin what-we-do-best
         .what-we-do-best__cards
           each card in cards.length ? cards : ['No values']
             .what-we-do-best__card
-              //- img.icon(src='../../img/icons/'+card.source+'.png' alt=card.alt)
               +webpImg('lazy','../../img/icons/'+card.source,'png',card.alt, 'icon')
               p.what-we-do-best__description= card.text
 
@@ -116,110 +111,129 @@ mixin our-partners
         each partner in partners.length ? partners : ['No values']
           li.our-partners__partner
             .img-container
-              //- img(loading='lazy' src=`../../img/logo/logo-partners-${partner}.png` alt=partner)
               +webpImg('lazy',`../../img/logo/logo-partners-${partner}`,'png',partner)
       .achievements
         each achieve, index in achievements.length ? achievements : ['No values']
           a.achieve(href=achieve.url rel="noreferrer nofollow" target="_blank")
-            //- img(loading='lazy' src=`../../img/achievements/achieve-${index+1}.png` alt=achieve.name)
             +webpImg('lazy',`../../img/achievements/achieve-${index+1}`,'png',achieve.name)
 
+mixin cases 
+  //- - var tabs = ['web/mobile development', 'Smart contracts'];
+  - var content = [[{source: 'logo-ducatus',alt: 'ducatus logo',name: 'DUCATUS Wallet'},{source: 'logo-census',alt: 'census logo',name: 'Census Wallet'},{source: 'logo-quras',alt: 'quras logo',name: 'QURAS'},{source: 'logo-hex',alt: 'hex logo',name: 'HEX'}],[{source: 'logo-pion',alt: 'pion logo',name: 'Pion'},{source: 'logo-inflat',alt: 'inflat logo',name: 'Inflationary Staking'},{source: 'logo-bitgear',alt: 'bitgear logo',name: 'Bitgear'},{source: 'logo-minto',alt: 'minto logo',name: 'Minto',},{source: 'logo-axion',alt: 'axion logo',name: 'Axion Dashboard'},{source: 'logo-ducatus',alt: 'ducatus logo',name: 'Ducatus'}]];
+
+  - var dropdown = [[{key: 1,name: 'ducatus',title: 'DUCATUS Wallet',images: ['../../img/case-ducatus-1.png','../../img/case-ducatus-2.png','../../img/case-ducatus-3.png'],description: 'Full functional custodial wallet development for IOS, Android and web, with more than 10,000 installs.',features: ['Blockchain development','Mobile wallet application development','Crowdfunding platform','Online stores with crypto support'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 2,name: 'census',title: 'Census Wallet',images: ['../../img/case-census-1.png','../../img/case-census-2.png','../../img/case-census-3.png'],description: 'Census wallet is an app that enables you to control Open Finance by Tangem Card. Available on IOS and Android devices.',features: ['Tangem integration','Open Finance','Loans','Staking','Digital Assets Investments'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 3,name: 'quras',title: 'QURAS wallet',images: ['../../img/case-quras-1.png','../../img/case-quras-2.png','../../img/case-quras-3.png'],description: 'Quras wallet is a tool that allows for interacting with the secret contract platform and fulfill various privacy protection needs.',features: ['Private blockchain integrations', 'Cross-blockchain swap'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 4,name: 'hex',title: 'HEX',images: ['../../img/case-hex-1.png','../../img/case-hex-2.png','../../img/case-hex-3.png'],description: '',features: ['QR', 'Smart Contract Integration'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']}],[{key: 1,name: 'pion',title: 'Pion',images: ['../../img/case-pion-1.png','../../img/case-pion-2.png'],description: '<p>A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br />A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br />Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.</p>',features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],stacks: ['Solidity']},{key: 2,name: 'inflat',title: 'Inflationary Staking',images: ['../../img/case-inflat-1.png','../../img/case-inflat-2.png'],description: '<p>A project based on complex smart contracts that give users the ability to exchange, purchase and stake the token.<br /> Receiving tokens is implemented in several ways:<br /> • Exchange tokens at the rate of 1:1<br /> • Free issuance of tokens from a snapshot with a Merkle tree check at a rate of 1:1<br /> • Instant Token Buyback Auction with Uniswap to Maintain the Token Price<br /> • Staking and receiving dividends due to token inflation.</p>',features: [],stacks: ['Solidity']},{key: 3,name: 'bitgear',title: 'Bitgear',images: ['../../img/case-bitgear-1.png','../../img/case-bitgear-2.png'],description: 'By using the Ox protocol, Bitgear helps to find the best prices across exchanges and combines them into one trade.',features: ['0x protocol integration','all DEXs trading','limit orders','multiple wallets support'],stacks: ['React', 'Web3', '0x protocol', 'Solidity']},{key: 4,name: 'minto',title: 'Minto',images: ['../../img/case-minto-1.png','../../img/case-minto-2.png'],description: 'Mine Bitcoin by staking BTCMT tokens. We’ve made smart contracts and crosschain integration between blockchains that helps to make mining easier than getting a BTC wallet.',features: ['HECO blockchain integration','staking','mining tokenization',],stacks: ['React', 'Web3', 'Python', 'Solidity']},{key: 5,name: 'axion',title: 'Axion Dashboard',images: ['../../img/case-axion-1.png','../../img/case-axion-2.png'],description: '<p>The dashboard visualizes financial statistics of the context of individual user wallets and time periods.<br /> To implement instant access to all information on the project, a centralized database was developed that stores all information about events occurring on the contract, received in real time from the Ethereum network.</p>',features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],stacks: ['Solidity']},{key: 6,name: 'duc',title: 'Ducatus',images: ['../../img/case-duc-1.png','../../img/case-duc-2.png'],description: 'Infrastructure creation and deployment of Ducatus and DucatusX blockchains. Blockchain tools development: API, explorer/insight, scanner and wallet. Network and user maintenance support. Application development for created blockchains, integration with exchanges and other blockchains.',features: ['custom blockchains development','explorer'],stacks: ['Angular', 'React', 'Web3', 'Ionic', 'Cordova', 'Solidity']}]];
+
+  - var developers = [{img: 'dev-1',post: 'Backend Team Lead',name: 'Maksim Strenk',skills: ['Development experience 6 years, in blockchain 4 years','MyWish Backend (4 years)','Implementation of UTREEXO and HTLC for the Bitcoin network','Made the current Ducatus Exchange','Experienced in deploying and syncing Ethereum and Bitcoin full nodes'],stacks: ['Python','Solidity','JavaScript','C','OpenZeppelin','GSN','NPM','Docker Hub','Gunicorn','Supervisord','PyPi','USWSGI','PostgreSQL','MongoDB']},{img: 'dev-2',post: 'Blockchain Team Lead',name: 'Rita Tsepeleva',skills: ['smart contract development collaterized stable coin','Anonymizer powered by ZK proof','development of OTC exchange','yeild-farming / staking contracts development'],stacks: ['Solidity','OpenZeppelin','Truffle','npm','C++','web3']},{img: 'dev-3',post: 'Frontend Team Lead',name: 'Nikita Sireishikov',skills: ['manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js','development of nodes for interacting with the blockchain on node.js','development of web-wallets in Angular','frontend development for interacting with smart contracts through the backend'],stacks: ['Express','Apollo','TypeScript','GraphQL','Angular','Vue','JS','MobX','NodeJS','Vuex','iOS Developing (Swiftui)','web3']}];
+  - var managers = [{img: 'mng-1',name: 'Dmitry Ershov',post: 'CEO'},{img: 'mng-2',name: 'Alex Tkachev',post: 'CBDO'},{img: 'mng-3',name: 'Olya Kulakova',post: 'CMO'}];
+  - var overview = [{number: 23,primary: 'Backend team',},{number: 27,primary: 'Frontend team',},{number: 19,primary: 'Smart Contracts team',},{number: 13,primary: 'Project managers',},{number: 5,primary: 'Designers',},{number: 3,primary: 'Analysts',}];
+
+  #cases.case-studies.container
+    +block-title('Case Studies')
+
+    .tabs
+      input#tab-btn-case-1(type='radio' name='tab-btn-case' checked)
+      label.tabs-label(for='tab-btn-case-1') Web/mobile development
+      input#tab-btn-case-2(type="radio" name="tab-btn-case")
+      label.tabs-label(for='tab-btn-case-2') Smart contracts
+      .scroll
+        .content-tab.content-case-1
+          .tabs-case
+            each tabsCaseOne, index in content[1].length ? content[1] : ['No values']
+              if index === 0
+                input(type='radio' name=`tab-btn-case-1` id=`tab-btn-case-1-${index+1}` checked)
+              else
+                input(type='radio' name=`tab-btn-case-1` id=`tab-btn-case-1-${index+1}`)
+              label.content-item(for=`tab-btn-case-1-${index+1}`)
+                img.content-item__img(src=`../../img/logo/${tabsCaseOne.source}.svg`, alt=tabsCaseOne.alt)
+                span.content-item__name= tabsCaseOne.name
+
+
+        .content-tab.content-case-2
+          .tabs-case
+            each tabsCaseOne, index in content[0].length ? content[0] : ['No values']
+              if index === 0
+                input(type='radio' name=`tab-btn-case-2` id=`tab-btn-case-2-${index+1}` checked)
+              else
+                input(type='radio' name=`tab-btn-case-2` id=`tab-btn-case-2-${index+1}`)
+              label.content-item(for=`tab-btn-case-2-${index+1}`)
+                img.content-item__img(src=`../../img/logo/${tabsCaseOne.source}.svg`, alt=tabsCaseOne.alt)
+                span.content-item__name= tabsCaseOne.name
+
+  //- #cases.case-studies.container
+  //-   +block-title('Case Studies')
+  //-       .case-studies__tabs
+  //-         .tabs__tablinks.tablinks
+  //-           //- BTNS
+  //-         .scroll
+  //-           <div id="case-studies__firs-tab" className={style['case-studies__content']}>
+  //-             {content[activeTab].map((item: CaseStudiesContentI, index: number) => (
+  //-                 <CaseStudiesContent
+  //-                     key={`${index}_${item.name}`}
+  //-                     style={style}
+  //-                     source={item.source}
+  //-                     alt={item.alt}
+  //-                     name={item.name}
+  //-                     number={item.number}
+  //-                     activeBtn={activeBtn}
+  //-                     setBtn={setBtn}
+  //-                 />
+  //-             ))}
+  //-           </div>
+  //-         </div>
+  //-       </div>
+  //-       <div
+  //-           className={`${style['case-studies__dropdown']} ${style.dropdown}`}
+  //-           key={activeDropdown.key}
+  //-       >
+  //-         <h3 className={style['dropdown__title']}>{activeDropdown.title}</h3>
+  //-         <div className={style['dropdown__img']}>
+  //-           {dropdownImg()}
+  //-         </div>
+  //-         <div className={activeDropdown.description ? style['case-studies__description'] : undefined}>
+  //-           {activeDropdown.description}
+  //-         </div>
+  //-         <div className={style['dropdown__insights']}>
+  //-           <div className={`${style['dropdown__insights-insight']} ${style['insight-features']}`}>
+  //-             <h5 className={style['insight__title']}>Features:</h5>
+  //-             <ul className={style['gray-list']}>
+  //-               {activeDropdown.features.map((feature: string) => (
+  //-                   <li className={`${style['features__item']} ${style['gray-list__item']}`} key={feature}>{feature}</li>
+  //-               ))}
+  //-             </ul>
+  //-           </div>
+  //-           <div className={`${style['dropdown__insights-insight']} ${style['insight-stacks']}`}>
+  //-             <h5 className={style['insight__title']}>Stacks:</h5>
+  //-             <ul className={style['gray-list']}>
+  //-               {activeDropdown.stacks.map((stack: string) => (
+  //-                   <li className={`${style['features__item']} ${style['gray-list__item']}`} key={stack}>{stack}</li>
+  //-               ))}
+  //-             </ul>
+  //-           </div>
+  //-         </div>
+  //-       </div>
+  //-     </div>
+
 mixin team 
-  //- .tabs
-  //-   input#tab-btn-1(type='radio' name='tab-btn' checked)
-  //-   label(for='tab-btn-1') Development
-  //-   input#tab-btn-2(type="radio" name="tab-btn")
-  //-   label(for='tab-btn-2') Managment
-
-  //-   #content-1 Содержимое 1...
-  //-   #content-2 Содержимое 2...
-
   - var developers = [{img: 'dev-1',post: 'Backend Team Lead',name: 'Maksim Strenk',skills: ['Development experience 6 years, in blockchain 4 years','MyWish Backend (4 years)','Implementation of UTREEXO and HTLC for the Bitcoin network','Made the current Ducatus Exchange','Experienced in deploying and syncing Ethereum and Bitcoin full nodes'],stacks: ['Python','Solidity','JavaScript','C','OpenZeppelin','GSN','NPM','Docker Hub','Gunicorn','Supervisord','PyPi','USWSGI','PostgreSQL','MongoDB']},{img: 'dev-2',post: 'Blockchain Team Lead',name: 'Rita Tsepeleva',skills: ['smart contract development collaterized stable coin','Anonymizer powered by ZK proof','development of OTC exchange','yeild-farming / staking contracts development'],stacks: ['Solidity','OpenZeppelin','Truffle','npm','C++','web3']},{img: 'dev-3',post: 'Frontend Team Lead',name: 'Nikita Sireishikov',skills: ['manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js','development of nodes for interacting with the blockchain on node.js','development of web-wallets in Angular','frontend development for interacting with smart contracts through the backend'],stacks: ['Express','Apollo','TypeScript','GraphQL','Angular','Vue','JS','MobX','NodeJS','Vuex','iOS Developing (Swiftui)','web3']}];
   - var managers = [{img: 'mng-1',name: 'Dmitry Ershov',post: 'CEO'},{img: 'mng-2',name: 'Alex Tkachev',post: 'CBDO'},{img: 'mng-3',name: 'Olya Kulakova',post: 'CMO'}];
   - var overview = [{number: 23,primary: 'Backend team',},{number: 27,primary: 'Frontend team',},{number: 19,primary: 'Smart Contracts team',},{number: 13,primary: 'Project managers',},{number: 5,primary: 'Designers',},{number: 3,primary: 'Analysts',}];
 
   #team.team.container
     .background-img
-      //- img(loading='lazy' src="../../img/background/team.png" alt="background-img")
-      +webpImg('lazy',`../../img/background/team-`,'png','background-img')
+      +webpImg('lazy',`../../img/background/team`,'png','background-img')
     +block-title('Team', 'A team of highly qualified specialists:')
-    .tabs
-      .tabs-buttons
-        input#tab-btn-1(type='radio' name='tab-btn' checked)
-        label(for='tab-btn-1') Development
-        input#tab-btn-2(type="radio" name="tab-btn")
-        label(for='tab-btn-2') Managment
-    //- .tabs
-      .tabs-buttons
-        label(for='tab-btn-1') Development
-          input#tab-btn-1(type='radio' name='tab-btn' checked)
-          .team__tabs
-            .scroll
-              .team__development-tab.team__content.content
-                .tab-content.content-1
-                  each developer in developers.length ? developers : ['No values']
-                    .content__card
-                      picture
-                        source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
-                        img(loading='lazy' src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
-                      h3.content__card__post= developer.post
-                      h4.content__card__name= developer.name
-                      .content__card__exp
-                        DIV
-                          h5.content__card__exp__title Experience:
-                          ul.content__card__exp__list
-                            each skill in developer.skills.length ? developer.skills : ['No values']
-                              li.content__card__exp__list__item= skill
-                        .content__card__exp__stacks.stacks
-                          h5.stacks__title Stack:
-                          ul.gray-list
-                            each skill in developer.stacks.length ? developer.stacks : ['No values']
-                              li.stacks__item.gray-list__item= stack
-                
-        label(for='tab-btn-2') Managment
-          input#tab-btn-2(type="radio" name="tab-btn")
-          .team__tabs
-            .scroll
-              .team__development-tab.team__content.content
-                .tab-content.content-1
-                  each developer in developers.length ? developers : ['No values']
-                    .content__card
-                      picture
-                        source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
-                        img(loading='lazy' src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
-                      h3.content__card__post= developer.post
-                      h4.content__card__name= developer.name
-                      .content__card__exp
-                        DIV
-                          h5.content__card__exp__title Experience:
-                          ul.content__card__exp__list
-                            each skill in developer.skills.length ? developer.skills : ['No values']
-                              li.content__card__exp__list__item= skill
-                        .content__card__exp__stacks.stacks
-                          h5.stacks__title Stack:
-                          ul.gray-list
-                            each skill in developer.stacks.length ? developer.stacks : ['No values']
-                              li.stacks__item.gray-list__item= stack
-                .tab-content.content-2
-                  each manager in managers.length ? managers : ['No values']
-                    .content__card__mng
-                      picture
-                        source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
-                        img(loading='lazy' src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
-                      .description
-                        .description__name= manager.name
-                        .description__post= manager.post
 
-    .team__tabs
+    .tabs
+      input#tab-btn-1(type='radio' name='tab-btn' checked)
+      label.tabs-label(for='tab-btn-1') Development
+      input#tab-btn-2(type="radio" name="tab-btn")
+      label.tabs-label(for='tab-btn-2') Managment
       .scroll
         .team__development-tab.team__content.content
-          .tab-content.content-1
+          .tab-content.content-1.content-tab
             each developer in developers.length ? developers : ['No values']
               .content__card
                 +webpImg('lazy',`../../img/team/team-${developer.img}-min`,'png',developer.name)
-                //- picture
-                //-   source(type='image/webp' srcSet=`../../img/team/team-${developer.img}-min.webp`)
-                //-   img(loading='lazy' src=`../../img/team/team-${developer.img}-min.png` alt=developer.name)
                 h3.content__card__post= developer.post
                 h4.content__card__name= developer.name
                 .content__card__exp
@@ -232,30 +246,24 @@ mixin team
                     h5.stacks__title Stack:
                     ul.gray-list
                       each skill in developer.stacks.length ? developer.stacks : ['No values']
-                        li.stacks__item.gray-list__item= stack
-          .tab-content.content-2
+                        li.stacks__item.gray-list__item= skill
+          .tab-content.content-2.content-tab
             each manager in managers.length ? managers : ['No values']
-              .content__card__mng
+              .content__card.content__card__mng
                 +webpImg('lazy',`../../img/team/team-${manager.img}-min`,'png','image of manager')
-                //- picture
-                //-   source(type='image/webp' srcSet=`../../img/team/team-${manager.img}-min.webp`)
-                //-   img(loading='lazy' src=`../../img/team/team-${manager.img}-min.png` alt='image of manager')
                 .description
                   .description__name= manager.name
                   .description__post= manager.post
-            
     ul.team__overview
       each item in overview.length ? overview : ['No values']
         li.team__overview__item
           .team__overview__item__number= item.number
           .team__overview__item__primary-text.text= item.primary
 
-
 mixin clients-feedback
   - var clients = [{title: 'DucatusX',desc: 'When it comes to the development of our blockchain and smart contracts, we trust only those trusted by experts. Rock’N’Block, developers  of the Ducatus wallet and the DucatusX blockchain, recognized by industry experts globally. #blockchain #rocknblock #ducatus #technology',imgClient: 'icon-client-feedback-ducatusx.svg',altClient: 'client feedback',logo: 'twitter',twitter: 'https://twitter.com/DucatusX/status/1448162748370620423'},{title: 'Kephi',desc: 'Con nuestro objetivo de convertirnos en un #NFTmarketplace de última generación, nos hemos asociado con el gigante blockchain @RocknBlock2 que ha crecido hasta convertirse en socio de actores como @binance @0xPolygon @Tronfoundation @Changelly_team',imgClient: 'icon-client-feedback-kephi.svg',altClient: 'client kephi',logo: 'twitter',twitter: 'https://twitter.com/KephiGallery/status/1428363220645933061'},{title: 'MyWish',desc: 'Make your blockchain project ideas come true! Our friends from @RocknBlock2 do blockchain development of any complexity: from custom token creation to NFT marketplaces and many more 💪 Visit http://rocknblock.io to get a unique solution for your project.\n',imgClient: 'icon-client-feedback-mywish.svg',altClient: 'client mywish',logo: 'twitter',twitter: 'https://twitter.com/mywishplatform/status/1441070124274884617'},{title: 'StrongHands',desc: 'Did you ever noticed #iSHND is born already audited?Have a look at the@RocknBlockDev report and see how we are starting! https://github.com/stronghands-of...',imgClient: 'icon-client-feedback-stronghands.svg',altClient: 'client stronghands',logo: 'twitter',twitter: 'https://twitter.com/SHNDcoin/status/1447757903977455621'}];
 
   .clients-feedback.container
-    //- +block-title('What our clients tell about us', false)
     h2.clients-feedback__title What our clients tell about us
     .swiper.swiper-feedback
       .swiper-wrapper
@@ -263,8 +271,6 @@ mixin clients-feedback
           .swiper-slide.clients-feedback__cards
             a.clients-feedback__cards_item(rel="noreferrer nofollow" target="_blank" href=client.twitter)
               .clients-feedback__cards_item_images
-                //- +webpImg('lazy',`../../img/logo/${client.imgClient}`,'png',client.altClient)
-                //- +webpImg('lazy',`../../img/social/${client.logo}`,'SVG',client.LOGO)
                 img(loading='lazy' src=`../../img/logo/${client.imgClient}` alt=client.altClient)
                 img(loading='lazy' src=`../../img/social/icon-${client.logo}.svg` alt=client.logo)
               .clients-feedback__cards_item_desc
@@ -283,7 +289,6 @@ mixin bottom-slide
           .swiper-slide.slide
               article.site
                 figure.site__imageWrapper
-                  //- img.site__image(src=`../../../img/farming/${slide.image}.png` alt=slide.title)
                   +webpImg('lazy',`../../../img/farming/${slide.image}`,'png',slide.title, 'site__image')
                 h4.site__title= slide.title 
                 a.site__link(href=`${slide.link}`) Click here
@@ -293,10 +298,8 @@ mixin bottom-slide
 mixin contact-us
   #contact-us.contact-us.container
     .background-img
-      //- img(loading='lazy' src='../../img/background/partners.png' alt='partners')
       +webpImg('lazy',`../../img/background/partners`,'png','partners')
     .background-img
-      //- img(loading='lazy' src='../../img/background/contact.png' alt='contact')
       +webpImg('lazy',`../../img/background/contact`,'png','contact')
 
     +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
