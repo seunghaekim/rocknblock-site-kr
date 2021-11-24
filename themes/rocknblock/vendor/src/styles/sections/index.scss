@@ -2008,6 +2008,11 @@ header {
       // align-items: center;
       width: 9%;
 
+      @include b(769) {
+        width: 20%;
+        margin-bottom: 35px;
+      }
+
       &__img {
         min-width: 85px;
         min-height: 85px;
@@ -2303,6 +2308,97 @@ header {
     @include b("tablet") {
       min-height: auto;
     }
+
+    .case-image {
+      display: none;
+    }
+
+    .switchIcon {
+      // opacity: 0.5;
+      cursor: pointer;
+    }
+
+    // #case-1-1-img-1:checked {
+    //   ~ {
+    //     .case-1-1-img-1 {
+    //       display: flex;
+    //     }
+
+    //     .switchIcon:nth-child(0) {
+    //       opacity: 0.5;
+    //       cursor: default;
+    //     }
+    //   }
+    // }
+
+    // #case-1-1-img-2:checked {
+    //   ~ {
+    //     .case-1-1-img-2 {
+    //       display: flex;
+    //     }
+
+    //     .switchIcon:last-child {
+    //       opacity: 0.5;
+    //       cursor: default;
+    //     }
+    //   }
+    // }
+
+    #case-1-1-img-1:checked ~ .case-1-1-img-1 {
+      display: flex;
+    }
+
+    #case-1-1-img-2:checked ~ .case-1-1-img-2 {
+      display: flex;
+    }
+
+    #case-1-2-img-1:checked ~ .case-1-2-img-1 {
+      display: flex;
+    }
+
+    #case-1-2-img-2:checked ~ .case-1-2-img-2 {
+      display: flex;
+    }
+
+    #case-1-3-img-1:checked ~ .case-1-3-img-1 {
+      display: flex;
+    }
+
+    #case-1-3-img-2:checked ~ .case-1-3-img-2 {
+      display: flex;
+    }
+
+    #case-1-4-img-1:checked ~ .case-1-4-img-1 {
+      display: flex;
+    }
+
+    #case-1-4-img-2:checked ~ .case-1-4-img-2 {
+      display: flex;
+    }
+
+    #case-1-5-img-1:checked ~ .case-1-5-img-1 {
+      display: flex;
+    }
+
+    #case-1-5-img-2:checked ~ .case-1-5-img-2 {
+      display: flex;
+    }
+
+    #case-1-6-img-1:checked ~ .case-1-6-img-1 {
+      display: flex;
+    }
+
+    #case-1-6-img-2:checked ~ .case-1-6-img-2 {
+      display: flex;
+    }
+
+    #case-1-3-img-1:checked ~ .case-1-3-img-1 {
+      display: flex;
+    }
+
+    #case-1-3-img-2:checked ~ .case-1-3-img-2 {
+      display: flex;
+    }
   }
 
   .noscroll {
@@ -2353,13 +2449,14 @@ header {
     }
 
     &Icon {
-      cursor: pointer;
+      // cursor: pointer;
       margin: 0 20px;
       align-items: center;
       width: 44px;
       min-width: 20px;
       background-color: transparent;
       border: none;
+      display: flex;
     }
   }
 

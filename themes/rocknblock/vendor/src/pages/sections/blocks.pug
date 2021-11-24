@@ -1,7 +1,10 @@
 mixin webpImg(loading, src, type, alt, useclass)
   picture(class=useclass)
     source(type="image/webp", srcset=src+'.webp')
-    img(loading=loading, src=src+'.'+type, alt=alt)
+    if type === '-'
+      img(loading=loading, src=src, alt=alt)
+    else
+      img(loading=loading, src=src+'.'+type, alt=alt)
 
 mixin block-title(title, titleText)
     .block-header
@@ -121,20 +124,15 @@ mixin cases
   //- - var tabs = ['web/mobile development', 'Smart contracts'];
   - var content = [[{source: 'logo-ducatus',alt: 'ducatus logo',name: 'DUCATUS Wallet'},{source: 'logo-census',alt: 'census logo',name: 'Census Wallet'},{source: 'logo-quras',alt: 'quras logo',name: 'QURAS'},{source: 'logo-hex',alt: 'hex logo',name: 'HEX'}],[{source: 'logo-pion',alt: 'pion logo',name: 'Pion'},{source: 'logo-inflat',alt: 'inflat logo',name: 'Inflationary Staking'},{source: 'logo-bitgear',alt: 'bitgear logo',name: 'Bitgear'},{source: 'logo-minto',alt: 'minto logo',name: 'Minto',},{source: 'logo-axion',alt: 'axion logo',name: 'Axion Dashboard'},{source: 'logo-ducatus',alt: 'ducatus logo',name: 'Ducatus'}]];
 
-  - var dropdown = [[{key: 1,name: 'ducatus',title: 'DUCATUS Wallet',images: ['../../img/case-ducatus-1.png','../../img/case-ducatus-2.png','../../img/case-ducatus-3.png'],description: 'Full functional custodial wallet development for IOS, Android and web, with more than 10,000 installs.',features: ['Blockchain development','Mobile wallet application development','Crowdfunding platform','Online stores with crypto support'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 2,name: 'census',title: 'Census Wallet',images: ['../../img/case-census-1.png','../../img/case-census-2.png','../../img/case-census-3.png'],description: 'Census wallet is an app that enables you to control Open Finance by Tangem Card. Available on IOS and Android devices.',features: ['Tangem integration','Open Finance','Loans','Staking','Digital Assets Investments'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 3,name: 'quras',title: 'QURAS wallet',images: ['../../img/case-quras-1.png','../../img/case-quras-2.png','../../img/case-quras-3.png'],description: 'Quras wallet is a tool that allows for interacting with the secret contract platform and fulfill various privacy protection needs.',features: ['Private blockchain integrations', 'Cross-blockchain swap'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 4,name: 'hex',title: 'HEX',images: ['../../img/case-hex-1.png','../../img/case-hex-2.png','../../img/case-hex-3.png'],description: '',features: ['QR', 'Smart Contract Integration'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']}],[{key: 1,name: 'pion',title: 'Pion',images: ['../../img/case-pion-1.png','../../img/case-pion-2.png'],description: '<p>A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br />A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br />Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.</p>',features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],stacks: ['Solidity']},{key: 2,name: 'inflat',title: 'Inflationary Staking',images: ['../../img/case-inflat-1.png','../../img/case-inflat-2.png'],description: '<p>A project based on complex smart contracts that give users the ability to exchange, purchase and stake the token.<br /> Receiving tokens is implemented in several ways:<br /> • Exchange tokens at the rate of 1:1<br /> • Free issuance of tokens from a snapshot with a Merkle tree check at a rate of 1:1<br /> • Instant Token Buyback Auction with Uniswap to Maintain the Token Price<br /> • Staking and receiving dividends due to token inflation.</p>',features: [],stacks: ['Solidity']},{key: 3,name: 'bitgear',title: 'Bitgear',images: ['../../img/case-bitgear-1.png','../../img/case-bitgear-2.png'],description: 'By using the Ox protocol, Bitgear helps to find the best prices across exchanges and combines them into one trade.',features: ['0x protocol integration','all DEXs trading','limit orders','multiple wallets support'],stacks: ['React', 'Web3', '0x protocol', 'Solidity']},{key: 4,name: 'minto',title: 'Minto',images: ['../../img/case-minto-1.png','../../img/case-minto-2.png'],description: 'Mine Bitcoin by staking BTCMT tokens. We’ve made smart contracts and crosschain integration between blockchains that helps to make mining easier than getting a BTC wallet.',features: ['HECO blockchain integration','staking','mining tokenization',],stacks: ['React', 'Web3', 'Python', 'Solidity']},{key: 5,name: 'axion',title: 'Axion Dashboard',images: ['../../img/case-axion-1.png','../../img/case-axion-2.png'],description: '<p>The dashboard visualizes financial statistics of the context of individual user wallets and time periods.<br /> To implement instant access to all information on the project, a centralized database was developed that stores all information about events occurring on the contract, received in real time from the Ethereum network.</p>',features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],stacks: ['Solidity']},{key: 6,name: 'duc',title: 'Ducatus',images: ['../../img/case-duc-1.png','../../img/case-duc-2.png'],description: 'Infrastructure creation and deployment of Ducatus and DucatusX blockchains. Blockchain tools development: API, explorer/insight, scanner and wallet. Network and user maintenance support. Application development for created blockchains, integration with exchanges and other blockchains.',features: ['custom blockchains development','explorer'],stacks: ['Angular', 'React', 'Web3', 'Ionic', 'Cordova', 'Solidity']}]];
-
-  - var developers = [{img: 'dev-1',post: 'Backend Team Lead',name: 'Maksim Strenk',skills: ['Development experience 6 years, in blockchain 4 years','MyWish Backend (4 years)','Implementation of UTREEXO and HTLC for the Bitcoin network','Made the current Ducatus Exchange','Experienced in deploying and syncing Ethereum and Bitcoin full nodes'],stacks: ['Python','Solidity','JavaScript','C','OpenZeppelin','GSN','NPM','Docker Hub','Gunicorn','Supervisord','PyPi','USWSGI','PostgreSQL','MongoDB']},{img: 'dev-2',post: 'Blockchain Team Lead',name: 'Rita Tsepeleva',skills: ['smart contract development collaterized stable coin','Anonymizer powered by ZK proof','development of OTC exchange','yeild-farming / staking contracts development'],stacks: ['Solidity','OpenZeppelin','Truffle','npm','C++','web3']},{img: 'dev-3',post: 'Frontend Team Lead',name: 'Nikita Sireishikov',skills: ['manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js','development of nodes for interacting with the blockchain on node.js','development of web-wallets in Angular','frontend development for interacting with smart contracts through the backend'],stacks: ['Express','Apollo','TypeScript','GraphQL','Angular','Vue','JS','MobX','NodeJS','Vuex','iOS Developing (Swiftui)','web3']}];
-  - var managers = [{img: 'mng-1',name: 'Dmitry Ershov',post: 'CEO'},{img: 'mng-2',name: 'Alex Tkachev',post: 'CBDO'},{img: 'mng-3',name: 'Olya Kulakova',post: 'CMO'}];
-  - var overview = [{number: 23,primary: 'Backend team',},{number: 27,primary: 'Frontend team',},{number: 19,primary: 'Smart Contracts team',},{number: 13,primary: 'Project managers',},{number: 5,primary: 'Designers',},{number: 3,primary: 'Analysts',}];
+  - var dropdown = [[{key: 1,name: 'ducatus',title: 'DUCATUS Wallet',images: ['ducatus-1','ducatus-2','ducatus-3'],description: 'Full functional custodial wallet development for IOS, Android and web, with more than 10,000 installs.',features: ['Blockchain development','Mobile wallet application development','Crowdfunding platform','Online stores with crypto support'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 2,name: 'census',title: 'Census Wallet',images: ['census-1','census-2','census-3'],description: 'Census wallet is an app that enables you to control Open Finance by Tangem Card. Available on IOS and Android devices.',features: ['Tangem integration','Open Finance','Loans','Staking','Digital Assets Investments'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 3,name: 'quras',title: 'QURAS wallet',images: ['quras-1','quras-2','quras-3'],description: 'Quras wallet is a tool that allows for interacting with the secret contract platform and fulfill various privacy protection needs.',features: ['Private blockchain integrations', 'Cross-blockchain swap'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']},{key: 4,name: 'hex',title: 'HEX',images: ['hex-1','hex-2','hex-3'],description: '',features: ['QR', 'Smart Contract Integration'],stacks: ['Web3js', 'Solidity', 'JavaScript', 'Openzeppelin', 'Truffle']}],[{key: 1,name: 'pion',title: 'Pion',images: ['pion-1','pion-2'],description: '<p>A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br />A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br />Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.</p>',features: ['Multicomponent system', 'Stablecoin', 'Liquidity Pool Staking'],stacks: ['Solidity']},{key: 2,name: 'inflat',title: 'Inflationary Staking',images: ['inflat-1','inflat-2'],description: '<p>A project based on complex smart contracts that give users the ability to exchange, purchase and stake the token.<br /> Receiving tokens is implemented in several ways:<br /> • Exchange tokens at the rate of 1:1<br /> • Free issuance of tokens from a snapshot with a Merkle tree check at a rate of 1:1<br /> • Instant Token Buyback Auction with Uniswap to Maintain the Token Price<br /> • Staking and receiving dividends due to token inflation.</p>',features: [],stacks: ['Solidity']},{key: 3,name: 'bitgear',title: 'Bitgear',images: ['bitgear-1','bitgear-2'],description: 'By using the Ox protocol, Bitgear helps to find the best prices across exchanges and combines them into one trade.',features: ['0x protocol integration','all DEXs trading','limit orders','multiple wallets support'],stacks: ['React', 'Web3', '0x protocol', 'Solidity']},{key: 4,name: 'minto',title: 'Minto',images: ['minto-1','minto-2'],description: 'Mine Bitcoin by staking BTCMT tokens. We’ve made smart contracts and crosschain integration between blockchains that helps to make mining easier than getting a BTC wallet.',features: ['HECO blockchain integration','staking','mining tokenization',],stacks: ['React', 'Web3', 'Python', 'Solidity']},{key: 5,name: 'axion',title: 'Axion Dashboard',images: ['axion-1','axion-2'],description: '<p>The dashboard visualizes financial statistics of the context of individual user wallets and time periods.<br /> To implement instant access to all information on the project, a centralized database was developed that stores all information about events occurring on the contract, received in real time from the Ethereum network.</p>',features: ['Staking', 'Auction', 'H2T token swap', 'Uniswap auto-buy', 'Dashboard'],stacks: ['Solidity']},{key: 6,name: 'duc',title: 'Ducatus',images: ['duc-1','duc-2'],description: 'Infrastructure creation and deployment of Ducatus and DucatusX blockchains. Blockchain tools development: API, explorer/insight, scanner and wallet. Network and user maintenance support. Application development for created blockchains, integration with exchanges and other blockchains.',features: ['custom blockchains development','explorer'],stacks: ['Angular', 'React', 'Web3', 'Ionic', 'Cordova', 'Solidity']}]];
 
   #cases.case-studies.container
     +block-title('Case Studies')
-
     .tabs
       input#tab-btn-case-1(type='radio' name='tab-btn-case' checked)
-      label.tabs-label(for='tab-btn-case-1') Web/mobile development
+      label.tabs-label(for='tab-btn-case-1') Smart contracts
       input#tab-btn-case-2(type="radio" name="tab-btn-case")
-      label.tabs-label(for='tab-btn-case-2') Smart contracts
+      label.tabs-label(for='tab-btn-case-2') Web/mobile development
       .scroll
         .content-tab.content-case-1
           .tabs-case
@@ -147,67 +145,33 @@ mixin cases
                 img.content-item__img(src=`../../img/logo/${tabsCaseOne.source}.svg`, alt=tabsCaseOne.alt)
                 span.content-item__name= tabsCaseOne.name
             .scroll
-              .content-tab.content-case-1-1
-                .case-studies__dropdown.dropdown
-                  h3.dropdown__title Pion
-                  .dropdown__img
-                    DIV
-                      .switch
-                        button.switchIcon
-                          img(src='../../img/icons/icon-switch-left.svg' alt='switch left icon')
-                        +webpImg('lazy',`../../img/case/pion-1`,'png','pion 1')
-                        //- +webpImg('lazy',`../../img/case/pion-2`,'png','pion 2')
-                        button.switchIcon
-                          img(src='../../img/icons/icon-switch-right.svg' alt='switch right icon')
-                  .case-studies__description
-                    p
-                      | A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br>A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br>Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.
-                  .dropdown__insights.insight
-                    .dropdown__insights-insight
-                      h5.insight__title Features
-                      ul.gray-list
-                        li.gray-list__item Multicomponent system
-                        li.gray-list__item Stablecoin
-                        li.gray-list__item Liquidity Pool Staking
-                    .dropdown__insights-insight.insight-stacks
-                      h5.insight__title Stacks:
-                      ul.gray-list
-                        li.gray-list__item Solidity
-              .content-tab.content-case-1-2
-                .case-studies__dropdown.dropdown
-                  h3.dropdown__title Inflationary Staking
-                  .dropdown__img
-                    DIV
-                      .switch
-                        button.switchIcon
-                          img(src='../../img/icons/icon-switch-left.svg' alt='switch left icon')
-                        +webpImg('lazy',`../../img/case/inflat-1`,'png','pion 1')
-                        //- +webpImg('lazy',`../../img/case/pion-2`,'png','pion 2')
-                        button.switchIcon
-                          img(src='../../img/icons/icon-switch-right.svg' alt='switch right icon')
-                  .case-studies__description
-                    p
-                      | A stablecoin with a token price of $1 by changing the total supply of tokens through a smart contract by rebase at a random time.<br>A second token convertible with the stablecoin at rate of 1:1, allows to fix the number of tokens pending the next rebase at a more favorable rate.<br>Stablecoin can generate income from yield farming by staking the LP2 Uniswap token.
-                  .dropdown__insights.insight
-                    .dropdown__insights-insight
-                      h5.insight__title Features
-                      ul.gray-list
-                        li.gray-list__item Multicomponent system
-                        li.gray-list__item Stablecoin
-                        li.gray-list__item Liquidity Pool Staking
-                    .dropdown__insights-insight.insight-stacks
-                      h5.insight__title Stacks:
-                      ul.gray-list
-                        li.gray-list__item Solidity
-              .content-tab.content-case-1-3
-                | Content tab 1 3
-              .content-tab.content-case-1-4
-                | Content tab 1 4
-              .content-tab.content-case-1-5
-                | Content tab 1 5
-              .content-tab.content-case-1-6
-                | Content tab 1 6
-
+              each caseOne, index in dropdown[1].length ? dropdown[1] : ['No values']
+                DIV(class=`content-tab content-case-1-${index+1}`)
+                  .case-studies__dropdown.dropdown
+                    h3.dropdown__title= caseOne.title
+                    .dropdown__img
+                      DIV
+                        .switch
+                          input(type='radio' name=`case-1-${index+1}-img` id=`case-1-${index+1}-img-1` checked)
+                          input(type='radio' name=`case-1-${index+1}-img` id=`case-1-${index+1}-img-2`)
+                          label.switchIcon(for=`case-1-${index+1}-img-1`)
+                            img(src='../../img/icons/icon-switch-left.svg' alt='switch left icon')
+                          each caseOneImage, imgIndex in caseOne.images.length ? caseOne.images : ['No values']
+                            +webpImg('lazy',`../../img/case/${caseOneImage}`,'png',`${caseOne.title} ${imgIndex+1}`,`case-1-${index+1}-img-${imgIndex+1} case-image`)
+                          label.switchIcon(for=`case-1-${index+1}-img-2`)
+                            img(src='../../img/icons/icon-switch-right.svg' alt='switch right icon')
+                    .case-studies__description= caseOne.description
+                    .dropdown__insights.insight
+                      .dropdown__insights-insight
+                        h5.insight__title Features
+                        ul.gray-list
+                          each caseOneFeature, index in caseOne.features.length ? caseOne.features : ['No values']
+                            li.gray-list__item= caseOneFeature
+                      .dropdown__insights-insight.insight-stacks
+                        h5.insight__title Stacks:
+                        ul.gray-list
+                          each caseOneStack, index in caseOne.stacks.length ? caseOne.stacks : ['No values']
+                            li.gray-list__item= caseOneStack
         .content-tab.content-case-2
           .tabs-case
             each tabsCaseOne, index in content[0].length ? content[0] : ['No values']
