@@ -183,14 +183,27 @@ mixin cases
                 img.content-item__img(src=`../../img/logo/${tabsCaseOne.source}.svg`, alt=tabsCaseOne.alt)
                 span.content-item__name= tabsCaseOne.name
             .scroll
-              .content-tab.content-case-2-1
-                | Content tab 2 1
-              .content-tab.content-case-2-2
-                | Content tab 2 2
-              .content-tab.content-case-2-3
-                | Content tab 2 3
-              .content-tab.content-case-2-4
-                | Content tab 2 4
+              each caseTwo, index in dropdown[0].length ? dropdown[0] : ['No values']
+                DIV(class=`content-tab content-case-2-${index+1}`)
+                  .case-studies__dropdown.dropdown.dropdown-web
+                    h3.dropdown__title= caseTwo.title
+                    .dropdown__img
+                      DIV
+                        .noscroll
+                          each caseTwoImage, imgIndex in caseTwo.images.length ? caseTwo.images : ['No values']
+                            +webpImg('lazy',`../../img/case/${caseTwoImage}`,'png',`${caseTwo.title} ${imgIndex+1}`,`scroll__dev`)
+                    .case-studies__description Full functional custodial wallet development for IOS, Android and web, with more than 10,000 installs.
+                    .dropdown__insights.insight
+                      .dropdown__insights-insight
+                        h5.insight__title Features:
+                        ul.gray-list
+                          each caseOneFeature, index in caseTwo.features.length ? caseTwo.features : ['No values']
+                            li.gray-list__item= caseOneFeature
+                      .dropdown__insights-insight.insight-stacks
+                        h5.insight__title Stacks:
+                        ul.gray-list
+                          each caseOneStack, index in caseTwo.stacks.length ? caseTwo.stacks : ['No values']
+                            li.gray-list__item= caseOneStack
 
 mixin team 
   - var developers = [{img: 'dev-1',post: 'Backend Team Lead',name: 'Maksim Strenk',skills: ['Development experience 6 years, in blockchain 4 years','MyWish Backend (4 years)','Implementation of UTREEXO and HTLC for the Bitcoin network','Made the current Ducatus Exchange','Experienced in deploying and syncing Ethereum and Bitcoin full nodes'],stacks: ['Python','Solidity','JavaScript','C','OpenZeppelin','GSN','NPM','Docker Hub','Gunicorn','Supervisord','PyPi','USWSGI','PostgreSQL','MongoDB']},{img: 'dev-2',post: 'Blockchain Team Lead',name: 'Rita Tsepeleva',skills: ['smart contract development collaterized stable coin','Anonymizer powered by ZK proof','development of OTC exchange','yeild-farming / staking contracts development'],stacks: ['Solidity','OpenZeppelin','Truffle','npm','C++','web3']},{img: 'dev-3',post: 'Frontend Team Lead',name: 'Nikita Sireishikov',skills: ['manual compilation of transactions to send for Bitcoin and Ethereum networks on node.js','development of nodes for interacting with the blockchain on node.js','development of web-wallets in Angular','frontend development for interacting with smart contracts through the backend'],stacks: ['Express','Apollo','TypeScript','GraphQL','Angular','Vue','JS','MobX','NodeJS','Vuex','iOS Developing (Swiftui)','web3']}];

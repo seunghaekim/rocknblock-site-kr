@@ -384,22 +384,6 @@
   margin-top: 90px;
   scroll-margin-top: 120px;
 
-  // ! Q: WHY IT NEDEED?
-
-  // .icon {
-  //   &::before {
-  //     background-color: #fff;
-  //   }
-
-  //   &-container {
-  //     display: flex;
-  //     justify-content: flex-start;
-  //     align-items: center;
-  //     width: 81px;
-  //     height: 81px;
-  //   }
-  // }
-
   .primary-header {
     @include text-gradient(
       linear-gradient(87.05deg, #ffffff 58.97%, #171628 84.38%)
@@ -1337,44 +1321,6 @@ header {
     overflow: hidden;
   }
 
-  // .desktop {
-  //   display: flex;
-  //   @include b("tablet") {
-  //     display: none;
-  //   }
-  // }
-
-  // .mobile {
-  //   display: none;
-  //   @include b("tablet") {
-  //     display: flex;
-  //     overflow-x: auto;
-  //   }
-  // }
-
-  // .switchIcon {
-  //   &_right,
-  //   &-left {
-  //     cursor: pointer;
-  //     -ms-flex-align: center;
-  //     align-items: center;
-  //     width: 48px;
-  //     min-width: 20px;
-  //     background-color: transparent;
-  //     border: none;
-  //   }
-
-  //   &_right {
-  //     margin-left: 20px;
-  //   }
-
-  //   &_left {
-  //     margin-right: 20px;
-  //     background-color: transparent;
-  //     border: none;
-  //   }
-  // }
-
   &__title {
     background: linear-gradient(87.05deg, #fff 51.97%, #171628 106.38%);
     -webkit-background-clip: text;
@@ -1417,10 +1363,6 @@ header {
       padding: 20px 30px 30px 30px;
       margin: 0 1em 0 1em;
 
-      // @include b("tablet") {
-      //   min-width: 300px;
-      // }
-
       &_desc {
         h2 {
           padding: 15px 0 10px 0;
@@ -1433,9 +1375,6 @@ header {
         h3 {
           font-family: TT Commons, sans-serif;
           font-weight: normal;
-          // font-size: 18px;
-          // line-height: 21px;
-          // opacity: 0.4;
 
           opacity: 0.5;
           line-height: 1.5;
@@ -1567,77 +1506,6 @@ header {
     }
   }
 
-  // .tabs {
-  //   width: 100%;
-  //   margin-top: 40px;
-
-  //   input[type="radio"] {
-  //     display: none;
-  //   }
-
-  //   label {
-  //     display: inline-block;
-  //     width: 50%;
-  //     padding-bottom: 22px;
-
-  //     border-bottom: 2px solid #2e2e35;
-  //     cursor: pointer;
-  //     opacity: 0.6;
-
-  //     transition: 0.4s ease;
-  //     font-feature-settings: "liga" off;
-
-  //     text-align: center;
-  //     text-transform: uppercase;
-
-  //     font-family: TT Norms, sans-serif;
-  //     font-size: 18px;
-  //     font-style: normal;
-  //     font-weight: 400;
-  //     line-height: 21px;
-
-  //     &:not(:first-of-type) {
-  //       border-left: none;
-  //     }
-  //   }
-
-  //   input[type="radio"]:checked + label {
-  //     border-bottom: 3px solid #dc2c2c;
-  //     color: #dc2c2c;
-  //     font-weight: 700;
-  //     opacity: 1;
-  //   }
-
-  //   #tab-btn-1:checked ~ .scroll .team__development-tab .content-1 {
-  //     display: flex;
-  //   }
-
-  //   #tab-btn-2:checked ~ .scroll .team__development-tab .content-2 {
-  //     display: flex;
-  //   }
-  // }
-
-  // .scroll {
-  //   margin-top: 40px;
-
-  //   @include b("desktop") {
-  //     overflow-x: auto;
-  //   }
-
-  //   .tab-content {
-  //     display: flex;
-  //     width: 100%;
-  //   }
-
-  //   .content-1 {
-  //     display: none;
-  //   }
-
-  //   .content-2 {
-  //     display: none;
-  //   }
-  // }
-
   &__content {
     width: 100%;
     display: flex;
@@ -1708,7 +1576,6 @@ header {
         margin-top: 30px;
         padding: 0 15px;
 
-        // height: 608px;
         height: max-content;
 
         display: flex;
@@ -1965,9 +1832,6 @@ header {
     width: 100%;
     margin-top: 40px;
 
-    // display: flex;
-    // justify-content: center;
-
     width: 100%;
     margin-top: 40px;
     display: flex;
@@ -2004,8 +1868,6 @@ header {
       transition: 0.4s ease;
 
       display: inline-block;
-      // flex-direction: column;
-      // align-items: center;
       width: 9%;
 
       @include b(769) {
@@ -2272,6 +2134,10 @@ header {
   flex-direction: column;
   align-items: center;
 
+  &-web {
+    overflow: hidden;
+  }
+
   @include b("tablet") {
     margin: 0;
     padding: 15px;
@@ -2307,6 +2173,7 @@ header {
 
     @include b("tablet") {
       min-height: auto;
+      overflow-x: auto;
     }
 
     .case-image {
@@ -2314,35 +2181,8 @@ header {
     }
 
     .switchIcon {
-      // opacity: 0.5;
       cursor: pointer;
     }
-
-    // #case-1-1-img-1:checked {
-    //   ~ {
-    //     .case-1-1-img-1 {
-    //       display: flex;
-    //     }
-
-    //     .switchIcon:nth-child(0) {
-    //       opacity: 0.5;
-    //       cursor: default;
-    //     }
-    //   }
-    // }
-
-    // #case-1-1-img-2:checked {
-    //   ~ {
-    //     .case-1-1-img-2 {
-    //       display: flex;
-    //     }
-
-    //     .switchIcon:last-child {
-    //       opacity: 0.5;
-    //       cursor: default;
-    //     }
-    //   }
-    // }
 
     #case-1-1-img-1:checked ~ .case-1-1-img-1 {
       display: flex;
@@ -2416,6 +2256,7 @@ header {
 
     &__dev {
       margin: 0 10px;
+      min-width: max-content;
     }
 
     @include b("tablet") {
@@ -2449,7 +2290,6 @@ header {
     }
 
     &Icon {
-      // cursor: pointer;
       margin: 0 20px;
       align-items: center;
       width: 44px;
