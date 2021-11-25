@@ -1,0 +1,135 @@
+.pg {
+  &-title {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
+
+.blog {
+  .container {
+    padding: 20px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 30px;
+
+    @include b(769) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-nav {
+    &-title {
+      display: block;
+
+      font-weight: bold;
+      font-size: 20px;
+
+      margin-bottom: 20px;
+    }
+
+    &-ls {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 6px;
+
+      font-weight: bold;
+      font-size: 17px;
+
+      @include b(769) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: 35px;
+      padding: 0 10px;
+      border-radius: 5px;
+
+      transition: 0.4s ease;
+      cursor: pointer;
+
+      background-color: #383841;
+
+      @include b(769) {
+        width: max-content;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.active {
+        background-color: #dc2c2c;
+        cursor: default;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px 30px;
+
+    @include b(950) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include b(550) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    &-img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 1.3;
+
+      font-family: TT Commons;
+      font-weight: bold;
+    }
+
+    &-anonce {
+      max-height: 60px;
+
+      font-size: 18px;
+      line-height: 1.2;
+
+      font-family: TT Commons;
+
+      opacity: 0.4;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

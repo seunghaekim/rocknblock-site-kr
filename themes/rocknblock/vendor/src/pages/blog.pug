@@ -1,25 +1,15 @@
 extends layouts/index
 
+include sections/blog
+
 block header
     include common/header
 
 block content
-    section 
-        .container 
-            h1 Rock`n`Block
-
-    .swiper-container
-        .swiper-wrapper
-            .swiper-slide Slide 1
-            .swiper-slide Slide 2
-            .swiper-slide Slide 3
-            .swiper-slide Slide 4
-            .swiper-slide Slide 5
-            .swiper-slide Slide 6
-            .swiper-slide Slide 7
-            .swiper-slide Slide 8
-            .swiper-slide Slide 9
-            .swiper-slide Slide 10
+    main.pg.pg-blog
+        +pg-title('Our Blog')
+        +blog-list
+            
 
 block footer
     include common/footer
