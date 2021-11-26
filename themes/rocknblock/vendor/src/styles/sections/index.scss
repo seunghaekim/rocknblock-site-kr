@@ -467,8 +467,9 @@
       font-weight: normal;
       font-size: 18px;
       line-height: 21px;
-      color: #fff;
-      opacity: 0.4;
+      // color: #fff;
+      color: #ffffff99;
+      // opacity: 0.4;
     }
 
     &:hover {
@@ -1123,7 +1124,7 @@ header {
   margin-top: 30px;
   text-align: center;
   font-size: 16px;
-  opacity: 0.4;
+  opacity: 0.6;
 
   a {
     text-decoration: underline;
@@ -1426,7 +1427,8 @@ header {
   justify-content: center;
   height: 50px;
   border-radius: 25px;
-  width: 194px;
+  padding: 0 15px;
+  width: max-content;
   border: 2px solid #dc2c2c;
   color: white;
   margin: 50px auto 0;
@@ -1444,7 +1446,7 @@ header {
 }
 
 .site__linkIcon {
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 .sectionSites {
@@ -1786,7 +1788,7 @@ header {
 
     border-bottom: 2px solid #2e2e35;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.7;
 
     transition: 0.4s ease;
     font-feature-settings: "liga" off;
@@ -1806,8 +1808,8 @@ header {
   }
 
   input[type="radio"]:checked + .tabs-label {
-    border-bottom: 3px solid #dc2c2c;
-    color: #dc2c2c;
+    border-bottom: 3px solid #f93333;
+    color: #f93333;
     font-weight: 700;
     opacity: 1;
   }

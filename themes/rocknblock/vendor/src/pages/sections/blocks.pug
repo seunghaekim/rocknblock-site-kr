@@ -163,12 +163,12 @@ mixin cases
                     .case-studies__description= caseOne.description
                     .dropdown__insights.insight
                       .dropdown__insights-insight
-                        h5.insight__title Features
+                        span.insight__title Features
                         ul.gray-list
                           each caseOneFeature, index in caseOne.features.length ? caseOne.features : ['No values']
                             li.gray-list__item= caseOneFeature
                       .dropdown__insights-insight.insight-stacks
-                        h5.insight__title Stacks:
+                        span.insight__title Stacks:
                         ul.gray-list
                           each caseOneStack, index in caseOne.stacks.length ? caseOne.stacks : ['No values']
                             li.gray-list__item= caseOneStack
@@ -283,7 +283,7 @@ mixin bottom-slide
                 figure.site__imageWrapper
                   +webpImg('lazy',`../../../img/farming/${slide.image}`,'png',slide.title, 'site__image')
                 h4.site__title= slide.title 
-                a.site__link(href=`${slide.link}`) Click here
+                a.site__link(href=`${slide.link}`)= `${slide.title}`
                   i.site__linkIcon
                     img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
 
@@ -298,7 +298,8 @@ mixin contact-us
     form.contact-us__form(name='contact-us-form')
       input#g-recaptcha-response(type='hidden' name='g-recaptcha-response')
       input(type='hidden' name='action' value='validate_captcha')
-      input.contact-us__form__input( type='text' placeholder='Name' value='')
+      label(hidden for='contact-us-input')
+      input#contact-us-input.contact-us__form__input( type='text' placeholder='Name' value='')
       
       label.visually-hidden Enter your name
 
@@ -311,10 +312,11 @@ mixin contact-us
 
       //- .inputBlock.socialsBlock
         input.contact-us__form__input(placeholder='Your contact' value='')
-        
-      input.contact-us__form__input(placeholder='Your contact' value='')
+      label(hidden for='contact-us-input-2')
+      input#contact-us-input-2.contact-us__form__input(placeholder='Your contact' value='')
 
-      textarea.contact-us__form__input.contact-us__form__input-textarea(rows='1' placeholder='Briefly describe your project or idea')
+      label(hidden for='contact-us-textarea')
+      textarea#contact-us-textarea.contact-us__form__input.contact-us__form__input-textarea(rows='1' placeholder='Briefly describe your project or idea')
       
       label.visually-hidden Briefly describe your project or idea
       p.terms By using the service, you accept the 
