@@ -13,6 +13,31 @@
     padding: 20px;
   }
 
+  .block-header {
+    margin-top: 100px;
+
+    @include b("tablet") {
+      margin-top: 70px;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+
+    .btn {
+      height: 45px;
+      width: max-content;
+      padding: 0 20px;
+
+      img {
+        margin-left: 15px;
+      }
+    }
+  }
+
   &-list {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -21,6 +46,10 @@
     @include b(769) {
       grid-template-columns: 1fr;
     }
+  }
+
+  &-slider {
+    overflow: hidden;
   }
 
   &-nav {

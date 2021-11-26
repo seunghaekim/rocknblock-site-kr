@@ -39,6 +39,30 @@ $(document).ready(() => {
     },
   });
 
+  const sliderBlog = new Swiper(".blog-slider", {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    breakpoints: {
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+    },
+    // loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      // prevEl: ".swiper-button-prev",
+    },
+  });
+
   const sliderBottom = new Swiper(".swiper-slider", {
     slidesPerView: "auto",
     loop: true,

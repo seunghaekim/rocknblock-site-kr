@@ -13,6 +13,31 @@ mixin blog-list
         +blog-navigation
         +blog-items
 
+mixin blog-list-slider 
+  section.blog
+    .container
+      +block-title('Our Blog', false)
+      span.blog-nav-title Show Me
+      .blog-list 
+        +blog-navigation
+        +blog-slider
+      .blog-bottom
+        a.btn.btn-orange.btn-rounded(href='/blog') View Blog
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin blog-slider
+  - var articles = [{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'},{img: 'blog', title: 'On-Demand Services App: 11 Challenges In Times Of COVID-19 And How To Solve Them', anonce: 'We would like to thank @mywishplatform for a reliable and easy to use service which service which service which'}];
+
+  .swiper.blog-slider
+    .swiper-wrapper
+      each article in articles.length ? articles : ['No values']
+        .swiper-slide
+          a.blog-item(href='/article', target='blank')
+            +webpImg('lazy',`../../img/blog/${article.img}`,'png',article.title,'blog-item-img')
+            h3.blog-item-title= article.title 
+            p.blog-item-anonce= article.anonce
+    .swiper-button-next
+
 mixin blog-navigation
   - var links = ['All Topics', 'Popular', 'Latest', 'Business', 'Design', 'Geeks', 'Insights', 'Management', 'Tech'];
 
