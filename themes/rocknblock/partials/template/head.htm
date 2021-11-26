@@ -1,38 +1,44 @@
 description = "Website head."
+
+[SeoCmsPage]
 ==
+<base href="/">
 <meta charset="utf-8">
 
-<title>{{ this.page.title }}</title>
 <meta name="title" content="{{ this.page.meta_title }}">
-<meta name="description" content="{{ this.page.meta_description }}">
+{% component 'SeoCmsPage' %}
 
-{% placeholder head %}
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta content="index, nofollow" name="robots">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta name="author" content="Amary Filo">
 
-<link rel="manifest" href="{{ '/assets/images/favicon/site.webmanifest' |theme }}">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preload" href="{{ 'assets/css/style.min.css'| theme}}" as="style">
+<link rel="preload" href="{{ 'assets/javascript/main.min.js'| theme}}" as="script">
+<link rel="manifest" href="{{ 'assets/images/manifest.webmanifest'| theme}}">
 
-<meta name="theme-color" content="#1d1b21">
-<meta name="msapplication-navbutton-color" content="#000">
-<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+<link rel="shortcut icon" href="{{ 'assets/images/favicon/favicon.ico'|theme }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ 'assets/images/favicon/favicon-16x16.png'|theme }}" type="image/png" sizes="16x16">
+<link rel="shortcut icon" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}" type="image/png" sizes="32x32">
+<link rel="shortcut icon" href="{{ 'assets/images/favicon/favicon-96x96.png'|theme }}" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="{{ 'assets/images/favicon/apple-touch-icon-57x57.png'|theme }}">
+<link rel="apple-touch-icon" sizes="57x57" href="{{ 'assets/images/favicon/apple-touch-icon-57x57.png'|theme }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ 'assets/images/favicon/apple-touch-icon-60x60.png'|theme }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ 'assets/images/favicon/apple-touch-icon-72x72.png'|theme }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/favicon/apple-touch-icon-76x76.png'|theme }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ 'assets/images/favicon/apple-touch-icon-114x114.png'|theme }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ 'assets/images/favicon/apple-touch-icon-120x120.png'|theme }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ 'assets/images/favicon/apple-touch-icon-152x152.png'|theme }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicon/apple-touch-icon-180x180.png'|theme }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ 'assets/images/favicon/android-chrome-192x192.png'|theme }}" />
+<meta name="msapplication-square70x70logo" content="{{ 'assets/images/favicon/smalltile.png'| theme}}" />
+<meta name="msapplication-square150x150logo" content="{{ 'assets/images/favicon/mediumtile.png'| theme}}" />
+<meta name="msapplication-wide310x150logo" content="{{ 'assets/images/favicon/widetile.png'| theme}}" />
+<meta name="msapplication-square310x310logo" content="{{ 'assets/images/favicon/largetile.png'|theme }}" />
 
-<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico'|theme }}" type="image/x-icon">
-<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon-16x16.png'|theme }}" type="image/png" sizes="16x16">
-<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon-32x32.png'|theme }}" type="image/png" sizes="32x32">
-<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon-96x96.png'|theme }}" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="{{ '/assets/images/favicon/apple-touch-icon-57x57.png'|theme }}">
-<link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/images/favicon/apple-touch-icon-57x57.png'|theme }}">
-<link rel="apple-touch-icon" sizes="60x60" href="{{ '/assets/images/favicon/apple-touch-icon-60x60.png'|theme }}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ '/assets/images/favicon/apple-touch-icon-72x72.png'|theme }}">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ '/assets/images/favicon/apple-touch-icon-76x76.png'|theme }}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ '/assets/images/favicon/apple-touch-icon-114x114.png'|theme }}">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ '/assets/images/favicon/apple-touch-icon-120x120.png'|theme }}">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ '/assets/images/favicon/apple-touch-icon-152x152.png'|theme }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon-180x180.png'|theme }}">
+<link rel="mask-icon" href="{{ 'assets/images/favicon/safari-pinned-tab.svg"'|theme }}" color="#ff0000" />
+<meta name="msapplication-TileColor" content="#ff0000" />
+<meta name="theme-color" content="#1D1B21" />
 
 <!-- meta name="google-site-verification" content="7_6Fy-97nJ33Ve9stEFXjT4RUqNwIQj-vh9tYL22ZU0" -->
+
+{% placeholder head %}
