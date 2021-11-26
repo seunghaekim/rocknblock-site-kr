@@ -1,7 +1,7 @@
-.pg {
-  &-article {
-  }
-}
+// .pg {
+//   &-article {
+//   }
+// }
 
 .article {
   font-family: TT Commons;
@@ -107,25 +107,6 @@
     font-weight: 500;
   }
 
-  // &-text,
-  // p,
-  // &-list li,
-  // ul li,
-  // &-blockquote,
-  // blockquote {
-  //   font-family: TT Commons;
-  //   font-size: 18px;
-  //   line-height: 1.4;
-
-  //   @include b(769) {
-  //     font-size: 16px;
-  //   }
-
-  //   @include b(500) {
-  //     font-size: 14px;
-  //   }
-  // }
-
   &-link,
   a {
     text-decoration: underline;
@@ -141,7 +122,6 @@
     color: #dbdbdb;
 
     margin: 10px 0;
-    // opacity: 0.85;
   }
 
   &-list,
