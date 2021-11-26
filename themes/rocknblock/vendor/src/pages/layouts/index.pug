@@ -8,7 +8,8 @@ html(lang="en")
         meta(content="index, nofollow" name="robots")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
-        link(rel="preload" as="style" href="css/style.min.css")
+        link(rel="preload" href="css/style.min.css" as="style")
+        link(rel="preload" href="js/main.min.js" as="script")
         link(rel="manifest" href="/manifest.webmanifest")
         +head-favicon
         meta(name='twitter:card' content='summary')
@@ -34,5 +35,5 @@ html(lang="en")
         block content
         block footer
         block scripts
-            link(rel="stylesheet", href="css/style.min.css")
-            script(defer, src='js/main.min.js')
+            link(rel="stylesheet" href="css/style.min.css")
+            script(defer src='js/main.min.js')
