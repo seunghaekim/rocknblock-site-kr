@@ -32,7 +32,7 @@ mixin blog-slider
     .swiper-wrapper
       each article in articles.length ? articles : ['No values']
         .swiper-slide
-          a.blog-item(href='/article', target='blank')
+          a.blog-item(href='/article.html', target='blank')
             +webpImg('lazy',`../../img/blog/${article.img}`,'png',article.title,'blog-item-img')
             h3.blog-item-title= article.title 
             p.blog-item-anonce= article.anonce
@@ -54,7 +54,7 @@ mixin blog-items
 
   .blog-items
     each article in articles.length ? articles : ['No values']
-      a.blog-item(href='/article', target='blank')
+      a.blog-item(href='/article.html', target='blank')
         +webpImg('lazy',`../../img/blog/${article.img}`,'png',article.title,'blog-item-img')
         h3.blog-item-title= article.title 
         p.blog-item-anonce= article.anonce
