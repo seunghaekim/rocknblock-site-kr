@@ -1,30 +1,40 @@
-<div class="about__xeyIm container__1fqxq">
-  <div class="background-img background-img-first"><img src="../../assets/img/background-about-1.png"
-                                                                                                                            alt="background-img">
-  </div>
-  <div class="background-img__qb4oZ background-img-second__11Q17"><img src="../../assets/img/background-about-2.png"
-                                                                                                                            alt="background-img">
-  </div>
-  <div class="background-img__qb4oZ background-img-third__VwwjG"><img src="../../assets/img/background-about-3.png"
-                                                                                                                            alt="background-img">
-  </div>
-  <h2 class="about__header__2JMBC">Your Blockchain Developers</h2>
-  <div class="about__content__LIrDl">
-    <div>
-      <p class="about__description__QwAF6">Since 2017 Rock’n’Block developed <b>250+</b> solutions of different complexity.<br>Ready to bring your
-        idea to life.</p>
-      <section class="about__buttons__28OU7"><a href="https://calendly.com/alex-tka"
-                                                                                                                                rel="noreferrer"
-                                                                                                                                target="_blank"
-                                                                                                                                class="about__buttons-call__3JGR9 btn__3dTvL btn-hollow__3fOby btn-rounded__3R1y_">Book
-          A Call</a><a href="#contact-us"
-                                                                                                                                class="about__buttons-contact__ihWQ6 btn__3dTvL btn-orange__3_o47 btn-rounded__3R1y_">Contact
-          Us<img src="../../assets/img/icons/icon-arrow-right-mask.svg"
-                                                                                                                                  alt="arrow-right"></a>
-      </section>
-    </div>
-    <div class="about__achievements__1rcG4"><img src="../../assets/img/achievements.svg"
-                                                                                                                              alt="our achievements">
-    </div>
-  </div>
-</div>
+description = "Section about"
+==
+<section class="about container">
+	<div class="background-img background-img-first">
+		<picture>
+			<source type="image/webp" srcset="{{ 'assets/images/site//background/about-1.webp' | theme }}" />
+			<img loading="lazy" src="{{ 'assets/images/site//background/about-1.png' | theme }}" alt="about one" />
+		</picture>
+	</div>
+	<div class="background-img background-img-second">
+		<picture>
+			<source type="image/webp" srcset="{{ 'assets/images/site//background/about-2.webp' | theme }}" />
+			<img loading="lazy" src="{{ 'assets/images/site//background/about-2.png' | theme }}" alt="about two" />
+		</picture>
+	</div>
+	<div class="background-img background-img-third">
+		<picture>
+			<source type="image/webp" srcset="{{ 'assets/images/site/background/about-3.webp' | theme }}" />
+			<img loading="lazy" src="{{ 'assets/images/site//background/about-3.png' | theme }}" alt="about three" />
+		</picture>
+	</div>
+	<h2 class="about__header">Your Blockchain Developers</h2>
+	<div class="about__content">
+		<div class="about__content-item">
+			<p class="about__description">
+				Since 2017 Rock&rsquo;n&rsquo;Block developed <b>250+</b>solutions of different complexity.
+				<br />Ready to bring your idea to life.
+			</p>
+			<section class="about__buttons">
+				<a class="about__buttons-call btn btn-hollow btn-rounded" href="https://calendly.com/alex-tka" rel="noreferrer nofollow" target="_blank">Book A Call</a>
+				<a class="about__buttons-contact btn btn-orange btn-rounded" href="#contact-us">Contact Us
+					<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+				</a>
+			</section>
+		</div>
+		<div class="about__achievements">
+			<img loading="lazy" src="{{ 'assets/images/site/achievements.svg' | theme }}" alt="our achievements" />
+		</div>
+	</div>
+</section>
