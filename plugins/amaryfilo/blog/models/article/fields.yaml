@@ -1,0 +1,74 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    is_active:
+        label: Отобразить статью
+        comment: Статья будет отображена в блоках на старницах сайта.
+        type: switch
+        span: full
+    title:
+        label: Заголовок статьи
+        type: text
+        span: left
+        required: true
+    image_article:
+        label: Изображение статьи
+        type: fileupload
+        mode: image
+        span: right
+        imageHeight: 140
+        imageWidth: 270
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 70
+            sharpen: 0
+            interlace: false
+            extension: auto
+    slug:
+        label: URL
+        comment: Ссылка по которой будет доступна статья. Ссылку вписывать без знаков, на английском языке, можно использовать тире, пробел использовать нельзя.
+        preset:
+            field: title
+            type: slug
+        span: left
+        type: text
+        required: true
+    anonce:
+        label: Анонс статьи
+        comment: Минимальный блок-превью с тектом.
+        type: richeditor
+        size: large
+        span: full
+        required: true
+    text:
+        label: Тело статьи
+        type: richeditor
+        size: large
+        span: full
+        required: true
+    # category:
+    #     label: Категория
+    #     type: dropdown
+    #     span: full
+    #     required: true
+    # category_two:
+    #     label: Категория
+    #     span: full
+    #     oc.commentPosition: ""
+    #     nameForm: id
+    #     descriptionForm: description
+    #     type: relation
+    #     path: field_blog_key
+    article_category:
+        label: Категория
+        span: full
+        oc.commentPosition: ""
+        nameForm: id
+        descriptionForm: description
+        type: partial
+        path: field_blog_key

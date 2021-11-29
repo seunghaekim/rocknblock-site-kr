@@ -1,0 +1,16 @@
+{% set articles = __SELF__.ViewArticlesAll() %}
+{% for article in articles %}
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wrap-blog-more">
+	<div class="wrap-item-blog-more"
+																																																													style="background-image: url({{ article.image_article.path }});">
+		<div class="item-blog-more">
+			<a href="/blog/{{ article.slug }}">Читать</a>
+		</div>
+	</div>
+	<div class="wrap-title-item-blog-more">
+		<h3 class="title-item-blog-more">
+			{{ article.title }}
+		</h3>
+	</div>
+</div>
+{% endfor %}

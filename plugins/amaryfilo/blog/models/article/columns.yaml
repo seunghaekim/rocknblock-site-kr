@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: Название статьи
+        searchable: true
+    is_active:
+        label: Активен
+        type: switch
+        searchable: true
+    created_at:
+        label: Дата
+        type: timetense
+        ignoreTimezone: false

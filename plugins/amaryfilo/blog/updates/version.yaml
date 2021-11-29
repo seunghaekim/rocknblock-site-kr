@@ -1,0 +1,12 @@
+1.0.0:
+    - Init plugin
+1.0.1:
+    - Run table migrations
+    - create_articles_table.php
+    - create_blog_key_table.php
+1.0.2:
+    - Run table migrations
+    - create_blog_categories_table.php
+1.0.3:
+    - Run table migrations
+    - create_blog_key_table.php

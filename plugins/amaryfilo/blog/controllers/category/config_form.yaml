@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/amaryfilo/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: Amaryfilo\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: amaryfilo/blog/category
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: amaryfilo/blog/category/update/:id
+    redirectClose: amaryfilo/blog/category
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: amaryfilo/blog/category
+    redirectClose: amaryfilo/blog/category
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
