@@ -1,21 +1,82 @@
-<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 text-article">
-	<h2 class="title-blog-article">{{ article.title }}</h2>
-	<p class="text-blog-article">{{ article.text_1|raw }}</p>
-</div>
-<div class="clearfix"></div>
-<div class="col-lg-12 text-article">
-	<p class="text-blog-article">{{ article.text_2|raw }}</p>
-</div>
-<section class="video-blog">
-	<div class="container">
-		{% for video in article.video_in_article %}
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 vl-video-blog-article-wrap">
-			<div class="vl-video-blog-article" style="background-image: url({{ video.image_video.path }});">
-				<a data-fancybox href="{{ video.url }}">
-					<i class="fa fa-play-circle fa-3x"></i>
-				</a>
-			</div>
-		</div>
-		{% endfor %}
-	</div>
-</section>
+{% put head %}
+<title>{{ article.seo_title }}</title>
+<meta name="title"
+																																																												content="{{ article.seo_title }}">
+<meta name="keywords"
+																																																												content="{{ article.seo_keywords }}">
+<meta name="description"
+																																																												content="{{ article.seo_description }}">
+<meta name="generator"
+																																																												content="Rock`n`Block Developing">
+
+<meta property="og:type"
+																																																												content="article">
+<meta property="og:title"
+																																																												content="{{ article.seo_title }}">
+<meta property="og:url"
+																																																												content="https://rocknblock.io/blog/{{ article.slug }}">
+<meta property="og:image"
+																																																												content="{{ article.seo_image.path |resize(1200, 640, { mode: 'crop', quality: '70', extension: 'png' }) }}">
+<meta property="og:description"
+																																																												content="{{ article.seo_description }}">
+<meta property="article:author"
+																																																												content="{{ article.seo_is_author ? article.seo_author : 'Rock’n’Block' }}">
+<meta property="article:published_time"
+																																																												content="{{ article.created_at }}">
+{% if article.updated_at %}
+<meta property="article:modified_time"
+																																																												content="{{ article.updated_at }}">
+{% endif %}
+<meta property="article:section"
+																																																												content="{{ article.seo_section ? article.seo_section : 'Technology' }}">
+{% set tags = article.seo_tags |split(',') %}
+{% for tag in tags %}
+<meta property="article:tag"
+																																																												content="{{ tag }}">
+{% endfor %}
+
+<meta name="twitter:card"
+																																																												content="summary">
+<meta name="twitter:title"
+																																																												content="{{ article.seo_title }}">
+<meta name="twitter:description"
+																																																												content="{{ article.seo_twitter_description }}">
+<meta name="twitter:site"
+																																																												content="{{ article.seo_is_twitter_site ? article.seo_twitter_site : '@rocknblock' }}">
+<meta name="twitter:url"
+																																																												content="https://rocknblock.io/blog/{{ article.slug }}">
+<meta name="twitter:image"
+																																																												content="{{ article.seo_image.path |resize(1200, 640, { mode: 'crop', quality: '70', extension: 'png' }) }}">
+<meta name="twitter:image:alt"
+																																																												content="{{ article.seo_image.title }}">
+
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org/",
+		"@type": "Article",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://rocknblock.io/blog/{{ article.slug }}"
+		},
+		"author": {
+			"@type": "{{ article.seo_is_person ? 'Person' : 'Organization' }}",
+			"name": "{{ article.seo_is_person ? article.seo_person : 'Rock`n`Block' }}"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Rock`n`Block",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "{{ 'assets/images/site/logo.png'| theme }}"
+			}
+		},
+		"headline": "{{ article.seo_title }}",
+		"image": "{{ article.seo_image.path }}",
+		"datePublished": "{{ article.created_at }}",
+		"dateModified": "{{ article.updated_at }}"
+	}
+	</script>
+{% endput %}
+
+<h1 class="article-title">{{ article.title }}</h1>
+{{ article.text|raw }}

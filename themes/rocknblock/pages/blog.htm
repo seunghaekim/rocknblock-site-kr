@@ -1,4 +1,4 @@
-title = "Блог"
+title = "Our Blog"
 url = "/blog"
 layout = "rocknblock"
 meta_title = "Rock'n'Block Blog"
@@ -7,6 +7,8 @@ is_hidden = 0
 seo_keywords = "blockchain, develop, rocknblock, crypto, cryptocurrency"
 robot_index = "index"
 robot_follow = "follow"
+
+[articleall]
 ==
 {% put head %}
 	<meta name="generator" content="Rocknblock Developing">
@@ -25,3 +27,28 @@ robot_follow = "follow"
 	<meta name="twitter:title" content="Rock`n`Block Website">
 	<meta name="twitter:description" content="Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups.">
 {% endput %}
+
+
+<section class="pg-title undefined">
+	<div class="container">
+		<h1>{{ this.page.title }}</h1>
+		<h2>We create an interesting blog articles for any ways in development and blockchain.</h2></div>
+</section>
+<section class="blog">
+	<div class="container">
+	    <span class="blog-nav-title">Show Me</span>
+	    {% component 'articleall' %}
+	</div>
+</section>
+
+<script defer>
+    Array.from(document.getElementsByClassName("blog-select-nav")).forEach((el) => {
+      el.addEventListener("click", () => {
+        document.getElementsByClassName("active")[0].classList.remove("active");
+        el.classList.add("active");
+        filterSelection(el.dataset.filter);
+      });
+    });
+    
+    const filterSelection = (c) => Array.from(document.getElementsByClassName("blog-item")).forEach((el) => el.hidden = el.dataset.category === c ? false : c !== 'all');
+</script>

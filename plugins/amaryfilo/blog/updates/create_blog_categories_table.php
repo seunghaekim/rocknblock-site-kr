@@ -8,10 +8,14 @@ class CreateBlogCategoriesTable extends Migration
 {
     public function up()
     {
+        Schema::dropIfExists('amaryfilo_blog_categories');
+        
         Schema::create('amaryfilo_blog_categories', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title');
+            $table->boolean('show')->default(false);
+            $table->boolean('show_in_modules')->default(false);
             $table->timestamps();
         });
     }

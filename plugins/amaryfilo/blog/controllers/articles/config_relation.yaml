@@ -1,4 +1,4 @@
-category:
+article_category:
     label: Категории
     view:
         list: $/amaryfilo/blog/models/category/columns.yaml

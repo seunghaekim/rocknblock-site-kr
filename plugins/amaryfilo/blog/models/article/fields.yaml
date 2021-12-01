@@ -1,74 +1,217 @@
 # ===================================
 #  Form Field Definitions
 # ===================================
+tabs:
+    fields:
+        is_active:
+            label: Отобразить статью
+            comment: Статья будет отображена в блоках на старницах сайта.
+            type: switch
+            span: full
+            tab: "Article"
+        title:
+            label: Заголовок статьи
+            type: text
+            span: left
+            required: true
+            tab: "Article"
+        image_article:
+            label: Изображение статьи
+            type: fileupload
+            mode: image
+            span: right
+            imageHeight: 140
+            imageWidth: 270
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 70
+                sharpen: 0
+                interlace: false
+                extension: auto
+            tab: "Article"
+        slug:
+            label: URL
+            comment: Ссылка по которой будет доступна статья. Ссылку вписывать без знаков, на английском языке, можно использовать тире, пробел использовать нельзя.
+            preset:
+                field: title
+                type: slug
+            span: left
+            type: text
+            required: true
+            tab: "Article"
+        anonce:
+            label: Анонс статьи
+            comment: Минимальный блок-превью с тектом.
+            type: text
+            span: full
+            required: true
+            tab: "Article"
+        text:
+            label: Тело статьи
+            type: richeditor
+            size: large
+            span: full
+            required: true
+            tab: "Article"
+        article_category:
+            label: Категория
+            span: full
+            oc.commentPosition: ""
+            nameForm: id
+            descriptionForm: description
+            type: partial
+            path: field_blog_key
+            tab: "Article"
 
-fields:
-    is_active:
-        label: Отобразить статью
-        comment: Статья будет отображена в блоках на старницах сайта.
-        type: switch
-        span: full
-    title:
-        label: Заголовок статьи
-        type: text
-        span: left
-        required: true
-    image_article:
-        label: Изображение статьи
-        type: fileupload
-        mode: image
-        span: right
-        imageHeight: 140
-        imageWidth: 270
-        thumbOptions:
-            mode: crop
-            offset:
-                - 0
-                - 0
-            quality: 70
-            sharpen: 0
-            interlace: false
-            extension: auto
-    slug:
-        label: URL
-        comment: Ссылка по которой будет доступна статья. Ссылку вписывать без знаков, на английском языке, можно использовать тире, пробел использовать нельзя.
-        preset:
-            field: title
-            type: slug
-        span: left
-        type: text
-        required: true
-    anonce:
-        label: Анонс статьи
-        comment: Минимальный блок-превью с тектом.
-        type: richeditor
-        size: large
-        span: full
-        required: true
-    text:
-        label: Тело статьи
-        type: richeditor
-        size: large
-        span: full
-        required: true
-    # category:
-    #     label: Категория
-    #     type: dropdown
-    #     span: full
-    #     required: true
-    # category_two:
-    #     label: Категория
-    #     span: full
-    #     oc.commentPosition: ""
-    #     nameForm: id
-    #     descriptionForm: description
-    #     type: relation
-    #     path: field_blog_key
-    article_category:
-        label: Категория
-        span: full
-        oc.commentPosition: ""
-        nameForm: id
-        descriptionForm: description
-        type: partial
-        path: field_blog_key
+        section1:
+            label: Общие настройки
+            type: section
+            comment: В данной секции задаются общие для SEO настройки, такие как описание и заголовок страницы, изображение и тд.
+            tab: "SEO"
+        seo_title:
+            label: Заголовок
+            comment: Заголовок для meta и самой страницы.
+            type: text
+            span: left
+            preset:
+                field: title
+                type: exact
+            required: true
+            tab: "SEO"
+        seo_image:
+            label: Изображение статьи в SEO
+            comment: Upload 1200x630px.
+            type: fileupload
+            mode: image
+            span: right
+            imageHeight: auto
+            imageWidth: auto
+            maxFilesize: 2
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 80
+                sharpen: 0
+                interlace: false
+                extension: auto
+            required: true
+            tab: "SEO"
+        seo_description:
+            label: Описание
+            comment: Meta description.
+            type: text
+            span: left
+            required: true
+            preset:
+                field: anonce
+                type: exact
+            tab: "SEO"
+        seo_keywords:
+            label: Keywords
+            comment: Meta keywords.
+            type: taglist
+            separator: comma
+            span: left
+            required: true
+            tab: "SEO"
+        seo_tags:
+            label: Тэги
+            comment: Meta tag.
+            type: taglist
+            separator: comma
+            span: left
+            required: true
+            tab: "SEO"
+        seo_section:
+            label: Секция
+            comment: Meta section. Only one word.
+            type: text
+            span: left
+            default: Technology
+            required: true
+            tab: "SEO"
+        seo_is_author:
+            label: Автор статьи
+            comment: Change meta parameter article:author. If off by default use Rock’n’Block.
+            type: switch
+            span: left
+            default: false
+            tab: "SEO"
+        seo_author:
+            label: Article author
+            comment: Meta author. By default using Rock’n’Block.
+            type: text
+            span: right
+            default: Rock’n’Block
+            trigger:
+                action: show
+                field: seo_is_author
+                condition: checked
+            required: true
+            tab: "SEO"
+        section2:
+            label: Twitter
+            type: section
+            comment: В данной секции настраиваются параметры SEO для twitter.
+            tab: "SEO"
+        seo_twitter_description:
+            label: Twitter текст
+            comment: Указывается описание для Twitter поста. По умолчанию копируется из SEO Описания.
+            type: text
+            span: full
+            required: true
+            preset:
+                field: anonce
+                type: exact
+            tab: "SEO"
+        seo_is_twitter_site:
+            label: Изменить Twitter аккаунт.
+            comment: Возможность использовать другой Twitter аккаунт для статьи. По умолчанию используется @rocknblock, даже если переключатель не активен.
+            type: switch
+            span: left
+            default: false
+            tab: "SEO"
+        seo_twitter_site:
+            label: Twitter аккаунт
+            comment: Уакзать тэг Twitter аккаунта (вписывать со знаком @).
+            type: text
+            span: right
+            default: "@rocknblock"
+            trigger:
+                action: show
+                field: seo_is_twitter_site
+                condition: checked
+            required: true
+            tab: "SEO"
+        section3:
+            label: Отображение в поисковой выдаче.
+            type: section
+            comment: В данной секции настраиваются параметры SEO дял поисковой выдачи.
+            tab: "SEO"
+        seo_is_person:
+            label: Использовать Автора вместо Организации.
+            comment: Если включена данная настройка, то в выдаче будет указываться Person (конкретный человек, необходимо заполнить поле Person name). По умолчанию используется параметр Organisation и имя организации Rock'n'Block.
+            type: switch
+            span: left
+            default: false
+            tab: "SEO"
+        seo_person:
+            label: Создатель статьи.
+            comment: Имя создателя статьи. По умолчанию берется значение поля Атор статьи (если влючено) блока Общие настройки.
+            type: text
+            span: right
+            default: Rock’n’Block
+            preset:
+                field: seo_author
+                type: exact
+            trigger:
+                action: show
+                field: seo_is_person
+                condition: checked
+            required: true
+            tab: "SEO"

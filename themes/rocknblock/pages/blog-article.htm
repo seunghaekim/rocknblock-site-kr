@@ -1,0 +1,15 @@
+title = "Blog article"
+url = "/blog/:slug"
+layout = "rocknblock-blog"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[article]
+slug = "{{ :slug }}"
+==
+<section class="pg pg-article">
+    <div class="article container">
+        {% component 'article' %}
+    </div>
+</section>

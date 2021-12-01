@@ -2,7 +2,6 @@
 
 use Cms\Classes\ComponentBase;
 use Amaryfilo\Blog\Models\Article;
-use Amaryfilo\Blog\Models\Video;
 
 class Articles extends ComponentBase
 {
@@ -32,7 +31,7 @@ class Articles extends ComponentBase
 
         $article_one = Article::where('slug', $slug)->first();
 
-        if (!$article_one) {
+        if (!$article_one || !$article_one->is_active) {
             $this->controller->setStatusCode(404);
             return $this->controller->run('404');
         } $this->page['article'] = $article_one;

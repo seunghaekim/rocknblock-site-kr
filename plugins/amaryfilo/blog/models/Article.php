@@ -29,7 +29,6 @@ class Article extends Model
     public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [
-        // 'article_category' => [\Amaryfilo\Blog\Models\Category::class,'table' => 'amaryfilo_blog_key', 'key' => 'id']
         'article_category' => [
             'Amaryfilo\Blog\Models\Category',
             'table' => 'amaryfilo_blog_key',
@@ -42,6 +41,7 @@ class Article extends Model
     public $morphMany = [];
     public $attachOne = [
         'image_article' => 'System\Models\File',
+        'seo_image' => 'System\Models\File',
     ];
     public $attachMany = [];
 }

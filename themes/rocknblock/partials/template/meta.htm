@@ -1,20 +1,15 @@
-description = "All website metategs"
-
-[SeoCmsPage]
+description = "Basic metatags."
 ==
-<base href="/">
+<!-- <base href="/"> -->
 <meta charset="utf-8">
 
-<meta name="title" content="{{ this.page.meta_title }}">
-{% component 'SeoCmsPage' %}
-
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta name="author" content="Amary Filo">
 
 <link rel="preload" href="{{ 'assets/css/style.min.css'| theme}}" as="style">
 <link rel="preload" href="{{ 'assets/javascript/main.min.js'| theme}}" as="script">
+<link rel="preload" href="{{ 'assets/javascript/jquery.js'| theme}}" as="script">
 <link rel="manifest" href="{{ 'assets/images/manifest.webmanifest'| theme}}">
 
 <link rel="shortcut icon" href="{{ 'assets/images/favicon/favicon.ico'|theme }}" type="image/x-icon">
@@ -41,5 +36,3 @@ description = "All website metategs"
 <meta name="theme-color" content="#1D1B21" />
 
 <!-- meta name="google-site-verification" content="7_6Fy-97nJ33Ve9stEFXjT4RUqNwIQj-vh9tYL22ZU0" -->
-
-{% placeholder head %}

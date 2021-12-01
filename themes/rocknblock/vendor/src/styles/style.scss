@@ -1,14 +1,14 @@
-@import "../../node_modules/swiper/swiper.scss";
-@import "../plugins/normalize.css/normalize";
-@import "mixins/mixins";
-@import "theme/theme";
-@import "common/index";
+@import '../../node_modules/swiper/swiper.scss';
+@import '../plugins/normalize.css/normalize';
+@import 'mixins/mixins';
+@import 'theme/theme';
+@import 'common/index';
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  font-family: "TTNorms", sans-serif;
+  font-family: 'TTNorms', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -27,7 +27,7 @@ body {
   overflow-x: hidden;
   color: white;
 
-  @include b("tablet") {
+  @include b('tablet') {
     padding: 0 15px;
   }
 }
@@ -57,7 +57,7 @@ span {
   max-width: 1000px;
   margin: 0 auto;
 
-  @include b("tablet") {
+  @include b('tablet') {
     width: 100%;
   }
 }
@@ -86,14 +86,14 @@ ul {
     font-size: 50px;
     line-height: 75px;
     text-align: center;
-    font-feature-settings: "liga" off;
+    font-feature-settings: 'liga' off;
 
-    @include b("tablet") {
+    @include b('tablet') {
       font-size: 40px;
       line-height: 47px;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       font-size: 32px;
       line-height: 37px;
     }
@@ -101,7 +101,7 @@ ul {
 
   .secondary-header {
     margin: 0;
-    font-family: "TT Commons", sans-serif;
+    font-family: 'TTCommons', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -120,14 +120,14 @@ ul {
     width: 100%;
     padding-bottom: 22px;
     border-bottom: 2px solid #2e2e35;
-    font-family: "TT Norms", sans-serif;
+    font-family: 'TTNorms', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     text-transform: uppercase;
-    font-feature-settings: "liga" off;
+    font-feature-settings: 'liga' off;
     opacity: 0.6;
     transition: 0.4s ease;
 
@@ -158,12 +158,12 @@ ul {
     margin-top: 6px;
     padding: 3px 8px;
     color: #fff;
-    font-family: "Karla", sans-serif;
+    font-family: 'Karla', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 30px;
-    font-feature-settings: "liga" off;
+    font-feature-settings: 'liga' off;
     background: #34313b;
     border-radius: 4px;
   }
@@ -171,7 +171,7 @@ ul {
 
 .icon {
   &::before {
-    content: "";
+    content: '';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,6 +181,6 @@ ul {
   }
 }
 
-@import "sections/index";
-@import "sections/blog";
-@import "sections/article";
+@import 'sections/index';
+@import 'sections/blog';
+@import 'sections/article';

@@ -1,15 +1,54 @@
-{% set articles = __SELF__.ViewArticlesP() %}
-{% for article in articles %}
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wrap-blog-more">
-	<div class="wrap-item-blog-more" style="background-image: url({{ article.image_article.path }});">
-		<div class="item-blog-more">
-			<a href="/blog/{{ article.slug }}">Читать</a>
+{% set navs = __SELF__.ViewCategories() %}
+{% set articles = __SELF__.ViewArticles() %}
+
+<section class="blog">
+	<div class="container">
+		<div class="block-header">
+			<h2 class="primary-header">Our Blog</h2>
+		</div>
+		<span class="blog-nav-title">Show Me</span>
+		<div class="blog-list">
+			<div class="blog-nav">
+				<div class="blog-nav-ls">
+					<span class="blog-select-nav blog-nav-item active"
+																																																																	data-filter="all">All
+						Topics</span>
+					{% for nav in navs %}
+					<span class="blog-select-nav blog-nav-item"
+																																																																	data-filter="{{ nav.title }}">{{
+						nav.title }}</span>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="swiper blog-slider">
+				<div class="swiper-wrapper">
+					{% for article in articles %}
+					<a class="swiper-slide blog-item"
+																																																																	data-category="{{ article.article_category[0].title }}"
+																																																																	href="/blog/{{article.slug}}"
+																																																																	target="_blank">
+						<picture class="blog-item-img">
+							<source type="image/webp"
+																																																																			srcset="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'webp' }) }}" />
+							<img loading="lazy"
+																																																																			src="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'png' }) }}"
+																																																																			alt="{{ article.title }}" />
+						</picture>
+						<h3 class="blog-item-title">{{ article.title }}</h3>
+						<p class="blog-item-anonce">{{ article.anonce }}</p>
+					</a>
+					{% endfor %}
+				</div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+		<div class="blog-bottom">
+			<a class="btn btn-orange btn-rounded"
+																																																															href="/blog">View Blog
+				<img loading="lazy"
+																																																																src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}"
+																																																																alt="arrow right" />
+			</a>
 		</div>
 	</div>
-	<div class="wrap-title-item-blog-more">
-		<h3 class="title-item-blog-more">
-			{{ article.title }}
-		</h3>
-	</div>
-</div>
-{% endfor %}
+</section>

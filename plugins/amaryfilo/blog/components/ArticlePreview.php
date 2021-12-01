@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Amaryfilo\Blog\Models\Article;
+use Amaryfilo\Blog\Models\Category;
 
 class ArticlePreview extends ComponentBase
 {
@@ -26,10 +27,12 @@ class ArticlePreview extends ComponentBase
             ]
         ];
     }
+    
+    public function ViewCategories() {
+        return Category::orderBy('id', 'desc')->where('show', true)->where('show_in_modules', true)->get();
+    }
 
-    public function ViewArticlesP()
-    {
-        if($this->property('maxItems') == 0) return Article::orderBy('id', 'desc')->get();
-        else return Article::orderBy('id', 'desc')->take($this->property('maxItems'))->get();
+    public function ViewArticles() {
+        return $this->property('maxItems') == 0 ? Article::orderBy('id', 'desc')->where('is_active', true)->get() : Article::orderBy('id', 'desc')->where('is_active', true)->take($this->property('maxItems'))->get();
     }
 }

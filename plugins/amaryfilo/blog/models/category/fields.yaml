@@ -4,6 +4,26 @@
 
 fields:
     title:
-        label: Название категории
+        label: Заголовок
+        comment: Наименование категории.
         span: full
         required: true
+    show:
+        label: Отображать категорию
+        comment: Отображение категории на сайте.
+        type: switch
+        span: left
+        default: false
+    show_in_modules:
+        label: Отображать в компонентах
+        comment: Разрешить отображать в компонентах, например на главной странице.
+        type: switch
+        span: right
+        default: false
+    articles_in:
+        label: Статьи в категории
+        span: full
+        oc.commentPosition: ""
+        nameForm: id
+        type: partial
+        path: field_blog_key

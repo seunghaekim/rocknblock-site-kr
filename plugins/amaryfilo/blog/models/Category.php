@@ -28,7 +28,14 @@ class Category extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'articles_in' => [
+            'Amaryfilo\Blog\Models\Article',
+            'table' => 'amaryfilo_blog_key',
+            'key'      => 'article_id',
+            'otherKey' => 'category_id'
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

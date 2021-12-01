@@ -11,14 +11,14 @@
     left: 576px;
     z-index: -1;
 
-    @include b("tablet") {
+    @include b('tablet') {
       width: 300px;
       right: 100px;
       left: auto;
       top: -50px;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       width: 246px;
       left: 10px;
       top: -70px;
@@ -30,7 +30,7 @@
     left: 709px;
     z-index: -2;
 
-    @include b("tablet") {
+    @include b('tablet') {
       width: 250px;
       right: 0;
       left: auto;
@@ -38,7 +38,7 @@
       transform: rotate(210deg);
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       width: 192px;
       right: 15px;
       top: -20px;
@@ -51,14 +51,14 @@
     left: 499px;
     z-index: -3;
 
-    @include b("tablet") {
+    @include b('tablet') {
       width: 192px;
       right: 230px;
       left: auto;
       top: 45px;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       left: 10px;
     }
   }
@@ -67,25 +67,21 @@
     max-width: 755px;
     margin-right: 0;
 
-    @include text-gradient(
-      linear-gradient(86.23deg, #ffffff 54.52%, #171628 83.07%)
-    );
+    @include text-gradient(linear-gradient(86.23deg, #ffffff 54.52%, #171628 83.07%));
 
     text-transform: uppercase;
-    font-family: "TT Norms", sans-serif;
-    font-feature-settings: "liga" off;
+    font-family: 'TTNorms', sans-serif;
+    font-feature-settings: 'liga' off;
     font-style: normal;
     font-weight: 800;
     font-size: 83px;
     line-height: 85px;
 
-    @include b("tablet") {
+    @include b('tablet') {
       margin-top: 90px;
       width: 300px;
 
-      @include text-gradient(
-        linear-gradient(86.23deg, #ffffff 54.52%, #171628 100%)
-      );
+      @include text-gradient(linear-gradient(86.23deg, #ffffff 54.52%, #171628 100%));
 
       font-size: 40px;
       line-height: 40px;
@@ -97,7 +93,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @include b("mobile") {
+    @include b('mobile') {
       flex-direction: column;
       justify-content: center;
     }
@@ -106,14 +102,14 @@
   &__description {
     max-width: 445px;
     margin: 57px 0 0 0;
-    font-family: "TT Commons", sans-serif;
+    font-family: 'TTCommons', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
     line-height: 25px;
     opacity: 0.85;
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 17px;
     }
   }
@@ -126,9 +122,9 @@
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
-    font-feature-settings: "kern" off, "liga" off;
+    font-feature-settings: 'kern' off, 'liga' off;
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 20px;
     }
 
@@ -137,7 +133,7 @@
       width: 144px;
       height: 50px;
 
-      @include b("mobile") {
+      @include b('mobile') {
         width: 137px;
         height: 43px;
       }
@@ -153,18 +149,13 @@
       display: flex;
       justify-content: space-evenly;
 
-      @include b("mobile") {
+      @include b('mobile') {
         width: 160px;
         height: 43px;
       }
 
       &:hover {
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.3) 0%,
-            rgba(255, 255, 255, 0) 100%
-          ),
-          #dc2c2c;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
       }
     }
@@ -184,7 +175,7 @@
       justify-content: center;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       width: 100%;
       margin: 30px auto 0;
     }
@@ -213,14 +204,10 @@
   margin: 50px auto 0;
 
   .primary-header {
-    @include text-gradient(
-      linear-gradient(87.05deg, #ffffff 51.97%, #171628 77.38%)
-    );
+    @include text-gradient(linear-gradient(87.05deg, #ffffff 51.97%, #171628 77.38%));
 
-    @include b("tablet") {
-      @include text-gradient(
-        linear-gradient(to right, #ffffff 51.97%, #171628 85.38%)
-      );
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 85.38%));
     }
   }
 
@@ -265,7 +252,7 @@
       width: 50%;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 20px;
       width: 50%;
       height: 150px;
@@ -290,16 +277,16 @@
       font-size: 60px;
       line-height: 75px;
       letter-spacing: -3px;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
       color: #dc2c2c;
 
-      @include b("tablet") {
+      @include b('tablet') {
         margin-right: 10px;
         font-size: 40px;
         line-height: 47px;
       }
 
-      @include b("mobile") {
+      @include b('mobile') {
         font-size: 35px;
         line-height: 42px;
       }
@@ -312,7 +299,7 @@
       font-size: 18px;
       line-height: 21px;
       text-transform: uppercase;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
     }
 
     &__secondary {
@@ -321,7 +308,7 @@
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
       opacity: 0.5;
     }
 
@@ -385,18 +372,14 @@
   scroll-margin-top: 120px;
 
   .primary-header {
-    @include text-gradient(
-      linear-gradient(87.05deg, #ffffff 58.97%, #171628 84.38%)
-    );
+    @include text-gradient(linear-gradient(87.05deg, #ffffff 58.97%, #171628 84.38%));
 
-    @include b("tablet") {
-      @include text-gradient(
-        linear-gradient(to right, #ffffff 51.97%, #171628 125.38%)
-      );
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 125.38%));
     }
   }
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 60px;
   }
 
@@ -405,7 +388,7 @@
     left: -10px;
     z-index: -1;
 
-    @include b("mobile") {
+    @include b('mobile') {
       display: none;
     }
   }
@@ -413,13 +396,13 @@
   &__cards {
     margin-top: 82px;
 
-    @include b("tablet") {
+    @include b('tablet') {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 50px;
       overflow-x: auto;
     }
@@ -436,7 +419,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @include b("tablet") {
+      @include b('tablet') {
         display: inline-flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -454,7 +437,7 @@
     border-radius: 20px;
     transition: 0.4s ease;
 
-    @include b("tablet") {
+    @include b('tablet') {
       margin: 5px;
       min-width: 280px;
       height: 310px;
@@ -462,7 +445,7 @@
 
     &-description {
       margin-top: 16px;
-      font-family: "TT Commons", sans-serif;
+      font-family: 'TTCommons', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
@@ -473,12 +456,7 @@
     }
 
     &:hover {
-      background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        #dc2c2c;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
 
       .icon {
         opacity: 0.8;
@@ -506,18 +484,14 @@
   margin-top: 100px;
 
   .primary-header {
-    @include text-gradient(
-      linear-gradient(87.05deg, #ffffff 58.97%, #171628 84.38%)
-    );
+    @include text-gradient(linear-gradient(87.05deg, #ffffff 58.97%, #171628 84.38%));
 
-    @include b("tablet") {
-      @include text-gradient(
-        linear-gradient(to right, #ffffff 51.97%, #171628 125.38%)
-      );
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 125.38%));
     }
   }
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 60px;
   }
 
@@ -528,7 +502,7 @@
   }
 
   .scroll {
-    @include b("tablet") {
+    @include b('tablet') {
       overflow-x: auto;
     }
   }
@@ -547,7 +521,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include b("tablet") {
+    @include b('tablet') {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -575,7 +549,7 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    font-feature-settings: "liga" off;
+    font-feature-settings: 'liga' off;
     border: 3px solid #2e2e35;
     border-radius: 20px;
 
@@ -607,18 +581,14 @@
   scroll-margin-top: 120px;
 
   .primary-header {
-    @include text-gradient(
-      linear-gradient(87.05deg, #ffffff 51.97%, #171628 82.38%)
-    );
+    @include text-gradient(linear-gradient(87.05deg, #ffffff 51.97%, #171628 82.38%));
 
-    @include b("tablet") {
-      @include text-gradient(
-        linear-gradient(to right, #ffffff 51.97%, #171628 125.38%)
-      );
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 125.38%));
     }
   }
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 60px;
   }
 
@@ -631,12 +601,12 @@
     grid-row-gap: 30px;
     justify-items: center;
 
-    @include b("tablet") {
+    @include b('tablet') {
       margin-top: 40px;
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 40px;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -662,7 +632,7 @@
     align-items: center;
     justify-content: space-around;
 
-    @include b("tablet") {
+    @include b('tablet') {
       margin-top: 60px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -675,7 +645,7 @@
     }
 
     .achieve {
-      @include b("tablet") {
+      @include b('tablet') {
         display: flex;
         align-self: center;
         justify-self: center;
@@ -718,7 +688,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  @include b("tablet") {
+  @include b('tablet') {
     border-bottom: none;
     padding: 24px 0;
   }
@@ -731,7 +701,7 @@ header {
     justify-content: space-between;
     padding: 0.5em 15px;
 
-    @include b("tablet") {
+    @include b('tablet') {
       padding: 0 15px;
     }
 
@@ -763,7 +733,7 @@ header {
     font-style: normal;
     font-weight: bold;
 
-    @include b("tablet") {
+    @include b('tablet') {
       position: absolute;
       top: 39px;
     }
@@ -774,21 +744,21 @@ header {
       line-height: 19px;
 
       &:first-child {
-        font-feature-settings: "liga" off;
+        font-feature-settings: 'liga' off;
       }
 
       &:hover {
         &:nth-child(-n + 4) {
           color: #d4d2d2;
 
-          @include b("tablet") {
+          @include b('tablet') {
             color: #dc2c2c;
 
             &::before {
               position: absolute;
               top: 0;
               left: -5px;
-              content: "";
+              content: '';
               display: inline-block;
               width: 5px;
               height: 48px;
@@ -814,7 +784,7 @@ header {
         border-color: #dc2c2c;
       }
 
-      @include b("tablet") {
+      @include b('tablet') {
         justify-content: flex-start;
         color: #dc2c2c;
         font-size: 16px;
@@ -822,12 +792,12 @@ header {
       }
     }
 
-    @include b("tablet") {
+    @include b('tablet') {
       display: none;
     }
   }
 
-  @include b("tablet") {
+  @include b('tablet') {
     flex-direction: column;
 
     .topnav {
@@ -855,7 +825,7 @@ header {
   display: none;
   cursor: pointer;
 
-  @include b("tablet") {
+  @include b('tablet') {
     display: inline-block;
   }
 }
@@ -885,7 +855,7 @@ header {
     opacity: 0.4;
   }
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 60px;
   }
 
@@ -903,7 +873,7 @@ header {
       max-width: 600px;
       margin-top: 34px;
 
-      @include b("mobile") {
+      @include b('mobile') {
         margin-top: 10px;
       }
     }
@@ -938,7 +908,7 @@ header {
     flex-direction: column;
     align-items: center;
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 20px;
     }
 
@@ -955,7 +925,7 @@ header {
       font-weight: bold;
       font-size: 18px;
       line-height: 21px;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
       text-align: center;
       border: 3px solid #414147;
       border-radius: 20px;
@@ -975,7 +945,7 @@ header {
         padding-bottom: 23px;
         overflow: hidden;
 
-        @include b("mobile") {
+        @include b('mobile') {
           height: 90px;
         }
       }
@@ -988,18 +958,13 @@ header {
       font-size: 24px;
       line-height: 28px;
       text-align: center;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
       width: 242px;
       height: 58px;
       outline: 0 none;
 
       &:hover {
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.25) 0%,
-            rgba(255, 255, 255, 0) 100%
-          ),
-          #dc2c2c;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
       }
     }
@@ -1051,16 +1016,14 @@ header {
       max-width: 400px;
       margin-top: 50px;
 
-      @include text-gradient(
-        linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
-      );
+      @include text-gradient(linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%));
 
       font-style: normal;
       font-weight: 800;
       font-size: 40px;
       line-height: 47px;
       text-align: center;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
     }
 
     &__button {
@@ -1076,12 +1039,7 @@ header {
         text-align: center;
 
         &:hover {
-          background: linear-gradient(
-              180deg,
-              rgba(255, 255, 255, 0.25) 0%,
-              rgba(255, 255, 255, 0) 100%
-            ),
-            #dc2c2c;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
           box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
         }
       }
@@ -1150,7 +1108,7 @@ header {
   margin-top: 81px;
   z-index: 10;
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 20px;
   }
 
@@ -1166,7 +1124,7 @@ header {
       flex-direction: row;
       flex-wrap: wrap;
 
-      @include b("tablet") {
+      @include b('tablet') {
         margin: 0;
       }
 
@@ -1233,7 +1191,7 @@ header {
     justify-content: space-between;
     max-width: 659px;
 
-    @include b("desktop") {
+    @include b('desktop') {
       flex-direction: column;
     }
 
@@ -1250,7 +1208,7 @@ header {
     &__copyright {
       text-align: center;
 
-      @include b("mobile") {
+      @include b('mobile') {
         width: 240px;
       }
     }
@@ -1258,7 +1216,7 @@ header {
     &__copyright-mobile {
       display: none;
 
-      @include b("tablet") {
+      @include b('tablet') {
         display: block;
         padding-top: 2em;
       }
@@ -1267,7 +1225,7 @@ header {
     &__copyright-desktop {
       display: block;
 
-      @include b("tablet") {
+      @include b('tablet') {
         display: none;
       }
     }
@@ -1280,7 +1238,7 @@ header {
       justify-content: space-between;
       font-size: 16px;
 
-      @include b("tablet") {
+      @include b('tablet') {
         justify-content: center;
 
         .tab {
@@ -1288,7 +1246,7 @@ header {
         }
       }
 
-      @include b("mobile") {
+      @include b('mobile') {
         justify-content: space-between;
       }
     }
@@ -1300,7 +1258,7 @@ header {
     a:not(:last-child) {
       margin-right: 1em;
 
-      @include b("tablet") {
+      @include b('tablet') {
         margin-right: 3em;
       }
 
@@ -1331,9 +1289,9 @@ header {
     font-size: 50px;
     line-height: 75px;
     text-align: center;
-    font-feature-settings: "liga" off;
+    font-feature-settings: 'liga' off;
 
-    @include b("tablet") {
+    @include b('tablet') {
       font-size: 32px;
       line-height: 39px;
       background: linear-gradient(87.05deg, #fff 51.97%, #171628 127.38%);
@@ -1348,7 +1306,7 @@ header {
     display: flex;
     justify-content: center;
 
-    @include b("tablet") {
+    @include b('tablet') {
       justify-content: flex-start;
     }
 
@@ -1367,14 +1325,14 @@ header {
       &_desc {
         h2 {
           padding: 15px 0 10px 0;
-          font-family: TT Commons, sans-serif;
+          font-family: TTCommons, sans-serif;
           font-weight: bold;
           font-size: 22px;
           line-height: 25px;
         }
 
         h3 {
-          font-family: TT Commons, sans-serif;
+          font-family: TTCommons, sans-serif;
           font-weight: normal;
 
           opacity: 0.5;
@@ -1462,10 +1420,15 @@ header {
   padding-left: 30px;
   padding-right: 30px;
   box-sizing: content-box;
+
+  @include b(500) {
+    width: 300px;
+  }
 }
 
 .sliderWrapper {
   margin-top: 60px;
+  overflow: hidden;
 }
 
 // Team
@@ -1475,7 +1438,7 @@ header {
   margin-top: 100px;
   scroll-margin-top: 120px;
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 50px;
   }
 
@@ -1492,14 +1455,10 @@ header {
 
   .block-header {
     .primary-header {
-      @include text-gradient(
-        linear-gradient(87.05deg, #ffffff 50.97%, #171628 62.38%)
-      );
+      @include text-gradient(linear-gradient(87.05deg, #ffffff 50.97%, #171628 62.38%));
 
-      @include b("tablet") {
-        @include text-gradient(
-          linear-gradient(to right, #ffffff 51.97%, #171628 77.38%)
-        );
+      @include b('tablet') {
+        @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 77.38%));
       }
     }
 
@@ -1514,7 +1473,7 @@ header {
     flex-direction: row;
     justify-content: center;
 
-    @include b("tablet") {
+    @include b('tablet') {
       display: inline-flex;
       overflow-x: scroll;
     }
@@ -1528,7 +1487,7 @@ header {
       box-sizing: border-box;
       border-radius: 20px;
 
-      @include b("mobile") {
+      @include b('mobile') {
         margin-top: 30px;
       }
 
@@ -1540,16 +1499,14 @@ header {
       }
 
       &__post {
-        @include text-gradient(
-          linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
-        );
+        @include text-gradient(linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%));
 
         padding: 0 15px;
         font-style: normal;
         font-weight: 800;
         font-size: 22px;
         line-height: 30px;
-        font-feature-settings: "liga" off;
+        font-feature-settings: 'liga' off;
       }
 
       &__name {
@@ -1569,7 +1526,7 @@ header {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-        font-feature-settings: "liga" off;
+        font-feature-settings: 'liga' off;
         mix-blend-mode: normal;
         opacity: 0.5;
       }
@@ -1584,26 +1541,24 @@ header {
         flex-direction: column;
         justify-content: space-between;
 
-        @include b("tablet") {
+        @include b('tablet') {
           height: initial;
         }
 
         div {
-          @include b("tablet") {
+          @include b('tablet') {
             height: 300px;
           }
         }
 
         &__title {
-          @include text-gradient(
-            linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
-          );
+          @include text-gradient(linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%));
 
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
           line-height: 19px;
-          font-feature-settings: "liga" off;
+          font-feature-settings: 'liga' off;
         }
 
         &__list {
@@ -1620,14 +1575,14 @@ header {
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
-            font-feature-settings: "liga" off;
+            font-feature-settings: 'liga' off;
             mix-blend-mode: normal;
 
             &::before {
               position: absolute;
               top: 6px;
               left: 0;
-              content: "";
+              content: '';
               display: inline-block;
               min-width: 10px;
               min-height: 10px;
@@ -1645,9 +1600,7 @@ header {
           .stacks__title {
             margin-top: 20px;
 
-            @include text-gradient(
-              linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
-            );
+            @include text-gradient(linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%));
 
             font-style: normal;
             font-weight: 800;
@@ -1674,7 +1627,7 @@ header {
           margin: 0 20px;
           display: flex;
           flex-direction: column;
-          font-family: "TT Norms", sans-serif;
+          font-family: 'TTNorms', sans-serif;
 
           &__name {
             font-style: normal;
@@ -1692,7 +1645,7 @@ header {
       }
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       justify-content: space-evenly;
     }
   }
@@ -1704,11 +1657,11 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @include b("tablet") {
+    @include b('tablet') {
       justify-content: center;
     }
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin: 30px auto;
       justify-content: space-around;
     }
@@ -1721,9 +1674,9 @@ header {
       align-items: center;
       font-style: normal;
       font-weight: bold;
-      font-feature-settings: "liga" off;
+      font-feature-settings: 'liga' off;
 
-      @include b("mobile") {
+      @include b('mobile') {
         width: 133px;
       }
 
@@ -1741,12 +1694,7 @@ header {
         text-align: center;
         color: #fff;
         mix-blend-mode: normal;
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0) 100%
-          ),
-          #dc2c2c;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
       }
@@ -1755,7 +1703,7 @@ header {
         font-size: 18px;
         line-height: 21px;
         text-align: center;
-        font-feature-settings: "liga" off;
+        font-feature-settings: 'liga' off;
       }
 
       &__primary-text {
@@ -1777,13 +1725,14 @@ header {
   width: 100%;
   margin-top: 40px;
 
-  input[type="radio"] {
+  input[type='radio'] {
     display: none;
   }
 
   .tabs-label {
     display: inline-block;
-    width: 50%;
+    // width: 50%;
+    width: 49.5%;
     padding-bottom: 22px;
 
     border-bottom: 2px solid #2e2e35;
@@ -1791,12 +1740,12 @@ header {
     opacity: 0.7;
 
     transition: 0.4s ease;
-    font-feature-settings: "liga" off;
+    font-feature-settings: 'liga' off;
 
     text-align: center;
     text-transform: uppercase;
 
-    font-family: TT Norms, sans-serif;
+    font-family: TTNorms, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -1807,7 +1756,7 @@ header {
     }
   }
 
-  input[type="radio"]:checked + .tabs-label {
+  input[type='radio']:checked + .tabs-label {
     border-bottom: 3px solid #f93333;
     color: #f93333;
     font-weight: 700;
@@ -1840,7 +1789,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 
-    input[type="radio"]:checked + label,
+    input[type='radio']:checked + label,
     label:hover {
       .content-item__img {
         transform: scale(1.4);
@@ -1891,7 +1840,7 @@ header {
         font-style: normal;
         font-size: 14px;
         line-height: 17px;
-        font-feature-settings: "liga" off;
+        font-feature-settings: 'liga' off;
         font-weight: normal;
         opacity: 0.5;
         transition: 0.4s ease;
@@ -1959,7 +1908,7 @@ header {
 .scroll {
   margin-top: 40px;
 
-  @include b("desktop") {
+  @include b('desktop') {
     overflow-x: auto;
   }
 
@@ -1980,37 +1929,33 @@ header {
   scroll-margin-top: 120px;
 
   .primary-header {
-    @include text-gradient(
-      linear-gradient(87.05deg, #ffffff 51.97%, #171628 78.38%)
-    );
+    @include text-gradient(linear-gradient(87.05deg, #ffffff 51.97%, #171628 78.38%));
 
-    @include b("tablet") {
-      @include text-gradient(
-        linear-gradient(to right, #ffffff 51.97%, #171628 125.38%)
-      );
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 125.38%));
     }
   }
 
-  @include b("mobile") {
+  @include b('mobile') {
     margin-top: 60px;
   }
 
   .tablinks {
     margin-top: 70px;
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 30px;
     }
   }
 
   .noscroll {
-    @include b("tablet") {
+    @include b('tablet') {
       justify-content: flex-start;
     }
   }
 
   .scroll {
-    @include b("mobile") {
+    @include b('mobile') {
       overflow-x: auto;
     }
   }
@@ -2023,7 +1968,7 @@ header {
     align-items: flex-start;
     flex-wrap: wrap;
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: 10px;
       padding: 20px;
       height: 200px;
@@ -2057,7 +2002,7 @@ header {
         font-style: normal;
         font-size: 14px;
         line-height: 17px;
-        font-feature-settings: "liga" off;
+        font-feature-settings: 'liga' off;
         font-weight: normal;
         opacity: 0.5;
         transition: 0.4s ease;
@@ -2100,17 +2045,17 @@ header {
   &__description {
     display: none;
 
-    font-family: "Karla", sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 20px;
     line-height: 23px;
 
     p {
-      font-family: "Karla", sans-serif;
+      font-family: 'Karla', sans-serif;
       font-size: 20px;
       line-height: 23px;
     }
 
-    @include b("tablet") {
+    @include b('tablet') {
       display: block;
       margin: 30px auto;
       padding: 10px;
@@ -2122,7 +2067,7 @@ header {
   &__dropdown {
     border-radius: 8px;
 
-    @include b("mobile") {
+    @include b('mobile') {
       border: none;
       background: transparent;
     }
@@ -2140,7 +2085,7 @@ header {
     overflow: hidden;
   }
 
-  @include b("tablet") {
+  @include b('tablet') {
     margin: 0;
     padding: 15px;
 
@@ -2160,7 +2105,7 @@ header {
     font-size: 24px;
     line-height: 28px;
 
-    @include b("mobile") {
+    @include b('mobile') {
       display: none;
     }
   }
@@ -2173,7 +2118,7 @@ header {
     display: flex;
     justify-content: space-between;
 
-    @include b("tablet") {
+    @include b('tablet') {
       min-height: auto;
       overflow-x: auto;
     }
@@ -2184,6 +2129,10 @@ header {
 
     .switchIcon {
       cursor: pointer;
+
+      @include b(500) {
+        display: none;
+      }
     }
 
     #case-1-1-img-1:checked ~ .case-1-1-img-1 {
@@ -2247,7 +2196,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    @include b("tablet") {
+    @include b('tablet') {
       justify-content: flex-start;
       overflow-x: auto;
     }
@@ -2261,7 +2210,7 @@ header {
       min-width: max-content;
     }
 
-    @include b("tablet") {
+    @include b('tablet') {
       display: inline-flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -2310,7 +2259,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
-    @include b("mobile") {
+    @include b('mobile') {
       margin-top: -20px;
       flex-direction: column;
       align-items: flex-start;
@@ -2322,16 +2271,14 @@ header {
       flex-direction: column;
       flex: 1;
 
-      @include b("mobile") {
+      @include b('mobile') {
         margin-top: 10px;
         align-items: flex-start;
         justify-content: flex-start;
       }
 
       .insight__title {
-        @include text-gradient(
-          linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%)
-        );
+        @include text-gradient(linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%));
 
         font-style: normal;
         font-weight: 800;
@@ -2342,7 +2289,7 @@ header {
       .gray-list {
         margin-top: 12px;
 
-        @include b("mobile") {
+        @include b('mobile') {
           margin-top: 5px;
         }
       }
@@ -2353,7 +2300,7 @@ header {
 .insight-stacks {
   align-items: flex-end;
 
-  @include b("mobile") {
+  @include b('mobile') {
     align-items: flex-start;
 
     .gray-list {
@@ -2364,7 +2311,7 @@ header {
   .gray-list {
     justify-content: flex-end;
 
-    @include b("mobile") {
+    @include b('mobile') {
       justify-content: flex-start;
     }
 
@@ -2372,7 +2319,7 @@ header {
       margin-right: 0;
       margin-left: 6px;
 
-      @include b("mobile") {
+      @include b('mobile') {
         margin-left: 0;
         margin-right: 5px;
       }

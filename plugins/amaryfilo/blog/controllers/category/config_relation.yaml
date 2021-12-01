@@ -1,0 +1,9 @@
+articles_in:
+    label: Article
+    view:
+        list: $/amaryfilo/blog/models/article/columns.yaml
+        toolbarButtons: add|remove|create
+    manage:
+        form: $/amaryfilo/blog/models/article/fields.yaml
+        showCheckboxes: true
+        showSearch: true

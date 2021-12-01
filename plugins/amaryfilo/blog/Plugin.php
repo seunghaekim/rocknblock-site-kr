@@ -92,6 +92,18 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-book',
                 'permissions' => ['amaryfilo.blog.*'],
                 'order'       => 500,
+                'sideMenu' => [
+                    'articles' => [
+                        'label'       => 'Статьи',
+                        'icon'        => 'icon-list-alt',
+                        'url'         => \Backend::url('amaryfilo/blog/articles'),
+                    ],     
+                    'category' => [
+                        'label'       => 'Категории',
+                        'icon'        => 'icon-list',
+                        'url'         => \Backend::url('amaryfilo/blog/category'),
+                    ], 
+                ],
             ],
         ];
     }

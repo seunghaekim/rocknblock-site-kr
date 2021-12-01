@@ -8,9 +8,12 @@ is_hidden = 0
 seo_keywords = "blockchain, develop, rocknblock, crypto, cryptocurrency"
 robot_index = "index"
 robot_follow = "follow"
+
+[articlepreview]
+maxItems = 0
 ==
 {% put head %}
-	<meta name="generator" content="Rocknblock Developing">
+	<meta name="generator" content="Rock`n`Block Developing">
 
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://rocknblock.io/">
@@ -34,7 +37,7 @@ robot_follow = "follow"
 {% partial 'sections/cases' %}
 {% partial 'sections/team' %}
 {% partial 'sections/partners' %}
-{% partial 'sections/blog' %}
+{% component 'articlepreview' %}
 {% partial 'sections/clients-feedback' %}
 {% partial 'sections/nav-slider' %}
 {% partial 'sections/contact-us' %}
