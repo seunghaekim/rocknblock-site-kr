@@ -41,8 +41,8 @@ class Articles extends ComponentBase
         $cat = Category::where('id', $article_one->article_category[0]->id)->first();
 
         $article_similar = 
-            $article_one->use_similar_select ? $article_one->similar_articles : 
-            $cat->articles_in()->where('is_active', '=', 1)->get();
+            $article_one->use_similar_select ? $article_one->similar_articles->reverse() : 
+            $cat->articles_in()->where('is_active', '=', 1)->where('id', '!=', $article_one->id)->take(3)->get()->reverse();
             // Category::where('id', $article_one->article_category[0]->id)->whereHas('articles_in', function($filter) {$filter->where('is_active', '=', 1);})->get()->articles_in();
 
         $this->page['similar_articles'] = $article_similar;
