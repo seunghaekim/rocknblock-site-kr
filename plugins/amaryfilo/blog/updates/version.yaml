@@ -34,3 +34,7 @@
     - create_blog_categories_table.php
     - create_articles_table.php
     - create_blog_key_table.php
+1.0.10:
+    - Update article table
+    - create_article_key_table.php
+    - create_articles_table.php

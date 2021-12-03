@@ -215,3 +215,40 @@ tabs:
                 condition: checked
             required: true
             tab: "SEO"
+
+        section4:
+            label: Похожие статьи
+            type: section
+            comment: В данной секции задаются похожие статьи для создаваемой статьи.
+            tab: "SIMILAR"
+        seo_title:
+            label: Заголовок
+            comment: Заголовок для meta и самой страницы.
+            type: text
+            span: left
+            preset:
+                field: title
+                type: exact
+            required: true
+            tab: "SIMILAR"
+        use_similar_select:
+            label: Выбрать статьи.
+            comment: Если не включен данный параметр, то будут выбраны последние три статьи из категории в которой опубликована созданная статья.
+            type: switch
+            span: left
+            default: false
+            tab: "SIMILAR"
+        similar_articles:
+            label: Выбранные статьи
+            span: full
+            oc.commentPosition: ""
+            nameForm: id
+            descriptionForm: description
+            type: partial
+            path: field_article_key
+            trigger:
+                action: show
+                field: use_similar_select
+                condition: checked
+            required: true
+            tab: "SIMILAR"

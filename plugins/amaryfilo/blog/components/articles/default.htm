@@ -78,5 +78,62 @@
 	</script>
 {% endput %}
 
-<h1 class="article-title">{{ article.title }}</h1>
-{{ article.text|raw }}
+<section class="article container">
+	<h1 class="article-title">{{ article.title }}</h1>
+	{{ article.text|raw }}
+</section>
+
+<section class="article-share">
+	<div class="container"><span class="article-section-title">Share it!</span>
+		<div class="article-share-items">
+			<a class="article-share-item"
+																																																															href="https://twitter.com/intent/tweet?text={{ article.seo_title }}.%20{{ article.seo_twitter_description }}&url=https://rocknblock.io/blog/{{ article.slug }}&hashtags={{ article.seo_keywords }}"
+																																																															target="_blank"
+																																																															rel="noreferrer"><img
+																																																																src="{{ 'assets/images/site/social/icon-footer-tw-mask.svg'| theme }}"
+																																																																alt="twitter" /></a>
+			<a class="article-share-item"
+																																																															href="https://t.me/share/url?url=https://rocknblock.io/blog/{{ article.slug }}&text={{ article.seo_description }}"
+																																																															target="_blank"
+																																																															rel="noreferrer"><img
+																																																																src="{{ 'assets/images/site/social/icon-footer-tg-mask.svg'| theme }}"
+																																																																alt="telegram" /></a>
+			<a class="article-share-item"
+																																																															href="https://www.facebook.com/sharer/sharer.php?u=https://rocknblock.io/blog/{{ article.slug }}&t={{ article.seo_title }}&text={{ article.seo_description }}"
+																																																															target="_blank"
+																																																															rel="noreferrer"><img
+																																																																src="{{ 'assets/images/site/social/icon-footer-fb-mask.svg'| theme }}"
+																																																																alt="facebook" /></a>
+			<a class="article-share-item"
+																																																															href="https://www.linkedin.com/sharing/share-offsite/?url=https://rocknblock.io/blog/{{ article.slug }}"
+																																																															target="_blank"
+																																																															rel="noreferrer"><img
+																																																																src="{{ 'assets/images/site/social/icon-footer-in-mask.svg'| theme }}"
+																																																																alt="linkedin" /></a>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container article-similar"> <span class="article-section-title">Similar Posts</span>
+		<div class="blog-items">
+			{% for similarPost in similar_articles %}
+			<a class="swiper-slide blog-item"
+																																																															href="/blog/{{similarPost.slug}}"
+																																																															target="_blank">
+				<picture class="blog-item-img">
+					<source type="image/webp"
+																																																																	srcset="{{ similarPost.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'webp' }) }}" />
+					<img loading="lazy"
+																																																																	src="{{ similarPost.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'png' }) }}"
+																																																																	alt="{{ similarPost.title }}" />
+				</picture>
+				<h3 class="blog-item-title">{{ similarPost.title }}</h3>
+				<p class="blog-item-anonce">{{ similarPost.anonce }}</p>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+{% partial 'sections/contact-us' %}

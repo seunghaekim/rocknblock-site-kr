@@ -1,9 +1,18 @@
 article_category:
-    label: Категории
+    label: Категория
     view:
         list: $/amaryfilo/blog/models/category/columns.yaml
         toolbarButtons: add|remove|create
     manage:
         form: $/amaryfilo/blog/models/category/fields.yaml
+        showCheckboxes: true
+        showSearch: true
+similar_articles:
+    label: Статья
+    view:
+        list: $/amaryfilo/blog/models/article/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        form: $/amaryfilo/blog/models/article/fields.yaml
         showCheckboxes: true
         showSearch: true

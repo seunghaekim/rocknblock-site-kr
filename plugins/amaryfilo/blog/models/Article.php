@@ -34,6 +34,12 @@ class Article extends Model
             'table' => 'amaryfilo_blog_key',
             'key'      => 'category_id',
             'otherKey' => 'article_id'
+        ],
+        'similar_articles' => [
+            'Amaryfilo\Blog\Models\Article',
+            'table' => 'amaryfilo_article_key',
+            'key'      => 's_article_id',
+            'otherKey' => 'article_id'
         ]
     ];
     public $morphTo = [];
