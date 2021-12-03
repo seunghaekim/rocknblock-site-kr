@@ -1,10 +1,4 @@
-// .pg {
-//   &-article {
-//   }
-// }
-
 .article {
-  font-family: TTCommons;
   font-size: 18px;
   line-height: 1.4;
 
@@ -14,6 +8,10 @@
 
   @include b(500) {
     font-size: 14px;
+  }
+
+  * {
+    font-family: TTCommons, sans-serif;
   }
 
   pre {
@@ -43,9 +41,9 @@
   h2,
   &-h3,
   h3 {
-    font-family: TTNorms;
     font-weight: 800;
     line-height: 1.4;
+    opacity: 1;
 
     @include b(769) {
       line-height: 1;
@@ -134,5 +132,72 @@
     li {
       margin: 0;
     }
+  }
+
+  &-section {
+    &-title {
+      font-family: TTCommons;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 34px;
+      text-align: center;
+      display: block;
+      margin: 30px 0;
+
+      color: #ffffff;
+    }
+  }
+
+  &-share {
+    margin-top: 50px;
+
+    &-items {
+      display: flex;
+      min-width: 320px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border-radius: 3em;
+      background-color: #000000;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      width: 100%;
+      max-width: max-content;
+      flex-wrap: wrap;
+
+      @include b(500) {
+        padding: 10px;
+      }
+    }
+
+    &-item {
+      width: 60px;
+      height: 60px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: 2px solid #dc2c2c;
+      margin: 5px;
+      border-radius: 2em;
+
+      @include b(500) {
+        width: 45px;
+        height: 45px;
+      }
+
+      &:hover {
+        background-color: #dc2c2c;
+      }
+    }
+  }
+
+  &-similar {
+    background-color: #000;
+    padding: 10px 50px 50px 50px;
+    margin: 50px auto;
+    border-radius: 1em;
   }
 }

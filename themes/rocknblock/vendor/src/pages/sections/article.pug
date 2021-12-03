@@ -1,4 +1,5 @@
 include blocks
+include blog
 
 mixin blog-article
   section.article.container
@@ -50,3 +51,27 @@ mixin blog-article
         |    line-height: 1;
         |  }
         | } 
+
+mixin blog-article-share
+  section.article-share
+    .container 
+      span.article-section-title Share it!
+      .article-share-items
+        a.article-share-item(href="#" target="_blank" rel="noreferrer")
+          img(src="../../img/social/icon-footer-tw-mask.svg" alt="tw")
+        a.article-share-item(href="#" target="_blank" rel="noreferrer")
+          img(src="../../img/social/icon-footer-tg-mask.svg" alt="tg")
+        a.article-share-item(href="#" target="_blank" rel="noreferrer")
+          img(src="../../img/social/icon-footer-fb-mask.svg" alt="fb")
+        a.article-share-item(href="#" target="_blank" rel="noreferrer")
+          img(src="../../img/social/icon-footer-medium-mask.svg" alt="medium")
+        a.article-share-item(href="#" target="_blank" rel="noreferrer")
+          img(src="../../img/social/icon-footer-in-mask.svg" alt="in")
+        a.article-share-item(href="#" target="_blank" rel="noreferrer")
+          img(src="../../img/social/icon-footer-mail-mask.svg" alt="mail")
+
+mixin blog-article-similar-posts
+  section
+    .container.article-similar 
+      span.article-section-title Similar Posts
+      +blog-items
