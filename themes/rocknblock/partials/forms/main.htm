@@ -1,0 +1,53 @@
+description = "Main form"
+==
+<div class="contact-us container" id="contact-us">
+	<div class="background-img">
+		<picture>
+			<source type="image/webp" srcset="{{ 'assets/images/site/background/partners.webp'| theme }}" />
+			<img loading="lazy" src="{{ 'assets/images/site/background/partners.png'| theme }}" alt="partners" />
+		</picture>
+	</div>
+	<div class="background-img">
+		<picture>
+			<source type="image/webp" srcset="{{ 'assets/images/site/background/contact.webp'| theme }}" />
+			<img loading="lazy" src="{{ 'assets/images/site/background/contact.png'| theme }}" alt="contact" />
+		</picture>
+	</div>
+
+	{% if success_form == "1" %}
+		<div style="margin: 0 auto;" class="contact-us__popup popup">
+			<h3 class="popup__title">Thanks for your request!</h3>
+			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="main::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
+		</div>
+	{% else %}
+    	<div class="block-header">
+    		<h2 class="primary-header">Estimate your project now!</h2>
+    		<h3 class="secondary-header">Get free consultation and build your blockchain project with our highly qualified team!</h3>
+    	</div>
+	
+	{{ form_ajax('main::onForm', {
+	    class: 'contact-us__form',
+        update: { 'forms/main': '#contact-us' }
+      }) }}
+		<input id="g-recaptcha-response" type="hidden" name="g-recaptcha-response" />
+		<input type="hidden" name="action" value="validate_captcha" />
+		<label hidden="hidden" for="contact-us-input"></label>
+		<input class="contact-us__form__input" id="contact-us-input" type="text" name="name" placeholder="Name" value="" />
+		<label class="visually-hidden">Enter your name</label>
+		<label hidden="hidden" for="contact-us-input-2"></label>
+		<input class="contact-us__form__input" id="contact-us-input-2" name="contact" placeholder="Your contact" value="" />
+        <select class="lm_input t-phone" name="type" required>
+            <option value="telegram" default>telegram</option>
+            <option value="email">email</option>
+            <option value="whatsapp">whatsapp</option>
+        </select>
+		<label hidden="hidden" for="contact-us-textarea"></label>
+		<textarea class="contact-us__form__input contact-us__form__input-textarea" name="idea" id="contact-us-textarea" rows="1" placeholder="Briefly describe your project or idea"></textarea>
+		<label class="visually-hidden">Briefly describe your project or idea</label>
+		<p class="terms">By using the service, you accept the <a href="/terms-of-service" target="_top">Terms of Service</a>
+		</p>
+		<button class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit">Submit request</button>
+      {{ form_close() }}
+    {% endif %}
+	
+</div>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Main
+
+# Model Form Field configuration
+form: $/amaryfilo/site/models/main/fields.yaml
+
+# Model Class name
+modelClass: amaryfilo\Site\Models\Main
+
+# Default redirect location
+defaultRedirect: amaryfilo/site/main
+
+# Create page
+create:
+    title: Create Main
+    redirect: amaryfilo/site/main/update/:id
+    redirectClose: amaryfilo/site/main
+
+# Update page
+update:
+    title: Edit Main
+    redirect: amaryfilo/site/main
+    redirectClose: amaryfilo/site/main
+
+# Preview page
+preview:
+    title: Preview Main
