@@ -114,13 +114,13 @@
 	</div>
 </section>
 
+{% if similar_articles|length > 0 %}
 <section>
 	<div class="container article-similar"> <span class="article-section-title">Similar Posts</span>
 		<div class="blog-items">
 			{% for similarPost in similar_articles %}
 			<a class="swiper-slide blog-item"
-																																																															href="/blog/{{similarPost.slug}}"
-																																																															target="_blank">
+																																																															href="/blog/{{similarPost.slug}}">
 				<picture class="blog-item-img">
 					<source type="image/webp"
 																																																																	srcset="{{ similarPost.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'webp' }) }}" />
@@ -135,5 +135,6 @@
 		</div>
 	</div>
 </section>
+{% endif %}
 
 {% partial 'sections/contact-us' %}

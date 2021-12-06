@@ -25,8 +25,7 @@
 					{% for article in articles %}
 					<a class="swiper-slide blog-item"
 																																																																	data-category="{{ article.article_category[0].title }}"
-																																																																	href="/blog/{{article.slug}}"
-																																																																	target="_blank">
+																																																																	href="/blog/{{article.slug}}">
 						<picture class="blog-item-img">
 							<source type="image/webp"
 																																																																			srcset="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'webp' }) }}" />
