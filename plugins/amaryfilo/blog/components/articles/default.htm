@@ -14,7 +14,7 @@
 <meta property="og:title"
 																																																												content="{{ article.seo_title }}">
 <meta property="og:url"
-																																																												content="https://rocknblock.io/blog/{{ article.slug }}">
+																																																												content="{{ this.pageUrl| page }}">
 <meta property="og:image"
 																																																												content="{{ article.seo_image.path |resize(1200, 640, { mode: 'crop', quality: '70', extension: 'png' }) }}">
 <meta property="og:description"
@@ -44,7 +44,7 @@
 <meta name="twitter:site"
 																																																												content="{{ article.seo_is_twitter_site ? article.seo_twitter_site : '@rocknblock' }}">
 <meta name="twitter:url"
-																																																												content="https://rocknblock.io/blog/{{ article.slug }}">
+																																																												content="{{ this.pageUrl| page }}">
 <meta name="twitter:image"
 																																																												content="{{ article.seo_image.path |resize(1200, 640, { mode: 'crop', quality: '70', extension: 'png' }) }}">
 <meta name="twitter:image:alt"
@@ -56,7 +56,7 @@
 		"@type": "Article",
 		"mainEntityOfPage": {
 			"@type": "WebPage",
-			"@id": "https://rocknblock.io/blog/{{ article.slug }}"
+			"@id": "{{ this.pageUrl| page }}"
 		},
 		"author": {
 			"@type": "{{ article.seo_is_person ? 'Person' : 'Organization' }}",
@@ -87,25 +87,25 @@
 	<div class="container"><span class="article-section-title">Share it!</span>
 		<div class="article-share-items">
 			<a class="article-share-item"
-																																																															href="https://twitter.com/intent/tweet?text={{ article.seo_title }}.%20{{ article.seo_twitter_description }}&url=https://rocknblock.io/blog/{{ article.slug }}&hashtags={{ article.seo_keywords }}"
+																																																															href="https://twitter.com/intent/tweet?text={{ article.seo_title }}.%20{{ article.seo_twitter_description }}&url={{ this.pageUrl| page }}&hashtags={{ article.seo_keywords }}"
 																																																															target="_blank"
 																																																															rel="noreferrer"><img
 																																																																src="{{ 'assets/images/site/social/icon-footer-tw-mask.svg'| theme }}"
 																																																																alt="twitter" /></a>
 			<a class="article-share-item"
-																																																															href="https://t.me/share/url?url=https://rocknblock.io/blog/{{ article.slug }}&text={{ article.seo_description }}"
+																																																															href="https://t.me/share/url?url={{ this.pageUrl| page }}&text={{ article.seo_description }}"
 																																																															target="_blank"
 																																																															rel="noreferrer"><img
 																																																																src="{{ 'assets/images/site/social/icon-footer-tg-mask.svg'| theme }}"
 																																																																alt="telegram" /></a>
 			<a class="article-share-item"
-																																																															href="https://www.facebook.com/sharer/sharer.php?u=https://rocknblock.io/blog/{{ article.slug }}&t={{ article.seo_title }}&text={{ article.seo_description }}"
+																																																															href="https://www.facebook.com/sharer/sharer.php?u={{ this.pageUrl| page }}&t={{ article.seo_title }}&text={{ article.seo_description }}"
 																																																															target="_blank"
 																																																															rel="noreferrer"><img
 																																																																src="{{ 'assets/images/site/social/icon-footer-fb-mask.svg'| theme }}"
 																																																																alt="facebook" /></a>
 			<a class="article-share-item"
-																																																															href="https://www.linkedin.com/sharing/share-offsite/?url=https://rocknblock.io/blog/{{ article.slug }}"
+																																																															href="https://www.linkedin.com/sharing/share-offsite/?url={{ this.pageUrl| page }}"
 																																																															target="_blank"
 																																																															rel="noreferrer"><img
 																																																																src="{{ 'assets/images/site/social/icon-footer-in-mask.svg'| theme }}"
