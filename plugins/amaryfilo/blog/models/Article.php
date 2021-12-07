@@ -50,4 +50,46 @@ class Article extends Model
         'seo_image' => 'System\Models\File',
     ];
     public $attachMany = [];
+
+
+    public static function getMenuTypeInfo($type)
+    {
+        // получаем текущую тему сайта
+        $theme = \Cms\Classes\Theme::getActiveTheme();
+
+        $result = [
+            'dynamicItems' => true,
+            // выберем все страницы сайта:
+            'cmsPages' => \Cms\Classes\Page::listInTheme($theme, true),
+        ];
+
+        return $result;
+    }
+
+    public static function resolveMenuItem($item, $url, $theme)
+    {
+        $result = [
+            'items' => []
+        ];
+
+        $page = \Cms\Classes\Page::loadCached($theme, $item->cmsPage);
+        $rows = self::orderBy('title')->where('is_active', 1)->get();
+
+        foreach ($rows as $row) {
+            $item = [
+                // Название страницы в карте сайта
+                'title' => $row->title,
+                // URL страницы в карте сайта (напр. "/element/:slug")
+                // Создаем URL с помощью хелпера url()
+                'url'   => url($page->getBaseFileName(), ['slug' => $row->slug]),
+                // Параметр lastmod в карте сайта
+                'mtime' => $row->updated_at,
+            ];
+
+            $result['items'][] = $item;
+        }
+
+        return $result;
+    }
 }
+

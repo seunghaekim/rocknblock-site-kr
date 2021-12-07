@@ -1,5 +1,6 @@
 <?php namespace Amaryfilo\Blog;
 
+use Event;
 use Backend;
 use System\Classes\PluginBase;
 
@@ -40,7 +41,30 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        Event::listen('pages.menuitem.listTypes', function() {
+            return [
+                'blog-plugin-article' => 'Blog Article',
+                // 'test-plugin-element' => 'Test Plugin Elements',
+            ];
+        });
 
+        Event::listen('pages.menuitem.getTypeInfo', function($type) {
+            if ($type == 'blog-plugin-article') {
+                return Models\Article::getMenuTypeInfo($type);
+            }
+            // elseif ($type == 'test-plugin-element') {
+            //     return Models\Article::getMenuTypeInfo($type);
+            // }
+        });
+
+        Event::listen('pages.menuitem.resolveItem', function($type, $item, $url, $theme) {
+            if ($type == 'blog-plugin-article') {
+                return Models\Article::resolveMenuItem($item, $url, $theme);
+            }
+            // elseif ($type == 'test-plugin-element') {
+            //     return Models\Article::resolveMenuItem($item, $url, $theme);
+            // }
+        });
     }
 
     /**
