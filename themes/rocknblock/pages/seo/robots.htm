@@ -1,0 +1,17 @@
+title = "Robots"
+url = "/robots.txt"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart() {
+  $content = $this->page->markup;
+  return Response::make($content)->header('Content-Type', 'text/plain');
+}
+?>
+==
+User-agent: *
+Allow: /
+
+Sitemap: https://dev-blog.rocknblock.io/sitemap.xml
