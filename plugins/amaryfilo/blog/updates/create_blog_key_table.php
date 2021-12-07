@@ -14,7 +14,6 @@ class CreateBlogKeyTable extends Migration
             $table->engine = 'InnoDB';
             $table->string('article_id');
             $table->string('category_id');
-            $table->primary(['article_id', 'category_id']);
             $table->timestamps();
         });
     }

@@ -58,12 +58,18 @@ tabs:
             tab: "Article"
         article_category:
             label: Категория
-            span: full
+            span: left
             oc.commentPosition: ""
             nameForm: id
             descriptionForm: description
             type: partial
             path: field_blog_key
+            tab: "Article"
+        published_at:
+            label: Дата и время публикации
+            comment: Дата и время когда была опубликована статья.
+            span: right
+            type: datepicker
             tab: "Article"
 
         section1:

@@ -14,7 +14,6 @@ class CreateArticleKeyTable extends Migration
             $table->engine = 'InnoDB';
             $table->string('s_article_id');
             $table->string('article_id');
-            $table->primary(['s_article_id', 'article_id']);
             $table->timestamps();
         });
     }

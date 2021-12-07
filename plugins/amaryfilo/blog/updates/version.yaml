@@ -4,3 +4,6 @@
     - create_blog_categories_table.php
     - create_article_key_table.php
     - create_blog_key_table.php
+1.0.1:
+    - Add published at to article model
+    - add_published_at_column.php

@@ -33,6 +33,8 @@ class CreateBlogArticlesTable extends Migration
             $table->boolean('seo_is_person')->default(false);
             $table->string('seo_person');
 
+            $table->timestamp('published_at')->nullable();
+
             $table->boolean('use_similar_select')->default(false);
 
             $table->timestamps();
