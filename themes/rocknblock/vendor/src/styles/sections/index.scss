@@ -15,13 +15,13 @@
       width: 300px;
       right: 100px;
       left: auto;
-      top: -50px;
+      top: -40px;
     }
 
     @include b('mobile') {
       width: 246px;
       left: 10px;
-      top: -70px;
+      top: -35px;
     }
   }
 
@@ -32,16 +32,16 @@
 
     @include b('tablet') {
       width: 250px;
-      right: 0;
+      right: 30px;
       left: auto;
-      top: -50px;
+      top: -40px;
       transform: rotate(210deg);
     }
 
     @include b('mobile') {
       width: 192px;
       right: 15px;
-      top: -20px;
+      top: 20px;
       transform: rotate(210deg);
     }
   }
@@ -55,11 +55,12 @@
       width: 192px;
       right: 230px;
       left: auto;
-      top: 45px;
+      top: 55px;
     }
 
     @include b('mobile') {
       left: 10px;
+      top: 70px;
     }
   }
 
@@ -711,6 +712,20 @@ header {
       &:focus {
         outline: 0 none;
       }
+
+      &-hidden {
+        display: none;
+      }
+
+      // &-burger {
+      // &-open {
+      // display: none;
+      // }
+      //
+      // &-close {
+      // display: none;
+      // }
+      // }
     }
   }
 
@@ -733,15 +748,30 @@ header {
     font-style: normal;
     font-weight: bold;
 
+    &.menu-open {
+      @include b('tablet') {
+        display: flex !important;
+      }
+    }
+
     @include b('tablet') {
       position: absolute;
-      top: 39px;
+      top: 60px;
+      flex-direction: column;
+      background-color: var(--header-background-color);
+      width: 100%;
+      max-width: 100%;
+      padding-bottom: 50px;
     }
 
     &__link {
       margin-right: 10px;
       font-size: 16px;
       line-height: 19px;
+
+      @include b('tablet') {
+        margin: 0 !important;
+      }
 
       &:first-child {
         font-feature-settings: 'liga' off;
@@ -785,7 +815,7 @@ header {
       }
 
       @include b('tablet') {
-        justify-content: flex-start;
+        justify-content: center;
         color: #dc2c2c;
         font-size: 16px;
         border: none;

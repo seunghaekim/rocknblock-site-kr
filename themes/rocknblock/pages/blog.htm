@@ -22,16 +22,4 @@ robot_follow = "follow"
     	    {% component 'articleall' %}
     	</div>
     </section>
-    
-    <script defer>
-        Array.from(document.getElementsByClassName("blog-select-nav")).forEach((el) => {
-          el.addEventListener("click", () => {
-            document.getElementsByClassName("active")[0].classList.remove("active");
-            el.classList.add("active");
-            filterSelection(el.dataset.filter);
-          });
-        });
-        
-        const filterSelection = (c) => Array.from(document.getElementsByClassName("blog-item")).forEach((el) => el.hidden = el.dataset.category === c ? false : c !== 'all');
-    </script>
 </div>

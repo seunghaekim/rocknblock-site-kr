@@ -4,8 +4,9 @@ header
             section.main-nav__mobile
                 a.logo(href='/')
                     img(src='../../img/logo.svg' alt="Rock'n'Block logo")
-            //- .burger.icon.icon-burger
-            //-     img(src=`../../assets/img/icons/icon-header-burger${burger}-mask.svg`)
+                .burger.icon
+                    img.icon-burger.ic-open(src=`../../img/icons/icon-header-burger-mask.svg` alt="burger menu")
+                    img.icon-burger.ic-close(src=`../../img/icons/icon-header-burger-close-mask.svg` alt="burger close menu" hidden)
             section#nav-pages.nav-pages
                 a.nav-pages__link(href='#services') Services
                 a.nav-pages__link(href='#cases') Cases

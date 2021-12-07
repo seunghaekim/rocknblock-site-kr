@@ -16,6 +16,19 @@ $(document).ready(() => {
   // eslint-disable-next-line no-console
   console.log(`document ready`);
 
+  Array.from(document.getElementsByClassName('icon-burger')).forEach((el) => {
+    el.addEventListener('click', () => {
+      el.hidden = true;
+      const menuType = el.classList.contains('ic-open') ? 'ic-close' : 'ic-open';
+      const navCl = document.getElementById('nav-pages').classList;
+
+      document.getElementsByClassName(menuType)[0].hidden = false;
+      menuType !== 'ic-open' ? navCl.add('menu-open') : navCl.remove('menu-open');
+
+      console.log(navCl);
+    });
+  });
+
   const sliderFeedback = new Swiper('.swiper-feedback', {
     slidesPerView: 1,
     spaceBetween: 0,
