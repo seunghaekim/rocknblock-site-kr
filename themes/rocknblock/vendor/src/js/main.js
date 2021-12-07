@@ -24,8 +24,6 @@ $(document).ready(() => {
 
       document.getElementsByClassName(menuType)[0].hidden = false;
       menuType !== 'ic-open' ? navCl.add('menu-open') : navCl.remove('menu-open');
-
-      console.log(navCl);
     });
   });
 
