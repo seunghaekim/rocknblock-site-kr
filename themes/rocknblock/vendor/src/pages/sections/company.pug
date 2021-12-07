@@ -1,0 +1,38 @@
+include blocks
+
+mixin company 
+  .container
+    +webpImg('lazy',`../../img/background/about-3`,'png','partners background', 'bg__2')
+    .blocks
+      .company
+        h2 Rock&apos;n&apos;Block
+        .company__info
+          .company__info__item
+            .company__info__item__title Beneficiary
+            .company__info__item__text MANZONI LIMITED LIABILITY COMPANY
+          .company__info__item
+            .company__info__item__title Beneficiary account
+            .company__info__item__text 40702840410000002761
+          .company__info__item
+            .company__info__item__title KPP number
+            .company__info__item__text 781301001
+          .company__info__item
+            .company__info__item__title OGRN
+            .company__info__item__text 1167847119901
+          .company__info__item
+            .company__info__item__title Tax payer number
+            .company__info__item__text 7813245218
+          .company__info__item
+            .company__info__item__title Registered address
+            .company__info__item__text 190031, RUSSIA, ST.PETERSBURG, Gorokhovaya street, 47
+      .contacts
+        h2 Contacts
+        .contacts__info
+          .contacts__info__item
+            .contacts__info__item__img
+              img(src="{{ 'assets/images/site/iocns/icon-footer-mail-mask.svg' | theme }}" alt='mail icon')
+            a.contacts__info__item__content(href="mailto:hello@rocknblock.io") hello@rocknblock.io
+          .contacts__info__item
+            .contacts__info__item__img
+              img(src="{{ 'assets/images/site/iocns/icon-footer-phone-mask.svg' | theme }}" alt='phone icon')
+            a.contacts__info__item__content(href="tel:+7 (812) 429-74-34") +7 (812) 429-74-34

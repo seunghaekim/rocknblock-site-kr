@@ -296,39 +296,32 @@ mixin contact-us
 
     +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
     form.contact-us__form(name='contact-us-form')
-      input#g-recaptcha-response(type='hidden' name='g-recaptcha-response')
-      input(type='hidden' name='action' value='validate_captcha')
-      label(hidden for='contact-us-input')
+
+      label.visually-hidden(hidden for='contact-us-input') Enter your name
       input#contact-us-input.contact-us__form__input( type='text' placeholder='Name' value='')
-      
-      label.visually-hidden Enter your name
 
-      //- DIV
-      //-   .block
-      //-     .socBlock.socialsType
-      //-       img.socIcon(src='../../../img/icons/email.svg')
-      //-       label.socName E-mail
-      //-       img.downIcon(src='../../../img/icons/down.svg')
+      .form-group
+        label(hidden for='contact-us-input-2') Yout contact
+        input#contact-us-input-2.contact-us__form__input(placeholder='Your contact' value='')
+        .select-social
+          select(name="type")
+            option(value="telegram") Telegram
+            option(value="email") E-mail
+            option(value="whatsapp") Whatsapp
 
-      //- .inputBlock.socialsBlock
-        input.contact-us__form__input(placeholder='Your contact' value='')
-      label(hidden for='contact-us-input-2')
-      input#contact-us-input-2.contact-us__form__input(placeholder='Your contact' value='')
-
-      label(hidden for='contact-us-textarea')
+      label.visually-hidden(hidden for='contact-us-textarea') Describe your project
       textarea#contact-us-textarea.contact-us__form__input.contact-us__form__input-textarea(rows='1' placeholder='Briefly describe your project or idea')
       
-      label.visually-hidden Briefly describe your project or idea
       p.terms By using the service, you accept the 
         a(href='/terms-of-service' target='_top') Terms of Service
       button.contact-us__form__submit-btn.btn.btn-orange.btn-rounded(type="submit") Submit request
     
+    //- #contact-us-popup.contact-us__popup-container
     //- #contact-us-popup.contact-us__popup-container.shoaw
-    #contact-us-popup.contact-us__popup-container
-      .contact-us__popup.popup
-        h3.popup__title Thanks for your request!
-        button.btn.btn-orange.btn-rounded.popup__button-ok Close
-        //- .background-img.background-img-left
-          //- img(loading='lazy' src='../../img/background/popup-left.png' alt='background-popup-left')
-        //- .background-img.background-img-right
-          //- img(loading='lazy' src='../../img/background/popup-right.png' alt='background-popup-right')
+    //-   .contact-us__popup.popup
+    //-     h3.popup__title Thanks for your request!
+    //-     button.btn.btn-orange.btn-rounded.popup__button-ok Close
+    //-     .background-img.background-img-left
+    //-       img(loading='lazy' src='../../img/background/popup-left.png' alt='background-popup-left')
+    //-     .background-img.background-img-right
+    //-       img(loading='lazy' src='../../img/background/popup-right.png' alt='background-popup-right')

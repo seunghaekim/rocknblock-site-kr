@@ -1,0 +1,14 @@
+extends layouts/index
+
+include sections/privacy-policy
+
+block header
+    include common/header
+
+block content
+    main
+      .page-privacy-policy
+        +privacy-policy
+
+block footer
+    include common/footer

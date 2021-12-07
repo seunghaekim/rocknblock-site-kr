@@ -1,0 +1,14 @@
+extends layouts/index
+
+include sections/company
+
+block header
+    include common/header
+
+block content
+    main
+      .page-company
+        +company
+
+block footer
+    include common/footer

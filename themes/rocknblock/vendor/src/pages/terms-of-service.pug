@@ -1,0 +1,14 @@
+extends layouts/index
+
+include sections/terms-of-service
+
+block header
+    include common/header
+
+block content
+    main
+      .terms-of-service
+        +terms-of-service
+
+block footer
+    include common/footer
