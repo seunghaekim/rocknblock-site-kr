@@ -22,9 +22,9 @@
 																																																														href="/blog/{{ article.slug }}">
 			<picture class="blog-item-img">
 				<source type="image/webp"
-																																																																srcset="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'webp' }) }}" />
+																																																																srcset="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '80', extension: 'webp' }) }}" />
 				<img loading="lazy"
-																																																																src="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '60', extension: 'png' }) }}"
+																																																																src="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '80', extension: 'png' }) }}"
 																																																																alt="{{ article.title }}" />
 			</picture>
 			<h3 class="blog-item-title">{{ article.title }}</h3>
