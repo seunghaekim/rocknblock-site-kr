@@ -27,9 +27,9 @@ body {
   overflow-x: hidden;
   color: white;
 
-  @include b('tablet') {
-    padding: 0 15px;
-  }
+  // @include b('tablet') {
+  //   padding: 0 15px;
+  // }
 }
 
 img {
@@ -54,12 +54,10 @@ span {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1030px;
   margin: 0 auto;
-
-  @include b('tablet') {
-    width: 100%;
-  }
+  width: 100%;
+  padding: 0 15px;
 }
 
 h1 {
