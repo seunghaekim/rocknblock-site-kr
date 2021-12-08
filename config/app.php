@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'debug' => true,
+    'debug' => env('DEBUG_MODE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Winter CMS',
+    'name' => "Rock'n'block Development",
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,10 @@ return [
     | on the Backend password reset flow for security reasons.
     */
 
-    'trustedHosts' => false,
+    'trustedHosts' => true,
+    'trustedHosts' => [
+       '^(.+\.)?rocknblock\.io$', // Matches example.com and all subdomains
+    ],
 
     /*
     |--------------------------------------------------------------------------

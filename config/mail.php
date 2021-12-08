@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => 'smtp',
+    'driver' => 'sendmail',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'noreply@domain.tld',
-        'name'    => 'Winter CMS',
+        'address' => 'hello@rocknblock.io',
+        'name'    => 'Rocknblock Development',
     ],
 
     /*

@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => 'mysql',
+    'default' => env('DATABASE_PROVIDER', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -57,11 +57,11 @@ return [
             'driver'         => 'mysql',
             // 'url'         => env('DATABASE_URL'),
             'engine'         => 'InnoDB',
-            'host'           => '127.0.0.1',
-            'port'           => 3306,
-            'database'       => 'rocknblock',
-            'username'       => 'root',
-            'password'       => '',
+            'host'           => env('DATABASE_HOST', '127.0.0.1'),
+            'port'           => env('DATABASE_PORT', 3306),
+            'database'       => env('DATABASE_NAME', 'database'),
+            'username'       => env('DATABASE_USERNAME', 'root'),
+            'password'       => env('DATABASE_PASSWORD', 'root'),
             'charset'        => 'utf8mb4',
             'collation'      => 'utf8mb4_unicode_ci',
             'prefix'         => '',
@@ -73,11 +73,11 @@ return [
         'pgsql' => [
             'driver'         => 'pgsql',
             // 'url'         => env('DATABASE_URL'),
-            'host'           => '127.0.0.1',
-            'port'           => 5432,
-            'database'       => 'rocknblock',
-            'username'       => 'amfi',
-            'password'       => 'amfi',
+            'host'           => env('DATABASE_HOST', '127.0.0.1'),
+            'port'           => env('DATABASE_PORT', 5432),
+            'database'       => env('DATABASE_NAME', 'database'),
+            'username'       => env('DATABASE_USERNAME', 'root'),
+            'password'       => env('DATABASE_PASSWORD', 'root'),
             'charset'        => 'utf8',
             'prefix'         => '',
             'prefix_indexes' => true,
@@ -88,11 +88,11 @@ return [
         'sqlsrv' => [
             'driver'         => 'sqlsrv',
             // 'url'         => env('DATABASE_URL'),
-            'host'           => '127.0.0.1',
-            'port'           => 1433,
-            'database'       => 'database',
-            'username'       => 'root',
-            'password'       => '',
+            'host'           => env('DATABASE_HOST', '127.0.0.1'),
+            'port'           => env('DATABASE_PORT', 1433),
+            'database'       => env('DATABASE_NAME', 'database'),
+            'username'       => env('DATABASE_USERNAME', 'root'),
+            'password'       => env('DATABASE_PASSWORD', 'root'),
             'charset'        => 'utf8',
             'prefix'         => '',
             'prefix_indexes' => true,
