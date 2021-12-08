@@ -39,7 +39,7 @@ class Main extends ComponentBase
 
         $headers .= 'From: Rocknblock <no-reply@rocknblock.io>' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
-        $mail_send = mail("laumiqv@gmail.com", "Заявка с сайта rocknblock.io", "<html><head><title>Заявка с сайта rocknblock.io</title><style>table.amaryfilo-table{width: 300px;}table.amaryfilo-table tbody tr td{padding: 8px;}table.amaryfilo-table tbody tr:nth-child(2n){background: #f5f5f5;}</style></head><body>Новая Заявка<br><small><a href='https://rocknblock.io/'>rocknblock.io</a></small><br><br><hr><br>".$text."<br><hr><br><small>Данное письмо было отправлено автоматически</small></body></html>", $headers);
+        $mail_send = mail("rocknblock.io@gmail.com", "Заявка с сайта rocknblock.io", "<html><head><title>Заявка с сайта rocknblock.io</title><style>table.amaryfilo-table{width: 300px;}table.amaryfilo-table tbody tr td{padding: 8px;}table.amaryfilo-table tbody tr:nth-child(2n){background: #f5f5f5;}</style></head><body>Новая Заявка<br><small><a href='https://rocknblock.io/'>rocknblock.io</a></small><br><br><hr><br>".$text."<br><hr><br><small>Данное письмо было отправлено автоматически</small></body></html>", $headers);
 
         if($mail_send) $this->page['success_form'] = "1";
     }

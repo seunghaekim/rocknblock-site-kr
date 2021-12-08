@@ -90,12 +90,12 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
             'amaryfilo.blog.some_permission' => [
                 'tab' => 'blog',
-                'label' => 'Some permission'
+                'label' => 'Create/Delete/Edit'
             ],
         ];
     }
