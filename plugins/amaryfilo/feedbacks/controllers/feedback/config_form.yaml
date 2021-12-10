@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Feedback
+
+# Model Form Field configuration
+form: $/amaryfilo/feedbacks/models/feedback/fields.yaml
+
+# Model Class name
+modelClass: Amaryfilo\Feedbacks\Models\Feedback
+
+# Default redirect location
+defaultRedirect: amaryfilo/feedbacks/feedback
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: amaryfilo/feedbacks/feedback/update/:id
+    redirectClose: amaryfilo/feedbacks/feedback
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: amaryfilo/feedbacks/feedback
+    redirectClose: amaryfilo/feedbacks/feedback
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

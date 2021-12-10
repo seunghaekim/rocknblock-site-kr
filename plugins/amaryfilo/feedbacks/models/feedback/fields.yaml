@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        span: left
+        disabled: true
+    from_url:
+        label: URL
+        type: right
+        disabled: true
+        span: full
+    contact:
+        label: Contact
+        type: text
+        span: left
+        disabled: true
+    type:
+        label: Type
+        type: text
+        span: right
+        disabled: true
+    created_at:
+        label: Date
+        type: text
+        span: full
+        disabled: true
