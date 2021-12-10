@@ -17,7 +17,7 @@ description = "Main form"
 	{% if success_form == "1" %}
 		<div style="margin: 0 auto;" class="contact-us__popup popup">
 			<h3 class="popup__title">Thanks for your request!</h3>
-			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="main::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
+			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="feedback::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
 		</div>
 	{% else %}
     	<div class="block-header">
@@ -25,7 +25,7 @@ description = "Main form"
     		<h3 class="secondary-header">Get free consultation and build your blockchain project with our highly qualified team!</h3>
     	</div>
 	
-	{{ form_ajax('main::onForm', {
+	{{ form_ajax('feedback::onForm', {
 	    class: 'contact-us__form',
         update: { 'forms/main': '#contact-us' }
       }) }}
@@ -50,36 +50,3 @@ description = "Main form"
       {{ form_close() }}
     {% endif %}
 </div>
-<!-- 
-<div class="contact-us container" id="contact-us">
-            <div class="background-img">
-                <picture>
-                    <source type="image/webp" srcset="../../img/background/partners.webp" /><img loading="lazy" src="../../img/background/partners.png" alt="partners" /></picture>
-            </div>
-            <div class="background-img">
-                <picture>
-                    <source type="image/webp" srcset="../../img/background/contact.webp" /><img loading="lazy" src="../../img/background/contact.png" alt="contact" /></picture>
-            </div>
-            <div class="block-header">
-                <h2 class="primary-header">Estimate your project now!</h2>
-                <h3 class="secondary-header">Get free consultation and build your blockchain project with our highly qualified team!</h3></div>
-            <form class="contact-us__form" name="contact-us-form">
-                <label class="visually-hidden" hidden="hidden" for="contact-us-input">Enter your name</label>
-                <input class="contact-us__form__input" id="contact-us-input" type="text" placeholder="Name" value="" />
-                <div class="form-group">
-                    <label hidden="hidden" for="contact-us-input-2">Yout contact</label>
-                    <input class="contact-us__form__input" id="contact-us-input-2" placeholder="Your contact" value="" />
-                    <div class="select-social">
-                        <select name="type">
-                            <option value="telegram">Telegram</option>
-                            <option value="email">E-mail</option>
-                            <option value="whatsapp">Whatsapp</option>
-                        </select>
-                    </div>
-                </div>
-                <label class="visually-hidden" hidden="hidden" for="contact-us-textarea">Describe your project</label>
-                <textarea class="contact-us__form__input contact-us__form__input-textarea" id="contact-us-textarea" rows="1" placeholder="Briefly describe your project or idea"></textarea>
-                <p class="terms">By using the service, you accept the <a href="/terms-of-service" target="_top">Terms of Service</a></p>
-                <button class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit">Submit request</button>
-            </form>
-        </div> -->

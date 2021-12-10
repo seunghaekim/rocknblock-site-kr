@@ -1,10 +1,10 @@
 <?php namespace Amaryfilo\Feedbacks\Components;
 
 use Cms\Classes\ComponentBase;
-use Illuminate\Http\Request;
+use Request;
 use Mail;
 
-use amaryfilo\Feedback\Models\Feedback as FeedbackModel;
+use amaryfilo\Feedbacks\Models\Feedback as FeedbackModel;
 
 class Feedback extends ComponentBase
 {
@@ -24,7 +24,7 @@ class Feedback extends ComponentBase
     public function onForm()
     {
         // Insert into database
-        FeedbackModel::insertGetId(
+        FeedbackModel::insert(
             [
                 'name' => post('name'),
                 'contact' => post('contact'),
@@ -55,7 +55,7 @@ class Feedback extends ComponentBase
         $mail_send = mail(env('MAIL_REQUEST_TO'), "Application from the site rocknblock.io.", "<html><head><title>Application from the site rocknblock.io.</title><style>".$styleTable."</style></head><body>New Application from <a href='https://rocknblock.io/'>rocknblock.io</a> from <b>".post('name')."</b><br><hr><br>".$text."<br><hr><br><small>This email was sent automatically. Please do not reply to it.</small></body></html>", $headers);
 
         if(post('type') === 'email')
-            Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', $params);
+            Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', ['name' => post('name')]);
             // mail(trim(post('contact')), "Your request to Rock'n'block Development.", "<html><head><title>Thank you for your request.</title></head><body>Hello, <b>".post('name')."</b>!<br><br>We have received your application. Our manager will contact you shortly.</body></html>", $headers);
 
         if($mail_send) $this->page['success_form'] = "1";

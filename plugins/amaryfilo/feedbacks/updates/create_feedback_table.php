@@ -8,12 +8,15 @@ class CreateFeedbackTable extends Migration
 {
     public function up()
     {
+        Schema::dropIfExists('amaryfilo_feedbacks_feedback');
+
         Schema::create('amaryfilo_feedbacks_feedback', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
             $table->string('contact');
             $table->string('type');
+            $table->text('idea');
             $table->text('from_url');
             $table->timestamps();
         });

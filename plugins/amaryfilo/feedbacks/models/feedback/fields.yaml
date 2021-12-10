@@ -25,6 +25,6 @@ fields:
         readOnly: true
     created_at:
         label: Date
-        type: text
+        type: datepicker
         span: full
         readOnly: true
