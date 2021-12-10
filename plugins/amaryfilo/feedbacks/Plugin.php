@@ -16,10 +16,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'feedbacks',
-            'description' => 'No description provided yet...',
+            'name'        => 'Feedbacks',
+            'description' => 'Feedbacks from website',
             'author'      => 'Amaryfilo',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-info'
         ];
     }
 
@@ -57,10 +57,10 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
-            'Amaryfilo\Feedbacks\Components\MyComponent' => 'myComponent',
+            'amaryfilo\Feedbacks\Components\Feedback' => 'feedback',
         ];
     }
 
@@ -71,12 +71,12 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
-            'amaryfilo.feedbacks.some_permission' => [
+            'amaryfilo.feedbacks.access' => [
                 'tab' => 'feedbacks',
-                'label' => 'Some permission'
+                'label' => 'Create/Delete/Edit'
             ],
         ];
     }
@@ -92,7 +92,7 @@ class Plugin extends PluginBase
 
         return [
             'feedbacks' => [
-                'label'       => 'feedbacks',
+                'label'       => 'Feedbacks',
                 'url'         => Backend::url('amaryfilo/feedbacks/feedback'),
                 'icon'        => 'icon-info',
                 'permissions' => ['amaryfilo.feedbacks.*'],

@@ -93,7 +93,7 @@ class Plugin extends PluginBase
         // return []; // Remove this line to activate
 
         return [
-            'amaryfilo.blog.some_permission' => [
+            'amaryfilo.blog.access' => [
                 'tab' => 'blog',
                 'label' => 'Create/Delete/Edit'
             ],
