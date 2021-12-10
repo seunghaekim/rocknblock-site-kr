@@ -7,24 +7,24 @@ fields:
         label: Name
         type: text
         span: left
-        disabled: true
+        readOnly: true
     from_url:
         label: URL
-        type: right
-        disabled: true
-        span: full
+        type: text
+        span: right
+        readOnly: true
     contact:
         label: Contact
         type: text
         span: left
-        disabled: true
+        readOnly: true
     type:
         label: Type
         type: text
         span: right
-        disabled: true
+        readOnly: true
     created_at:
         label: Date
         type: text
         span: full
-        disabled: true
+        readOnly: true

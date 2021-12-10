@@ -88,13 +88,13 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
             'feedbacks' => [
                 'label'       => 'feedbacks',
-                'url'         => Backend::url('amaryfilo/feedbacks/mycontroller'),
-                'icon'        => 'icon-leaf',
+                'url'         => Backend::url('amaryfilo/feedbacks/feedback'),
+                'icon'        => 'icon-info',
                 'permissions' => ['amaryfilo.feedbacks.*'],
                 'order'       => 500,
             ],

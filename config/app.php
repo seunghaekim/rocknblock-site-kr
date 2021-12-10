@@ -71,10 +71,10 @@ return [
     | on the Backend password reset flow for security reasons.
     */
 
-    'trustedHosts' => true,
-    'trustedHosts' => [
-       '^(.+\.)?rocknblock\.io$', // Matches example.com and all subdomains
-    ],
+    // 'trustedHosts' => true,
+    // 'trustedHosts' => [
+    //    '^(.+\.)?rocknblock\.io$', // Matches example.com and all subdomains
+    // ],
 
     /*
     |--------------------------------------------------------------------------
