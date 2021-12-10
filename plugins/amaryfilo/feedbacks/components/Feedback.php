@@ -30,7 +30,7 @@ class Feedback extends ComponentBase
                 'contact' => post('contact'),
                 'type' => post('type'),
                 'idea' => post('idea'),
-                'from_url' => Request::url(),
+                'from_url' => Request::path(),
                 'created_at' => date("Ymdhis")
             ]
         );

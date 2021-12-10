@@ -1,34 +1,35 @@
 description = "Blog template"
 
-[main]
-
 [feedback]
 ==
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		{% partial "template/meta" %}
-        {% placeholder head %}
-		{% styles %}
-	</head>
-	<body>
+
+<head>
+	{% partial "template/meta" %}
+	{% placeholder head %}
+	{% styles %}
+</head>
+
+<body>
 	<!-- Header -->
-		<header id="layout-header">
+	<header id="layout-header">
 		{% partial 'site/header' %}
-		</header>
+	</header>
 
-		<!-- Content -->
-		<main id="layout-content">
+	<!-- Content -->
+	<main id="layout-content">
 		{% page %}
-		</main>
+	</main>
 
-		<!-- Footer -->
-		<footer id="layout-footer">
+	<!-- Footer -->
+	<footer id="layout-footer">
 		{% partial 'site/footer' %}
-		</footer>
+	</footer>
 
-		{% partial "template/styles-scripts" %}
-		{% partial "template/scripts-seo" %}
-		{% scripts %}
-	</body>
+	{% partial "template/styles-scripts" %}
+	{% partial "template/scripts-seo" %}
+	{% scripts %}
+</body>
+
 </html>
