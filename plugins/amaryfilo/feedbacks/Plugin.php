@@ -27,6 +27,7 @@ class Plugin extends PluginBase
     {
         return [
             'amaryfilo.feedbacks::mail.request',
+            'amaryfilo.feedbacks::mail.feedback',
         ];
     }
 
