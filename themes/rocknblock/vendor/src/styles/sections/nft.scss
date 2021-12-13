@@ -1,0 +1,1234 @@
+.pg {
+  &-nft {
+    .background {
+      background-color: black;
+
+      .upButton {
+        left: calc(100% - 65px);
+        top: calc(100% - 160px);
+      }
+
+      .ellipseContainer {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        margin-top: -400px;
+        z-index: 0;
+        overflow-y: clip;
+        display: flex;
+        justify-content: center;
+
+        .ellipse {
+          position: absolute;
+          margin-top: 400px;
+          height: 400px;
+          width: 600px;
+          background: #ff0000;
+          filter: blur(150px);
+          border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+          overflow: hidden;
+
+          @include b(600) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .background {
+      // background-image: url('/assets/img/marketplacePage/consultationBG.svg');
+      background-image: url("../img/nft/consultationBG.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      margin-top: -94px;
+
+      @media (min-width: 1920px) {
+        width: 1920px;
+        margin-left: calc((100% - 1920px) / 2);
+      }
+
+      @include b("desktop") {
+        background-size: 130%;
+        background-position-x: center;
+        height: 40%;
+      }
+
+      @include b("mobile") {
+        background-size: 150%;
+        background-position-x: center;
+      }
+    }
+
+    .imgStatue {
+      display: block;
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      width: 240px;
+      height: 320px;
+      margin-top: 340px;
+
+      @media (min-width: 1920px) {
+        margin-top: 500px;
+      }
+
+      background-image: url("../img/nft/image450.png");
+      background-repeat: no-repeat;
+      @include b("desktop") {
+        margin-top: 25%;
+        background-size: 80%;
+        background-position-x: center;
+        height: 300px;
+      }
+
+      @include b("mobile") {
+        background-size: 55%;
+        background-position-x: center;
+        height: 200px;
+      }
+    }
+
+    .hero-nft {
+      .block {
+        margin-top: 103px;
+
+        @include b("mobile") {
+          margin-top: 40px;
+        }
+
+        .title {
+          margin: auto;
+          width: 850px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 60px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include b("desktop") {
+            width: 90%;
+            font-size: 50px;
+            line-height: 50px;
+          }
+
+          @include b("mobile") {
+            font-size: 40px;
+            line-height: 40px;
+            width: auto;
+          }
+        }
+
+        .secondText {
+          margin-top: 30px;
+          margin: auto;
+          width: 600px;
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+          opacity: 0.5;
+          margin-top: 40px;
+          position: relative;
+          z-index: 1;
+
+          @include b("desktop") {
+            width: 95%;
+          }
+
+          @include b("mobile") {
+            font-size: 22px;
+            line-height: 25px;
+            margin-top: 15px;
+            width: auto;
+          }
+        }
+
+        .img {
+          position: absolute;
+          top: 163px;
+          left: calc(50% + 458px);
+          z-index: 1;
+
+          @media (max-width: 1146px) {
+            display: none;
+          }
+        }
+
+        .button {
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
+          max-width: 330px;
+          margin: auto;
+          margin-top: 40px;
+
+          @include b("mobile") {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    .what-is-nft {
+      .block {
+        position: relative;
+        z-index: 1;
+
+        @include b("mobile") {
+          padding-top: 320px;
+        }
+
+        .imgGroup {
+          position: absolute;
+          z-index: -1;
+
+          @media (max-width: 1385px) {
+            display: none;
+          }
+
+          @include b("mobile") {
+            display: block;
+            margin-top: -320px;
+          }
+        }
+
+        .imgGroupLeft {
+          background-image: url("../img/nft/groupLeft.png");
+          background-position: 485px;
+          width: 455px;
+          height: 447px;
+          left: 0;
+
+          @include b("mobile") {
+            z-index: -2;
+            height: 360px;
+            background-size: cover;
+            margin-top: -200px;
+            background-position: 485px;
+            width: 100%;
+          }
+        }
+
+        .imgGradient {
+          @include b("mobile") {
+            position: absolute;
+            z-index: -1;
+            margin-top: -100px;
+            height: 300px;
+            width: 100%;
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0) 0%,
+              #000000 100%
+            );
+          }
+        }
+
+        .imgGroupRight {
+          right: 0;
+          @include b("mobile") {
+            display: none;
+          }
+        }
+
+        .title {
+          margin: auto;
+          margin-top: 115px;
+          width: 850px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 60px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include b("desktop") {
+            width: 70%;
+            font-size: 40px;
+            line-height: 40px;
+          }
+          @include b("mobile") {
+            font-size: 30px;
+            line-height: 30px;
+          }
+          .redText {
+            color: #dc2c2c;
+            @include b("desktop") {
+              width: 100%;
+            }
+
+            @include b("mobile") {
+              font-size: 30px;
+              line-height: 30px;
+            }
+          }
+        }
+
+        .secondText {
+          width: 600px;
+          margin: auto;
+          margin-top: 30px;
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+
+          @include b("desktop") {
+            width: 70%;
+          }
+
+          @include b("mobile") {
+            font-size: 22px;
+            line-height: 25px;
+            width: auto;
+            padding: 0 15px;
+          }
+
+          @media (max-width: 374px) {
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+
+        .imgStatue {
+          position: absolute;
+          right: calc(50% + 371px);
+          z-index: -1;
+          margin-top: 46px;
+        }
+
+        .redParalleogram {
+          position: absolute;
+          left: calc(50% + 378px);
+          width: 85px;
+          height: 155px;
+          margin-top: 12px;
+
+          @include b("desktop") {
+            display: none;
+          }
+        }
+
+        .ellipse {
+          position: absolute;
+          z-index: 0;
+          width: 664px;
+          height: 664px;
+          border-radius: 340px;
+          background-color: #ff0000;
+          margin: auto;
+          filter: blur(400px);
+          z-index: -1;
+          left: calc(50% - 332px);
+          margin-top: 236px;
+
+          @include b("desktop") {
+            width: 60%;
+            height: 60%;
+            filter: blur(40%);
+            left: 20%;
+            margin-top: 126px;
+          }
+
+          @include b("mobile") {
+            width: 200px;
+            height: 200px;
+            filter: blur(60px);
+            margin-top: 56px;
+            left: calc(50% - 100px);
+          }
+        }
+
+        .imgLaptop {
+          margin: auto;
+          display: block;
+          margin-top: 196px;
+          @include b("mobile") {
+            margin-top: 36px;
+          }
+        }
+      }
+    }
+
+    .features {
+      .block {
+        position: relative;
+        z-index: 1;
+
+        .title {
+          margin: auto;
+          margin-top: 128px;
+          width: 850px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 50px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include b("desktop") {
+            width: auto;
+          }
+
+          @include b("mobile") {
+            font-size: 40px;
+            line-height: 40px;
+            width: auto;
+          }
+        }
+
+        .secondText {
+          margin-top: 30px;
+          margin: auto;
+          width: 600px;
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+          opacity: 0.5;
+          margin-top: 40px;
+          position: relative;
+          z-index: 1;
+
+          @include b("desktop") {
+            width: auto;
+          }
+
+          @include b("mobile") {
+            font-size: 22px;
+            line-height: 25px;
+            width: auto;
+          }
+        }
+
+        .cardsContainer {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          height: 434px;
+          justify-content: space-between;
+          width: 833px;
+          margin: auto;
+          margin-top: 40px;
+
+          @media (max-width: 860px) {
+            overflow-x: auto;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding-left: 10px;
+            height: 330px;
+          }
+
+          .card {
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              #2c2c33;
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+
+            .img {
+              margin-right: 32px;
+              margin-bottom: 26px;
+              max-width: 83px;
+
+              @media (max-width: 860px) {
+                margin: 15px auto 23px 9px;
+              }
+            }
+
+            .cardInfo {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                font-family: TTNorms;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #ffffff;
+              }
+
+              .cardDescription {
+                font-family: TTCommons;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                color: #ffffff;
+                opacity: 0.5;
+
+                @media (max-width: 860px) {
+                  margin-top: 20px;
+                  width: 290px;
+                }
+              }
+            }
+          }
+
+          .cardVertical {
+            width: 313px;
+            height: 434px;
+            flex-direction: column;
+
+            @media (max-width: 860px) {
+              height: 320px;
+              padding: 15px;
+              margin-right: 8px;
+              flex-direction: column;
+            }
+
+            .cardDescription {
+              margin-top: 16px;
+            }
+          }
+
+          .cardHorizontal {
+            width: 500px;
+            height: 208px;
+            margin-right: 20px;
+
+            @media (max-width: 860px) {
+              height: 320px;
+              padding: 15px;
+              margin-right: 8px;
+              flex-direction: column;
+            }
+
+            .cardDescription {
+              margin-top: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .standarts {
+      .block {
+        margin-top: 103px;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: 1200px) {
+          height: 600px;
+        }
+
+        @media (max-width: 980px) {
+          height: 900px;
+        }
+
+        @include b("mobile") {
+          margin-top: 60px;
+          padding-bottom: 443px;
+        }
+
+        .title {
+          margin: auto;
+          width: auto;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 50px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include b("mobile") {
+            width: 340px;
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+          @media (max-width: 374px) {
+            width: 95%;
+          }
+        }
+
+        .ellipse {
+          position: absolute;
+          left: calc(50% - 182px);
+          width: 364px;
+          height: 364px;
+          background: #ff0000;
+          filter: blur(200px);
+          z-index: -1;
+
+          @media (max-width: 980px) {
+            width: 50%;
+            height: 50%;
+            left: 25%;
+            filter: blur(40%);
+            margin-top: 370px;
+          }
+
+          @include b("mobile") {
+            margin-top: 0px;
+            top: 600px;
+            left: calc(50% - 92px);
+            width: 204px;
+            height: 204px;
+            filter: blur(120px);
+          }
+        }
+
+        .cardsContainers {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 33px;
+
+          @media (max-width: 980px) {
+            flex-direction: column;
+          }
+
+          .card {
+            margin: 8px;
+            background: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            );
+            border-radius: 20px;
+            width: 350px;
+            height: 100px;
+            display: flex;
+            padding-top: 15px;
+            padding-left: 100px;
+
+            @media (max-width: 374px) {
+              width: 95%;
+            }
+
+            .img {
+              position: absolute;
+              margin-left: -77px;
+              width: 46px;
+              height: 49px;
+            }
+
+            .cardTitle {
+              font-family: TTNorms;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 20px;
+              line-height: 24px;
+              text-transform: uppercase;
+              color: #ffffff;
+
+              .titleRed {
+                color: #dc2c2c;
+
+                width: auto;
+                display: inline;
+              }
+            }
+
+            .cardDescription {
+              max-width: 220px;
+              font-family: TTCommons;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 23px;
+              color: #ffffff;
+              margin-top: 3px;
+              opacity: 0.5;
+            }
+          }
+        }
+
+        .cardsImg {
+          background-image: url("../img/nft/cardGroup.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+          max-width: 1920px;
+          display: block;
+          margin: auto;
+          margin-top: 10px;
+          height: 650px;
+          margin-bottom: 200px;
+
+          @media (max-width: 1919px) {
+            height: 500px;
+          }
+
+          @media (max-width: 980px) {
+            background-size: cover;
+            height: 500px;
+          }
+
+          @include b("mobile") {
+            flex-direction: column;
+            height: 400px;
+            margin-bottom: 80px;
+            background-position: 60%;
+          }
+        }
+      }
+    }
+
+    .order {
+      .block {
+        position: relative;
+        z-index: 1;
+
+        @media (min-width: 1920px) {
+          width: 1920px;
+          margin: auto;
+        }
+
+        @media (max-width: 1919px) {
+          width: auto;
+        }
+
+        @include b("mobile") {
+          padding: 0 15px;
+          padding-bottom: 541px;
+          padding-top: 60px;
+        }
+
+        .infoBG {
+          position: absolute;
+          margin-top: -30px;
+
+          @include b("mobile") {
+            display: none;
+          }
+        }
+
+        .info {
+          position: relative;
+          left: 170px;
+          width: 300px;
+
+          @media (max-width: 769px) {
+            width: 90%;
+            left: 5%;
+          }
+
+          @include b("mobile") {
+            margin: auto;
+            left: auto;
+          }
+
+          .title {
+            margin-top: 128px;
+            width: 450px;
+            font-family: TTNorms;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 60px;
+            text-transform: uppercase;
+
+            @media (max-width: 769px) {
+              width: 70%;
+            }
+
+            @include b("mobile") {
+              width: auto;
+              margin-top: 0;
+              font-size: 40px;
+              line-height: 40px;
+            }
+
+            @media (max-width: 379px) {
+              font-size: 35px;
+              line-height: 35px;
+            }
+          }
+
+          .secondText {
+            margin-top: 73px;
+            width: 500px;
+            font-family: TTCommons;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 30px;
+            color: #ffffff;
+
+            @media (max-width: 769px) {
+              width: 70%;
+            }
+
+            @include b("mobile") {
+              margin-top: 0px;
+              width: auto;
+              font-size: 22px;
+              line-height: 25px;
+            }
+          }
+        }
+
+        .imgGroup {
+          .ellipse {
+            position: absolute;
+            right: 170px;
+            margin-top: 80px;
+            width: 364px;
+            height: 364px;
+            background: #ff0000;
+            filter: blur(200px);
+            z-index: -1;
+
+            @media (max-width: 769px) {
+              right: 20%;
+            }
+
+            @include b("mobile") {
+              width: 220px;
+              height: 220px;
+              background: #ff0000;
+              filter: blur(150px);
+              right: calc(50% - 110px);
+              margin-top: 780px;
+            }
+          }
+
+          .orderDevelopmentImg {
+            background-image: url("../img/nft/orderDevelopmentImg.png");
+            background-size: cover;
+            width: 50%;
+            height: 800px;
+            margin-top: -150px;
+            position: absolute;
+            right: 0;
+
+            @media (min-width: 1920px) {
+              width: 770px;
+              height: 900px;
+              margin-right: 50px;
+            }
+
+            @media (max-width: 769px) {
+              display: none;
+            }
+
+            @include b("mobile") {
+              display: block;
+              margin-top: 550px;
+              width: 100%;
+              height: 481px;
+              background-size: 170%;
+              background-position-x: 70%;
+              height: 700px;
+            }
+            @media (max-width: 350px) {
+              margin-top: 630px;
+            }
+          }
+        }
+      }
+    }
+
+    .why-choose {
+      .block {
+        margin-top: 108px;
+        @include b("mobile") {
+          margin-top: 50px;
+        }
+
+        .title {
+          margin: auto;
+          width: 820px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 40px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include b("desktop") {
+            width: 80%;
+          }
+
+          @include b("mobile") {
+            width: auto;
+            padding: 0 23px;
+            margin-top: 0;
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+          @media (max-width: 370px) {
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+
+        .secondText {
+          margin-top: 30px;
+          margin: auto;
+          width: 808px;
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+          opacity: 0.5;
+          margin-top: 40px;
+          position: relative;
+          z-index: 1;
+
+          @include b("desktop") {
+            width: 80%;
+          }
+
+          @include b("mobile") {
+            width: auto;
+            padding: 0 15px;
+            font-size: 22px;
+            line-height: 25px;
+            margin-top: 15px;
+          }
+        }
+
+        .slider {
+          height: 300px;
+          width: 100%;
+        }
+
+        .sliderContainerWrapper {
+          width: 100%;
+          overflow: hidden;
+
+          .redLine {
+            width: 100%;
+            height: 2px;
+          }
+
+          .leftShadowBlock {
+            margin-top: -40px;
+            position: absolute;
+            height: 252px;
+            width: 152px;
+            background: linear-gradient(
+              270deg,
+              #000000 0%,
+              rgba(0, 0, 0, 0) 100%
+            );
+            transform: rotate(180deg);
+
+            @include b("mobile") {
+              display: none;
+            }
+          }
+
+          .rightShadowBlock {
+            margin-top: -40px;
+            position: absolute;
+            right: 0;
+            height: 252px;
+            width: 152px;
+            background: linear-gradient(
+              270deg,
+              #000000 0%,
+              rgba(0, 0, 0, 0) 100%
+            );
+            transform: matrix(1, 0, 0, -1, 0, 0);
+
+            @include b("mobile") {
+              display: none;
+            }
+          }
+
+          .sliderContainer {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 8px;
+            align-items: center;
+            justify-content: center;
+
+            @include b("mobile") {
+              justify-content: start;
+              overflow: auto;
+            }
+
+            .blockSlide {
+              display: inline-block;
+              height: 184px;
+              border-right: solid rgba($color: #fff, $alpha: 0.2) 2px;
+              min-width: 280px;
+              width: 20.1%;
+
+              padding-top: 50px;
+
+              .slideTitle {
+                margin: auto;
+                width: 190px;
+                font-family: TTNorms;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 20px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #db2e2e;
+                // border: 1px solid #000000;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              }
+
+              .slideDescription {
+                margin: auto;
+                margin-top: 17px;
+                width: 190px;
+                font-family: TTNorms;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                text-transform: uppercase;
+                font-feature-settings: "liga" off;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+
+        .navigation {
+          display: flex;
+          justify-content: center;
+
+          @include b("mobile") {
+            display: none;
+          }
+
+          .navIcon {
+            cursor: pointer;
+            padding: 8px;
+            width: 36px;
+            height: 32px;
+          }
+        }
+      }
+    }
+
+    .working {
+      .block {
+        position: relative;
+        z-index: 1;
+
+        .title {
+          margin: auto;
+          margin-top: 128px;
+          width: 858px;
+          font-family: TTNorms;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 60px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include b("desktop") {
+            width: 90%;
+            font-size: 50px;
+            line-height: 50px;
+          }
+
+          @include b("mobile") {
+            margin-top: 0;
+            padding: 0 23px;
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+          @media (max-width: 370px) {
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+
+        .secondText {
+          margin-top: 30px;
+          margin: auto;
+          width: 808px;
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: center;
+          opacity: 0.5;
+          margin-top: 40px;
+          position: relative;
+          z-index: 1;
+
+          @include b("desktop") {
+            width: 70%;
+            font-size: 22px;
+            line-height: 25px;
+          }
+
+          @include b("mobile") {
+            margin-top: 15px;
+            width: 360px;
+            font-size: 22px;
+            line-height: 25px;
+          }
+
+          @media (max-width: 370px) {
+            width: auto;
+            padding: 0 10px;
+          }
+        }
+
+        .cardsContainerWrapper {
+          @include b("desktop") {
+            overflow-y: auto;
+            width: 100%;
+          }
+
+          .cardsContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+
+            @include b("desktop") {
+              width: 1000px;
+            }
+
+            .card {
+              .cardTitle {
+                font-family: TTNorms;
+                font-style: normal;
+                font-weight: 800;
+                text-align: center;
+                text-transform: uppercase;
+                color: #ffffff;
+              }
+
+              .lineIcon {
+                margin: 20px 0px 20px;
+              }
+
+              .option {
+                display: flex;
+                align-items: center;
+                height: 44px;
+                padding-left: 24px;
+
+                .checkIcon {
+                  margin-right: 13px;
+                }
+
+                .name {
+                  font-family: TTCommons;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 20px;
+                  line-height: 23px;
+                  color: #ffffff;
+                }
+              }
+            }
+
+            .transparentCard {
+              width: 291px;
+              height: 608px;
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              box-sizing: border-box;
+              border-radius: 30px;
+              padding: 26px 15px;
+
+              .cardTitle {
+                font-size: 18px;
+                line-height: 21px;
+              }
+
+              .line {
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                width: 300px;
+                margin-left: 30px;
+                position: absolute;
+                box-sizing: border-box;
+                margin: 20px 0px 20px;
+              }
+            }
+
+            .currentCard {
+              width: 343px;
+              height: 658px;
+              background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.1) 0%,
+                  rgba(255, 255, 255, 0) 100%
+                ),
+                #2c2c33;
+              border-radius: 20px;
+              padding: 34px 21px;
+              margin: 0 21px;
+
+              .cardTitle {
+                font-size: 32px;
+                line-height: 38px;
+              }
+            }
+          }
+        }
+
+        .button {
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
+          margin: auto;
+          margin-top: 40px;
+
+          max-width: 400px;
+        }
+      }
+    }
+
+    .portfolio {
+      .block {
+        display: flex;
+        flex-direction: column;
+
+        @include b("mobile") {
+          flex-direction: column-reverse;
+        }
+
+        .portfolioSlider {
+          padding: 0 30px;
+
+          .slide {
+            padding: 0;
+            width: 100%;
+            max-width: 500px;
+            padding-right: 10px;
+          }
+          img {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+
+    // new
+  }
+}

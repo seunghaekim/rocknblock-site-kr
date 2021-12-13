@@ -67,4 +67,24 @@ $(document).ready(() => {
     slidesPerView: "auto",
     loop: true,
   });
+
+  const sliderPorfolio = new Swiper(".swiper-portfolio", {
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 15,
+    // breakpoints: {
+    //   550: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 15,
+    //   },
+    //   950: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 15,
+    //   },
+    //   1100: {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 30,
+    //   },
+    // },
+  });
 });
