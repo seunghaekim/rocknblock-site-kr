@@ -1,5 +1,7 @@
 .pg {
   &-nft {
+    overflow: hidden;
+
     .background {
       background-color: black;
 
@@ -37,7 +39,7 @@
 
     .background {
       // background-image: url('/assets/img/marketplacePage/consultationBG.svg');
-      background-image: url("../img/nft/consultationBG.png");
+      background-image: url('../img/nft/consultationBG.png');
       background-repeat: no-repeat;
       background-size: contain;
       width: 100%;
@@ -50,44 +52,15 @@
         margin-left: calc((100% - 1920px) / 2);
       }
 
-      @include b("desktop") {
+      @include b('desktop') {
         background-size: 130%;
         background-position-x: center;
         height: 40%;
       }
 
-      @include b("mobile") {
+      @include b('mobile') {
         background-size: 150%;
         background-position-x: center;
-      }
-    }
-
-    .imgStatue {
-      display: block;
-      position: relative;
-      z-index: 1;
-      margin: auto;
-      width: 240px;
-      height: 320px;
-      margin-top: 340px;
-
-      @media (min-width: 1920px) {
-        margin-top: 500px;
-      }
-
-      background-image: url("../img/nft/image450.png");
-      background-repeat: no-repeat;
-      @include b("desktop") {
-        margin-top: 25%;
-        background-size: 80%;
-        background-position-x: center;
-        height: 300px;
-      }
-
-      @include b("mobile") {
-        background-size: 55%;
-        background-position-x: center;
-        height: 200px;
       }
     }
 
@@ -95,7 +68,7 @@
       .block {
         margin-top: 103px;
 
-        @include b("mobile") {
+        @include b('mobile') {
           margin-top: 40px;
         }
 
@@ -110,13 +83,13 @@
           text-align: center;
           text-transform: uppercase;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 90%;
             font-size: 50px;
             line-height: 50px;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             font-size: 40px;
             line-height: 40px;
             width: auto;
@@ -138,11 +111,11 @@
           position: relative;
           z-index: 1;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 95%;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             font-size: 22px;
             line-height: 25px;
             margin-top: 15px;
@@ -169,9 +142,38 @@
           margin: auto;
           margin-top: 40px;
 
-          @include b("mobile") {
+          @include b('mobile') {
             margin-top: 20px;
           }
+        }
+      }
+
+      .imgStatue {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin: auto;
+        width: 240px;
+        height: 320px;
+        margin-top: 340px;
+
+        @media (min-width: 1920px) {
+          margin-top: 500px;
+        }
+
+        background-image: url('../img/nft/image450.png');
+        background-repeat: no-repeat;
+        @include b('desktop') {
+          margin-top: 25%;
+          background-size: 80%;
+          background-position-x: center;
+          height: 300px;
+        }
+
+        @include b('mobile') {
+          background-size: 55%;
+          background-position-x: center;
+          height: 200px;
         }
       }
     }
@@ -181,7 +183,7 @@
         position: relative;
         z-index: 1;
 
-        @include b("mobile") {
+        @include b('mobile') {
           padding-top: 320px;
         }
 
@@ -193,20 +195,20 @@
             display: none;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             display: block;
             margin-top: -320px;
           }
         }
 
         .imgGroupLeft {
-          background-image: url("../img/nft/groupLeft.png");
+          background-image: url('../img/nft/groupLeft.png');
           background-position: 485px;
           width: 455px;
           height: 447px;
           left: 0;
 
-          @include b("mobile") {
+          @include b('mobile') {
             z-index: -2;
             height: 360px;
             background-size: cover;
@@ -217,23 +219,19 @@
         }
 
         .imgGradient {
-          @include b("mobile") {
+          @include b('mobile') {
             position: absolute;
             z-index: -1;
             margin-top: -100px;
             height: 300px;
             width: 100%;
-            background: linear-gradient(
-              180deg,
-              rgba(0, 0, 0, 0) 0%,
-              #000000 100%
-            );
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
           }
         }
 
         .imgGroupRight {
           right: 0;
-          @include b("mobile") {
+          @include b('mobile') {
             display: none;
           }
         }
@@ -250,22 +248,22 @@
           text-align: center;
           text-transform: uppercase;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 70%;
             font-size: 40px;
             line-height: 40px;
           }
-          @include b("mobile") {
+          @include b('mobile') {
             font-size: 30px;
             line-height: 30px;
           }
           .redText {
             color: #dc2c2c;
-            @include b("desktop") {
+            @include b('desktop') {
               width: 100%;
             }
 
-            @include b("mobile") {
+            @include b('mobile') {
               font-size: 30px;
               line-height: 30px;
             }
@@ -283,11 +281,11 @@
           line-height: 30px;
           text-align: center;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 70%;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             font-size: 22px;
             line-height: 25px;
             width: auto;
@@ -314,7 +312,7 @@
           height: 155px;
           margin-top: 12px;
 
-          @include b("desktop") {
+          @include b('desktop') {
             display: none;
           }
         }
@@ -332,7 +330,7 @@
           left: calc(50% - 332px);
           margin-top: 236px;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 60%;
             height: 60%;
             filter: blur(40%);
@@ -340,7 +338,7 @@
             margin-top: 126px;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             width: 200px;
             height: 200px;
             filter: blur(60px);
@@ -353,7 +351,7 @@
           margin: auto;
           display: block;
           margin-top: 196px;
-          @include b("mobile") {
+          @include b('mobile') {
             margin-top: 36px;
           }
         }
@@ -377,11 +375,11 @@
           text-align: center;
           text-transform: uppercase;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: auto;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             font-size: 40px;
             line-height: 40px;
             width: auto;
@@ -403,11 +401,11 @@
           position: relative;
           z-index: 1;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: auto;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             font-size: 22px;
             line-height: 25px;
             width: auto;
@@ -434,12 +432,7 @@
           }
 
           .card {
-            background: linear-gradient(
-                180deg,
-                rgba(255, 255, 255, 0.1) 0%,
-                rgba(255, 255, 255, 0) 100%
-              ),
-              #2c2c33;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #2c2c33;
             border-radius: 20px;
             padding: 30px;
             display: flex;
@@ -536,7 +529,7 @@
           height: 900px;
         }
 
-        @include b("mobile") {
+        @include b('mobile') {
           margin-top: 60px;
           padding-bottom: 443px;
         }
@@ -552,7 +545,7 @@
           text-align: center;
           text-transform: uppercase;
 
-          @include b("mobile") {
+          @include b('mobile') {
             width: 340px;
             font-size: 40px;
             line-height: 40px;
@@ -580,7 +573,7 @@
             margin-top: 370px;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             margin-top: 0px;
             top: 600px;
             left: calc(50% - 92px);
@@ -602,11 +595,7 @@
 
           .card {
             margin: 8px;
-            background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.6),
-              rgba(0, 0, 0, 0.6)
-            );
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
             border-radius: 20px;
             width: 350px;
             height: 100px;
@@ -657,7 +646,7 @@
         }
 
         .cardsImg {
-          background-image: url("../img/nft/cardGroup.png");
+          background-image: url('../img/nft/cardGroup.png');
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -678,7 +667,7 @@
             height: 500px;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             flex-direction: column;
             height: 400px;
             margin-bottom: 80px;
@@ -702,7 +691,7 @@
           width: auto;
         }
 
-        @include b("mobile") {
+        @include b('mobile') {
           padding: 0 15px;
           padding-bottom: 541px;
           padding-top: 60px;
@@ -712,7 +701,7 @@
           position: absolute;
           margin-top: -30px;
 
-          @include b("mobile") {
+          @include b('mobile') {
             display: none;
           }
         }
@@ -727,7 +716,7 @@
             left: 5%;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             margin: auto;
             left: auto;
           }
@@ -746,7 +735,7 @@
               width: 70%;
             }
 
-            @include b("mobile") {
+            @include b('mobile') {
               width: auto;
               margin-top: 0;
               font-size: 40px;
@@ -773,7 +762,7 @@
               width: 70%;
             }
 
-            @include b("mobile") {
+            @include b('mobile') {
               margin-top: 0px;
               width: auto;
               font-size: 22px;
@@ -797,7 +786,7 @@
               right: 20%;
             }
 
-            @include b("mobile") {
+            @include b('mobile') {
               width: 220px;
               height: 220px;
               background: #ff0000;
@@ -808,7 +797,7 @@
           }
 
           .orderDevelopmentImg {
-            background-image: url("../img/nft/orderDevelopmentImg.png");
+            background-image: url('../img/nft/orderDevelopmentImg.png');
             background-size: cover;
             width: 50%;
             height: 800px;
@@ -826,7 +815,7 @@
               display: none;
             }
 
-            @include b("mobile") {
+            @include b('mobile') {
               display: block;
               margin-top: 550px;
               width: 100%;
@@ -841,12 +830,16 @@
           }
         }
       }
+
+      .button {
+        max-width: 220px;
+      }
     }
 
     .why-choose {
       .block {
         margin-top: 108px;
-        @include b("mobile") {
+        @include b('mobile') {
           margin-top: 50px;
         }
 
@@ -861,11 +854,11 @@
           text-align: center;
           text-transform: uppercase;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 80%;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             width: auto;
             padding: 0 23px;
             margin-top: 0;
@@ -894,11 +887,11 @@
           position: relative;
           z-index: 1;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 80%;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             width: auto;
             padding: 0 15px;
             font-size: 22px;
@@ -926,14 +919,10 @@
             position: absolute;
             height: 252px;
             width: 152px;
-            background: linear-gradient(
-              270deg,
-              #000000 0%,
-              rgba(0, 0, 0, 0) 100%
-            );
+            background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
             transform: rotate(180deg);
 
-            @include b("mobile") {
+            @include b('mobile') {
               display: none;
             }
           }
@@ -944,14 +933,10 @@
             right: 0;
             height: 252px;
             width: 152px;
-            background: linear-gradient(
-              270deg,
-              #000000 0%,
-              rgba(0, 0, 0, 0) 100%
-            );
+            background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
             transform: matrix(1, 0, 0, -1, 0, 0);
 
-            @include b("mobile") {
+            @include b('mobile') {
               display: none;
             }
           }
@@ -962,8 +947,9 @@
             margin-top: 8px;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
 
-            @include b("mobile") {
+            @include b('mobile') {
               justify-content: start;
               overflow: auto;
             }
@@ -974,6 +960,10 @@
               border-right: solid rgba($color: #fff, $alpha: 0.2) 2px;
               min-width: 280px;
               width: 20.1%;
+
+              @include b(500) {
+                min-width: 100%;
+              }
 
               padding-top: 50px;
 
@@ -1002,7 +992,7 @@
                 font-size: 16px;
                 line-height: 22px;
                 text-transform: uppercase;
-                font-feature-settings: "liga" off;
+                font-feature-settings: 'liga' off;
                 color: #ffffff;
               }
             }
@@ -1013,7 +1003,7 @@
           display: flex;
           justify-content: center;
 
-          @include b("mobile") {
+          @include b('mobile') {
             display: none;
           }
 
@@ -1044,13 +1034,13 @@
           text-align: center;
           text-transform: uppercase;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 90%;
             font-size: 50px;
             line-height: 50px;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             margin-top: 0;
             padding: 0 23px;
             font-size: 40px;
@@ -1078,13 +1068,13 @@
           position: relative;
           z-index: 1;
 
-          @include b("desktop") {
+          @include b('desktop') {
             width: 70%;
             font-size: 22px;
             line-height: 25px;
           }
 
-          @include b("mobile") {
+          @include b('mobile') {
             margin-top: 15px;
             width: 360px;
             font-size: 22px;
@@ -1098,7 +1088,7 @@
         }
 
         .cardsContainerWrapper {
-          @include b("desktop") {
+          @include b('desktop') {
             overflow-y: auto;
             width: 100%;
           }
@@ -1109,7 +1099,7 @@
             align-items: center;
             margin-top: 40px;
 
-            @include b("desktop") {
+            @include b('desktop') {
               width: 1000px;
             }
 
@@ -1174,12 +1164,7 @@
             .currentCard {
               width: 343px;
               height: 658px;
-              background: linear-gradient(
-                  180deg,
-                  rgba(255, 255, 255, 0.1) 0%,
-                  rgba(255, 255, 255, 0) 100%
-                ),
-                #2c2c33;
+              background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #2c2c33;
               border-radius: 20px;
               padding: 34px 21px;
               margin: 0 21px;
@@ -1198,8 +1183,7 @@
           z-index: 1;
           margin: auto;
           margin-top: 40px;
-
-          max-width: 400px;
+          max-width: 335px;
         }
       }
     }
@@ -1209,8 +1193,32 @@
         display: flex;
         flex-direction: column;
 
-        @include b("mobile") {
+        @include b('mobile') {
           flex-direction: column-reverse;
+        }
+
+        .title {
+          font-family: TTNorms;
+          font-size: 60px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 60px;
+          margin: 50px auto 30px;
+          text-align: center;
+          text-transform: uppercase;
+          width: 100%;
+
+          @include b('desktop') {
+            width: 90%;
+            font-size: 50px;
+            line-height: 50px;
+          }
+
+          @include b('mobile') {
+            font-size: 40px;
+            line-height: 40px;
+            width: auto;
+          }
         }
 
         .portfolioSlider {

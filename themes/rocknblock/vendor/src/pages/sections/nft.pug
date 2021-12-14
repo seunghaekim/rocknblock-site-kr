@@ -47,7 +47,7 @@ mixin features()
   section.features
     .container 
       .block
-        span.title Features of NFT Marketplace
+        h2.title Features of NFT Marketplace
         .secondText Check the various features that will help your platform users.
         .cardsContainer
           .card.cardHorizontal
@@ -245,24 +245,25 @@ mixin why-choose()
       .sliderContainerWrapper
         .leftShadowBlock
         .rightShadowBlock
-        img.redLine(src="../../img/nft/Line2.png" alt="line")
-        .sliderContainer
-          .blockSlide
-            .slideTitle 250+ Projects
-            .slideDescription created on-a-turn-key basis
-          .blockSlide
-            .slideTitle 1 Bn+ dollar
-            .slideDescription capitalization of the projects we have built
-          .blockSlide
-            .slideTitle 15 000+
-            .slideDescription smart contracts deployed
-          .blockSlide
-            .slideTitle 15+ years
-            .slideDescription of development experience
-          .blockSlide
-            .slideTitle 50+ Team
-            .slideDescription members (mostly developers)
-        img.redLine(src="../../img/nft/Line16.png" alt="line")
-      .navigation
-        img.navIcon(src="../../img/nft/toLeft.svg" alt="nav left")
-        img.navIcon(src="../../img/nft/toRight.svg" alt="nav right")
+        .swiper.sliderContainer.swiper-business
+          img.redLine(src="../../img/nft/Line2.png" alt="line")
+          .swiper-wrapper
+            .swiper-slide.blockSlide
+              .slideTitle 250+ Projects
+              .slideDescription created on-a-turn-key basis
+            .swiper-slide.blockSlide
+              .slideTitle 1 Bn+ dollar
+              .slideDescription capitalization of the projects we have built
+            .swiper-slide.blockSlide
+              .slideTitle 15 000+
+              .slideDescription smart contracts deployed
+            .swiper-slide.blockSlide
+              .slideTitle 15+ years
+              .slideDescription of development experience
+            .swiper-slide.blockSlide
+              .slideTitle 50+ Team
+              .slideDescription members (mostly developers)
+          img.redLine(src="../../img/nft/Line16.png" alt="line")
+          .navigation
+            img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
+            img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")

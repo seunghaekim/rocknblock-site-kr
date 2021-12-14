@@ -1,6 +1,7 @@
-// import $ from '../plugins/jquery/dist/jquery.min';
 import $ from 'cash-dom';
-import Swiper from 'swiper';
+import Swiper, { Navigation } from 'swiper';
+
+Swiper.use([Navigation]);
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
@@ -71,20 +72,33 @@ $(document).ready(() => {
     loop: true,
   });
 
-  Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
-    el.addEventListener('click', () => {
-      document.getElementsByClassName('active')[0].classList.remove('active');
-      el.classList.add('active');
-      filterSelection(el.dataset.filter);
-      window.dispatchEvent(new Event('resize'));
+  if (document.getElementsByClassName('blog-select-nav').length !== 0) {
+    console.log(document.getElementsByClassName('blog-select-nav'));
+    Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
+      el.addEventListener('click', () => {
+        document.getElementsByClassName('active')[0].classList.remove('active');
+        el.classList.add('active');
+        filterSelection(el.dataset.filter);
+        window.dispatchEvent(new Event('resize'));
+      });
     });
-  });
 
-  const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
+    const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
+  }
 
   const sliderPorfolio = new Swiper('.swiper-portfolio', {
     slidesPerView: 'auto',
     loop: true,
     spaceBetween: 15,
+  });
+
+  const sliderBusiness = new Swiper('.swiper-business', {
+    slidesPerView: 'auto',
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.nav-next',
+      prevEl: '.nav-prev',
+    },
   });
 });
