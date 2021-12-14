@@ -80,6 +80,9 @@
 
 <section class="article container">
 	<h1 class="article-title">{{ article.title }}</h1>
+	<span class="article-date"
+																																																													style="background-image: url('{{ 'assets/images/site/blog/icon-clock.svg'| theme }}');">{{
+		article.published_at }}</span>
 	{{ article.text|raw }}
 </section>
 
