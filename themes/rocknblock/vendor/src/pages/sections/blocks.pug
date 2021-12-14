@@ -274,7 +274,7 @@ mixin clients-feedback
 mixin bottom-slide
   - var slides = [{image: 'icon-site1',title: 'NFT Marketplace',link: '/marketplace',},{image: 'icon-site2',title: 'Farming',link: '/farming',},{image: 'icon-site3',title: '10k nft generator',link: '/10knft',},{image: 'icon-site4',title: 'Crowdsale',link: '/crowdsale',},{image: 'icon-site5',title: 'Vesting',link: '/vesting',},{image: 'icon-site6',title: 'Staking',link: '/staking',}];
 
-  .sliderWrapper
+  .sliderWrapper.slider-v1
     .swiper.swiper-slider
       .swiper-wrapper
         each slide in slides.length ? slides : ['No values']
@@ -283,6 +283,21 @@ mixin bottom-slide
                 figure.site__imageWrapper
                   +webpImg('lazy',`../../../img/farming/${slide.image}`,'png',slide.title, 'site__image')
                 h4.site__title= slide.title 
+                a.site__link(href=`${slide.link}`)= `${slide.title}`
+                  i.site__linkIcon
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin bottom-slide-v2
+  - var slides = [{image: 'icon-site1',title: 'NFT Marketplace',link: '/marketplace',},{image: 'icon-site2',title: 'Farming',link: '/farming',},{image: 'icon-site3',title: '10k nft generator',link: '/10knft',},{image: 'icon-site4',title: 'Crowdsale',link: '/crowdsale',},{image: 'icon-site5',title: 'Vesting',link: '/vesting',},{image: 'icon-site6',title: 'Staking',link: '/staking',}];
+
+  .sliderWrapper.slider-v2
+    .swiper.swiper-slider
+      .swiper-wrapper
+        each slide in slides.length ? slides : ['No values']
+          .swiper-slide.slide
+              article.site
+                figure.site__imageWrapper
+                  +webpImg('lazy',`../../../img/farming/${slide.image}`,'png',slide.title, 'site__image')
                 a.site__link(href=`${slide.link}`)= `${slide.title}`
                   i.site__linkIcon
                     img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')

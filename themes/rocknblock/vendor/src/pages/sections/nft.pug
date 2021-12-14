@@ -11,8 +11,8 @@ mixin hero()
         img.img(src="../../img/nft/redParallelogram.svg" alt="redParallelogram-img")
         a.button(href="#contact-us") Get free consultation
             img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
-    .background
-    .imgStatue
+    .background(style="background-image: url('../../img/nft/consultationBG.png');")
+    .imgStatue(style="background-image: url('../../img/nft/image450.png');")
 
 mixin portfolio()
   - var slides = ['../../img/nft/sliderPortfolio/slide1.png','../../img/nft/sliderPortfolio/slide2.png','../../img/nft/sliderPortfolio/slide3.png','../../img/nft/sliderPortfolio/slide4.png','../../img/nft/sliderPortfolio/slide5.png'];
@@ -31,17 +31,17 @@ mixin what-is-nft()
   section.what-is-nft
     .block
       .imgGradient
-      .imgGroup.imgGroupLeft
-      img.imgGroup.imgGroupRight(src="../../img/nft/groupRight.png" alt="image450.png")
+      .imgGroup.imgGroupLeft(style="background-image: url('../../img/nft/groupLeft.png');")
+      +webpImg('lazy',`../../img/nft/groupRight`,'png','what is nft','imgGroup imgGroupRight')
       .title What is an
         .redText NFT Marketplace?
       p.secondText
         | The NFT Marketplace is an adaptive online platform that provides access to offers to sell and buy non-circulating tokens powered by NFT technology. Popular objects include various texts, digital images, and artworks, game characters, financial instruments, and domain names. 
         | A competently designed marketplace will enable a close connection between the seller and the interested user, providing a place to place trade offers. Users will have at their disposal a digital catalog and a personal account, with the help of which it will be possible to carry out the most | secure and expedited transactions.
       .ellipse ellipse
-      img.imgStatue(src="../../img/nft/image448.png" alt="image448.png")
+      +webpImg('lazy',`../../img/nft/image448`,'png','what is nft','imgStatue')
       img.redParalleogram(src="../../img/nft/redParallelogram.svg" alt="redParallelogram-img")
-      img.imgLaptop(src="../../img/nft/laptop.png" alt="image450.png")
+      +webpImg('lazy',`../../img/nft/laptop`,'png','what is nft','imgLaptop')
 
 mixin features()
   section.features
@@ -90,15 +90,16 @@ mixin standarts()
             .cardTitle ERC 1155 
               .titleRed Multiple
             .cardDescription if you want to sell one collectible multiple times
-      .cardsImg
+      .cardsImg(style="background-image: url('../../img/nft/cardGroup.png');")
 
 mixin order()
   section.order
     .block
       .imgGroup
         .ellipse
-        .orderDevelopmentImg
-      img.infoBG(src="../../img/nft/infoBG.png" alt="info bg")
+        .orderDevelopmentImg(style="background-image: url('../../img/nft/orderDevelopmentImg.png');")
+      //- img.infoBG(src="../../img/nft/infoBG.png" alt="info bg")
+      +webpImg('lazy',`../../img/nft/infoBG`,'png','wave background','infoBG')
       .info
         h2.title Order development of NFT Marketplace
         .secondText
@@ -246,7 +247,7 @@ mixin why-choose()
         .leftShadowBlock
         .rightShadowBlock
         .swiper.sliderContainer.swiper-business
-          img.redLine(src="../../img/nft/Line2.png" alt="line")
+          +webpImg('lazy',`../../img/nft/Line2`,'png','line background','redLine')
           .swiper-wrapper
             .swiper-slide.blockSlide
               .slideTitle 250+ Projects
@@ -263,7 +264,7 @@ mixin why-choose()
             .swiper-slide.blockSlide
               .slideTitle 50+ Team
               .slideDescription members (mostly developers)
-          img.redLine(src="../../img/nft/Line16.png" alt="line")
+          +webpImg('lazy',`../../img/nft/Line16`,'png','line background','redLine')
           .navigation
             img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
             img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")
