@@ -1,4 +1,5 @@
-import $ from '../plugins/jquery/dist/jquery.min';
+// import $ from '../plugins/jquery/dist/jquery.min';
+import $ from 'cash-dom';
 import Swiper from 'swiper';
 
 if (navigator.serviceWorker) {
@@ -80,4 +81,10 @@ $(document).ready(() => {
   });
 
   const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
+
+  const sliderPorfolio = new Swiper('.swiper-portfolio', {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 15,
+  });
 });

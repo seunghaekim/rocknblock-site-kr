@@ -287,14 +287,17 @@ mixin bottom-slide
                   i.site__linkIcon
                     img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
 
-mixin contact-us
+mixin contact-us(title)
   #contact-us.contact-us.container
     .background-img
       +webpImg('lazy',`../../img/background/partners`,'png','partners')
     .background-img
       +webpImg('lazy',`../../img/background/contact`,'png','contact')
 
-    +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
+    if title
+      +block-title(title)
+    else
+      +block-title('Estimate your project now!', 'Get free consultation and build your blockchain project with our highly qualified team!')
     form.contact-us__form(name='contact-us-form')
 
       label.visually-hidden(hidden for='contact-us-input') Enter your name

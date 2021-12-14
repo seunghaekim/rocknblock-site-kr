@@ -179,6 +179,45 @@ ul {
   }
 }
 
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  padding: 0 31px;
+  background: #dc2c2c;
+  border-width: 0;
+  border-radius: 46px;
+  margin-top: 40px;
+  font-family: TTNorms, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: white;
+  top: 0;
+  position: relative;
+  transition: top 0.15s ease-in;
+
+  &:hover {
+    top: -5px;
+    text-decoration: none;
+  }
+
+  .textBtn {
+    cursor: pointer;
+  }
+
+  .btnIcon {
+    width: 23px;
+    height: 12px;
+    margin-left: 27px;
+  }
+}
+
 @import 'sections/index';
 @import 'sections/blog';
 @import 'sections/article';
+@import 'sections/nft';
