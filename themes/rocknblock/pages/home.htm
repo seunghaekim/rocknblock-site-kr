@@ -12,14 +12,16 @@ robot_follow = "follow"
 [articlepreview]
 maxItems = 0
 ==
-{% partial 'sections/hero' %}
-{% partial 'sections/why-us' %}
-{% partial 'sections/areas-of-expertise' %}
-{% partial 'sections/what-we-do-best' %}
-{% partial 'sections/cases' %}
-{% partial 'sections/team' %}
-{% partial 'sections/partners' %}
-{% component 'articlepreview' %}
-{% partial 'sections/clients-feedback' %}
-{% partial 'sections/nav-slider' %}
-{% partial 'forms/main' %}
+<section class="pg pg-main">
+    {% partial 'sections/hero' %}
+    {% partial 'sections/nav-slider-v2' %}
+    {% partial 'sections/why-us' %}
+    {% partial 'sections/areas-of-expertise' %}
+    {% partial 'sections/what-we-do-best' %}
+    {% partial 'sections/cases' %}
+    {% partial 'sections/team' %}
+    {% partial 'sections/partners' %}
+    {% component 'articlepreview' %}
+    {% partial 'sections/clients-feedback' %}
+    {% partial 'forms/main' %}
+</section>
