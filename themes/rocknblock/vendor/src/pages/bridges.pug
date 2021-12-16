@@ -1,0 +1,21 @@
+extends layouts/index
+
+include sections/blocks
+include sections/bridges
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-bridges
+		+hero
+		+what-is
+		+how-it-works
+		+why
+		+blockchains
+		+bridges
+		+bottom-slide-v2
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

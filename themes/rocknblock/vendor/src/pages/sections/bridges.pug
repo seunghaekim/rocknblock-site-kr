@@ -1,0 +1,132 @@
+include blocks
+
+mixin hero()
+  section.bridge-hero.hero(style="background-image: url('../../img/bridge/hero/hero-bg.jpg')")
+    .hero__container.container
+      .hero__content
+        h1.hero__title.title Cross-Chain Solutions
+        p.hero__subtitle Token bridges enable the flow of value from one chain to another and back
+        a.button(href="#contact-us") Apply now
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      .hero__img
+        +webpImg('lazy',`../../img/bridge/hero/hero-form`,'png','Cross-chain form')
+
+mixin what-is()
+  .what
+    .container.what__container
+      h2.what__title.title
+        span(style="color: #DC2C2C; display: block;") What is 
+        span cross-chain bridge?
+    .what__img
+      +webpImg('lazy',`../../img/bridge/what/what`,'png','cross-chain bridge')
+    .container.what__container
+      p.what__discription Cross-chain bridge allows to wrap a token to other blockchain standards and enable secure swap of tokens with 1:1 ratio across different networks.
+      p.what__discription_sub.what__discription Along with the project's need to reach bigger audiences, increase the variety of trading platforms, and establish competitive transaction terms for holders, the need to establish a cross-chain bridge arises.
+
+mixin how-it-works()
+  section#how.how
+    .container.how__container
+      h2.how__title.title How it works
+      .how__steps
+        .step
+          .step__circle
+            span 1
+          p.step__description Tx is sent from user to the swap contract in Network A
+        .step
+          .step__circle
+            span 2
+          p.step__description The tokens are locked in the swap contract in Network A
+        .step
+          .step__circle
+            span 3
+          p.step__description Tokens are sent from the swap contract in Network B to the user
+      .how__img
+        +webpImg('lazy',`../../img/bridge/how-it-works/chain-bridge`,'png','chain-bridge')
+
+mixin why()
+  section#why.why
+    .container.why__container
+      h2.why__title.title Why going Cross-Chain with 
+        span(style="color: #DC2C2C; display: block;") ROCK'N'BLOCK?
+      .why__items
+        .item
+          img.item__img(src=`../../img/bridge/why/icon-1.svg` alt="Have full control of your bridge")
+          p.item__text Have full control of your bridge
+        .item
+          img.item__img(src=`../../img/bridge/why/icon-2.svg` alt="Discover new trading platforms")
+          p.item__text Discover new trading platforms
+        .item
+          img.item__img(src=`../../img/bridge/why/icon-3.svg` alt="Reach new audiences")
+          p.item__text Reach new audiences
+        .item
+          img.item__img(src=`../../img/bridge/why/icon-4.svg` alt="Escape high gas fees")
+          p.item__text Escape high gas fees
+        .item
+          img.item__img(src=`../../img/bridge/why/icon-5.svg` alt="Set your commission")
+          p.item__text Set your commission
+      a.button(href="#contact-us") REQUEST BRIDGE
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin blockchains()
+  section#blockchains.blockchains
+    h2.title Supported blockchains
+    .blockchains__items
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/ethereum.svg" alt="Ethereum")
+        p.blockchains__title Ethereum
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/neo.svg" alt="NEO")
+        p.blockchains__title NEO
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/tron.svg" alt="Tron")
+        p.blockchains__title Tron
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/polygon.svg" alt="Polygon")
+        p.blockchains__title Polygon
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/moonriver.svg" alt="Moonriver")
+        p.blockchains__title Moonriver
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/eos.svg" alt="EOS")
+        p.blockchains__title EOS
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/binance.svg" alt="Binance Smart Chain")
+        p.blockchains__title Binance Smart Chain
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/xinfin.svg" alt="XinFin")
+        p.blockchains__title XinFin
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/heco.svg" alt="Heco")
+        p.blockchains__title Heco
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/waves.svg" alt="Waves")
+        p.blockchains__title Waves
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/solana.svg" alt="Solana")
+        p.blockchains__title Solana
+      .blockchains__item
+        img.blockchains__img(src="../../img/bridge/blockchains/elrond.svg" alt="elrond")
+        p.blockchains__title elrond
+
+mixin bridges()
+  section#bridges.bridges
+    .container
+      h2.title Bridges we've built
+    .bridges__items
+      .bridges__item
+        img.bridges__img(src="../../img/bridge/bridges/quarashi.svg" alt="QUARASHI")
+        p.bridges__title QUARASHI
+      .bridges__item
+        img.bridges__img(src="../../img/bridge/bridges/name.svg" alt="Name")
+        p.bridges__title Name
+      .bridges__item
+        img.bridges__img(src="../../img/bridge/bridges/less.svg" alt="Less")
+        p.bridges__title Less
+      .bridges__item
+        img.bridges__img(src="../../img/bridge/bridges/chipz.svg" alt="CHIPZ")
+        p.bridges__title CHIPZ
+      .bridges__item
+        img.bridges__img(src="../../img/bridge/bridges/bscgirl.svg" alt="BSCGIRL")
+        p.bridges__title BSCGIRL
+    .container
+      p.bridges__text Rock'n'Block helps to bridge smaller chains to other networks, to develop business models around the transfer and building trust with the users through bridge dashboards.

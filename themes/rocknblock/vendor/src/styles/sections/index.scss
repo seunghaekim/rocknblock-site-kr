@@ -74,6 +74,8 @@
     max-width: 755px;
     margin-right: 0;
 
+    margin: 0;
+
     @include text-gradient(linear-gradient(86.23deg, #ffffff 54.52%, #171628 83.07%));
 
     text-transform: uppercase;
