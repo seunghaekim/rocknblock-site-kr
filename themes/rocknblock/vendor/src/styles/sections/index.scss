@@ -897,10 +897,15 @@ header {
     justify-content: center;
     align-items: center;
 
+    transition: 0.4s ease-out;
     margin: 20px auto;
 
     a {
       margin: 0 15px;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 

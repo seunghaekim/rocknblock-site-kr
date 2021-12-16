@@ -3,6 +3,7 @@ description = "Section links slider v2"
 <div class="sliderWrapper slider-v2">
 	<div class="swiper swiper-slider">
 		<div class="swiper-wrapper">
+		{% if this.page.url != '/marketplace' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -17,6 +18,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
+		{% endif %}
+		{% if this.page.url != '/farming' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -31,6 +34,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
+		{% endif %}
+		{% if this.page.url != '/10knft' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -45,6 +50,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
+		{% endif %}
+		{% if this.page.url != '/crowdsale' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -59,6 +66,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
+		{% endif %}
+		{% if this.page.url != '/vesting' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -73,6 +82,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
+		{% endif %}
+		{% if this.page.url != '/staking' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -87,6 +98,7 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
+		{% endif %}
 		</div>
 	</div>
 </div>

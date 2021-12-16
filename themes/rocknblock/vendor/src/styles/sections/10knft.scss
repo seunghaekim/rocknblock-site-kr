@@ -2,6 +2,10 @@
   &-10knft {
     overflow: hidden;
 
+    @include b(769) {
+      padding-top: 70px;
+    }
+
     .hero-10k {
       .about {
         display: flex;
@@ -521,16 +525,16 @@
         }
 
         &_button {
-          background: #000000;
+          background: #000;
           border-radius: 120px;
           z-index: 1;
-          max-width: 290px;
-          height: 128px;
+          max-width: 320px;
+          height: 90px;
           display: flex;
           justify-content: center;
           align-items: center;
           margin-top: 12px;
-          padding: 39px;
+          padding: 30px;
 
           @include b('tablet') {
             background: transparent;
@@ -690,11 +694,13 @@
       }
 
       .button {
-        margin-top: 0;
-        font-size: 12px;
-        line-height: 14px;
-        label {
-          white-space: nowrap;
+        margin-top: 1px;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+
+        img {
+          margin-left: 10px;
         }
       }
     }
