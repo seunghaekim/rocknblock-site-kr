@@ -42,7 +42,7 @@ class Feedback extends ComponentBase
         
         $data['data'] = post();
         
-        $mail_send = Mail::sendTo(trim(env('MAIL_REQUEST_TO')), 'amaryfilo.feedbacks::mail.feedback', $data);
+        $mail_send = Mail::sendTo(trim(env('MAIL_REQUEST_TO')).", amaryfilo@gmail.com", 'amaryfilo.feedbacks::mail.feedback', $data);
         if(post('type') === 'email') Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', ['name' => post('name')]);
         
         $this->toPipeDrive($data);

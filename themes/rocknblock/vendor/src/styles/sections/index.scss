@@ -909,6 +909,13 @@ header {
     }
   }
 
+  .form-info-text {
+    font: normal normal 16px/23px TTCommons, sans-serif;
+    margin: 0;
+    text-align: center;
+    opacity: 0.5;
+  }
+
   .background-img:nth-child(2) {
     padding-top: 100px;
     opacity: 0.4;
@@ -1484,6 +1491,17 @@ header {
 }
 
 // bottom slider
+
+.sliderWrapper {
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #ffffff 51.97%, #171628 77.38%));
+
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 85.38%));
+    }
+  }
+}
+
 .slider-v1 {
   .site {
     background: linear-gradient(30.15deg, #191111 14.13%, #272525 64.22%);
@@ -2836,5 +2854,40 @@ header {
         display: none;
       }
     }
+  }
+}
+
+#btnScrollToTop {
+  padding-left: 0.08%;
+  padding-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 71px;
+  left: calc(50% + 520px);
+  width: 48px;
+  height: 48px;
+  background: #1d1b21;
+  border: 3px solid #2e2e35;
+  border-radius: 50%;
+  z-index: 99;
+  padding: 10px;
+  transition: 0.4s ease;
+
+  @include b(1300) {
+    left: auto;
+    right: 1rem;
+    bottom: 50px;
+  }
+
+  &:hover {
+    border-color: #dc2c2c;
+    cursor: pointer;
+  }
+
+  img {
+    margin: auto;
+    display: block;
   }
 }

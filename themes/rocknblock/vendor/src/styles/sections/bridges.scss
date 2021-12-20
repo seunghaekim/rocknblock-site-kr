@@ -312,7 +312,7 @@
         &__text {
           font-size: calc(15px + 5 * ((100vw - 320px) / 1600));
 
-          font-family: 'TT Commons', sans-serif;
+          font-family: 'TTCommons', sans-serif;
           font-weight: bold;
           text-align: center;
           text-transform: uppercase;
@@ -429,7 +429,9 @@
 
       &__text {
         text-align: center;
-        font-size: calc(30px + 8 * ((100vw - 320px) / 1600));
+        // font-size: calc(30px + 8 * ((100vw - 320px) / 1600));
+        font-size: 32px;
+        font-family: 'TTCommons', sans-serif;
 
         @include b(700) {
           font-size: 18px;

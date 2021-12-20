@@ -18,6 +18,19 @@ $(document).ready(() => {
   // eslint-disable-next-line no-console
   console.log(`document ready`);
 
+  const scrollBtn = $('#btnScrollToTop')[0];
+
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  $(window).on('scroll', function () {
+    scrollBtn ? scrollTopBtn() : null;
+  });
+
+  const scrollTopBtn = () => (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? (scrollBtn.style.display = 'block') : (scrollBtn.style.display = 'none'));
+  // const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   Array.from(document.getElementsByClassName('icon-burger')).forEach((el) => {
     el.addEventListener('click', () => {
       el.hidden = true;
@@ -73,7 +86,6 @@ $(document).ready(() => {
   });
 
   if (document.getElementsByClassName('blog-select-nav').length !== 0) {
-    console.log(document.getElementsByClassName('blog-select-nav'));
     Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
       el.addEventListener('click', () => {
         document.getElementsByClassName('active')[0].classList.remove('active');

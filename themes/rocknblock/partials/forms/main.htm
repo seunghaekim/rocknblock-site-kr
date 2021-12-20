@@ -16,7 +16,8 @@ description = "Main form"
 
 	{% if success_form == "1" %}
 		<div style="margin: 0 auto;" class="contact-us__popup popup">
-			<h3 class="popup__title">Thanks for your request!</h3>
+			<h3 class="popup__title">Thank you for your request!</h3>
+			<span>We will be in touch with you shortly.</span>
 			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="feedback::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
 		</div>
 	{% else %}
@@ -32,7 +33,10 @@ description = "Main form"
                 <img src="{{ 'assets/images/site/social/whatsapp.svg'| theme }}" alt="whatsapp" />
             </a>
         </div>
-	
+        <div class="form-info-text">
+				<span>Start a chat with us or fill this form</span>
+        </div>
+
 	{{ form_ajax('feedback::onForm', {
 	    class: 'contact-us__form',
 	    "data-request-loading": "#loading-form",
