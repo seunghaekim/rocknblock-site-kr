@@ -35,8 +35,15 @@ description = "Main form"
 	
 	{{ form_ajax('feedback::onForm', {
 	    class: 'contact-us__form',
-        update: { 'forms/main': '#contact-us' }
+	    "data-request-loading": "#loading-form",
+       update: { 'forms/main': '#contact-us' },
       }) }}
+      <div id="loading-form">
+      	<div class="load-form">
+      		<img class="load-form-icon" src="{{ 'assets/images/site/icon-loader.svg'| theme }}" alt="rocknblock loading" />
+      		<span>Please wait...</span>
+      	</div>
+      </div>
         <input class="contact-us__form__input" id="contact-us-input" type="text" name="id" placeholder="Name" value="all" required hidden="hidden" />
 		<label class="visually-hidden" hidden="hidden" for="contact-us-input">Enter your name</label>
 		<input class="contact-us__form__input" id="contact-us-input" type="text" name="name" placeholder="Name" required />
@@ -55,7 +62,7 @@ description = "Main form"
 		<textarea class="contact-us__form__input contact-us__form__input-textarea" name="idea" id="contact-us-textarea" rows="1" placeholder="Briefly describe your project or idea" required></textarea>
 		<p class="terms">By using the service, you accept the <a href="/terms-of-service" target="_blank">Terms of Service</a>
 		</p>
-		<button class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit">Submit request</button>
+		<input class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit" value="Submit request" />
       {{ form_close() }}
     {% endif %}
 </div>

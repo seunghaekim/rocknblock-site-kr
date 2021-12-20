@@ -946,6 +946,60 @@ header {
     max-width: 550px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+
+    overflow: hidden;
+
+    #loading-form {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      z-index: 1;
+      padding-bottom: 25%;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .load-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+
+        &-icon {
+          width: 50px;
+          height: 50px;
+          background-color: red;
+          border-radius: 5px;
+          padding: 5px;
+          animation: imageFloating 1s linear infinite;
+          position: relative;
+          top: -5px;
+        }
+
+        @keyframes imageFloating {
+          0%,
+          100% {
+            top: -5px;
+          }
+          50% {
+            top: 5px;
+          }
+        }
+      }
+    }
 
     @include b('mobile') {
       margin-top: 20px;

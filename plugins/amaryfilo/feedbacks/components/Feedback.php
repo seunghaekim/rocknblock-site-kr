@@ -33,21 +33,20 @@ class Feedback extends ComponentBase
             'from_url' => Request::url(),
             'created_at' => date("Ymdhis")
         ];
-
-        if(post('id') === 'bridge') $data['idea'] = '<b>Blockchain</b>: '.post('blockchain').'.<br /><b>Token Contract</b>: '.post('tokenContract').'.';
-
-        FeedbackModel::insert($data);
-
-        $data['data'] = post();
-
-        $mail_send = Mail::sendTo(trim(env('MAIL_REQUEST_TO')), 'amaryfilo.feedbacks::mail.feedback', $data);
         
+        if(post('id') === 'bridge') $data['idea'] = '<b>Blockchain</b>: '.post('blockchain').'.<br /><b>Token Contract</b>: '.post('tokenContract').'.';
+        
+        FeedbackModel::insert($data);
+        
+        $this->page['success_form'] = "1";
+        
+        $data['data'] = post();
+        
+        $mail_send = Mail::sendTo(trim(env('MAIL_REQUEST_TO')), 'amaryfilo.feedbacks::mail.feedback', $data);
         if(post('type') === 'email') Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', ['name' => post('name')]);
         
-        // if($mail_send)
-        $this->page['success_form'] = "1";
-
         $this->toPipeDrive($data);
+        
     }
 
     public function onFormDone()
