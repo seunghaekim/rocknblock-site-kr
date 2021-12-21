@@ -95,6 +95,11 @@
       font-size: 40px;
       line-height: 40px;
     }
+
+    &:before {
+      content: attr(sub-text);
+      display: block;
+    }
   }
 
   &__content {
@@ -914,6 +919,7 @@ header {
     margin: 0;
     text-align: center;
     opacity: 0.5;
+    margin-top: 5px;
   }
 
   .background-img:nth-child(2) {
@@ -950,7 +956,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 550px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -1493,11 +1499,15 @@ header {
 // bottom slider
 
 .sliderWrapper {
-  .primary-header {
-    @include text-gradient(linear-gradient(87.05deg, #ffffff 51.97%, #171628 77.38%));
+  .block-header {
+    margin-bottom: 35px;
 
-    @include b('tablet') {
-      @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 85.38%));
+    .primary-header {
+      @include text-gradient(linear-gradient(87.05deg, #ffffff 51.97%, #171628 77.38%));
+
+      @include b('tablet') {
+        @include text-gradient(linear-gradient(to right, #ffffff 51.97%, #171628 85.38%));
+      }
     }
   }
 }
