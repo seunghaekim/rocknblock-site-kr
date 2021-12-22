@@ -1,0 +1,20 @@
+extends layouts/index
+
+include sections/blocks
+include sections/staking
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-staking
+		.staking
+			+about
+			+cards
+			+call
+			+numbers
+		+bottom-slide-v2
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

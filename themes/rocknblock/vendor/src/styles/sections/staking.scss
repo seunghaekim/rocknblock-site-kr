@@ -1,0 +1,665 @@
+.pg {
+  &-staking {
+    .staking {
+      margin: 40px auto 0;
+      position: relative;
+
+      .w1000px {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .pd15px {
+        padding: 0 15px;
+      }
+
+      &__container {
+        &_block_1,
+        &_block_2 {
+          display: flex;
+        }
+
+        &_block_1 {
+          margin: 0 auto;
+          position: relative;
+          padding-bottom: 55px;
+          height: 620px;
+
+          .bg-1,
+          .bg-2 {
+            position: absolute;
+            top: -153px;
+            z-index: -10;
+            object-fit: none;
+          }
+
+          .bg-1 {
+            left: -221px;
+            filter: blur(50px);
+            @include b('1440') {
+              left: auto;
+            }
+          }
+
+          .bg-2 {
+            right: -221px;
+            filter: blur(50px);
+            @include b('1440') {
+              right: auto;
+            }
+          }
+
+          @include b('tablet') {
+            height: 100%;
+          }
+
+          div:first-child {
+            padding-top: 50px;
+            z-index: 4;
+
+            @include b('desktop') {
+              max-width: 300px;
+            }
+
+            @include b('tablet') {
+              padding-top: 200px;
+            }
+          }
+
+          picture {
+            position: absolute;
+            left: 500px;
+            height: 100%;
+            width: 100%;
+            max-width: 600px;
+            z-index: -10;
+
+            @include b(1100) {
+              left: auto;
+              right: 0;
+            }
+
+            @include b('tablet') {
+              top: -18%;
+            }
+
+            img {
+              @include b('desktop') {
+                min-height: 400px;
+                width: 600px;
+                object-fit: cover;
+                object-position: left;
+              }
+            }
+          }
+
+          h1 {
+            font-family: TTNORMS, sans-serif;
+            font-weight: 800;
+            font-size: 60px;
+            line-height: 60px;
+            text-transform: uppercase;
+            color: #ffffff;
+
+            @include b('tablet') {
+              font-size: 40px;
+              line-height: 40px;
+            }
+
+            @include b(400) {
+              font-size: 30px;
+              line-height: 30px;
+            }
+          }
+
+          h2 {
+            font-family: TTCOMMONS, sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: #ffffff;
+            opacity: 0.5;
+
+            @include b('tablet') {
+              font-size: 22px;
+              line-height: 25px;
+            }
+          }
+        }
+
+        &_block_2 {
+          align-items: center;
+          padding-bottom: 93px;
+          position: relative;
+
+          @include b('tablet') {
+            margin-top: 300px;
+          }
+
+          @include b('mobile') {
+            margin-top: 100px;
+          }
+
+          &_bg {
+            position: absolute;
+            top: -309px;
+            filter: blur(18px);
+            left: -100px;
+            z-index: -10;
+
+            @include b('1440') {
+              left: auto;
+              top: -109px;
+            }
+          }
+
+          @include b('tablet') {
+            flex-direction: column;
+            padding-bottom: 60px;
+          }
+
+          h2 {
+            font-family: TTCOMMONS, sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: right;
+            max-width: 400px;
+            padding-left: 2em;
+
+            @include b('tablet') {
+              padding-left: 0;
+              text-align: left;
+              max-width: none;
+              line-height: 25px;
+              padding-bottom: 60px;
+            }
+          }
+        }
+
+        &_info {
+          display: block;
+
+          &_head:nth-child(1) {
+            padding-bottom: 145px;
+
+            @include b('tablet') {
+              padding-bottom: 60px;
+            }
+
+            .staking__container_info_head_block_card_text-container {
+              padding-top: 51px;
+            }
+          }
+
+          &_head:last-child {
+            padding-bottom: 180px;
+
+            @include b('tablet') {
+              padding-bottom: 60px;
+            }
+
+            .staking__container_info_head_block_card_text-container {
+              padding-top: 43px;
+            }
+          }
+
+          &_head {
+            &_title {
+              font-family: TTNORMS, sans-serif;
+              font-weight: 800;
+              font-size: 34px;
+              line-height: 60px;
+              max-width: 700px;
+              text-align: center;
+              margin: 0 auto;
+              text-transform: uppercase;
+
+              @include b('tablet') {
+                font-size: 30px;
+                line-height: 40px;
+                padding: 0 15px;
+              }
+            }
+
+            &_desc {
+              font-family: TTCOMMONS, sans-serif;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 30px;
+              text-align: center;
+              margin: 0 auto;
+              color: #ffffff;
+              opacity: 0.5;
+
+              @include b('tablet') {
+                text-align: left;
+                padding: 0 15px;
+              }
+            }
+
+            &_block {
+              display: flex;
+              justify-content: space-between;
+              padding-top: 41px;
+              padding-left: 15px;
+
+              @include b('desktop') {
+                overflow-x: auto;
+              }
+
+              &_card {
+                min-width: 310px;
+                max-width: 310px;
+                padding: 25px 25px 50px 25px;
+                background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+                border-radius: 4px;
+
+                h2 {
+                  font-family: TTNORMS, sans-serif;
+                  font-weight: 700;
+                  font-size: 20px;
+                  line-height: 24px;
+                  text-transform: uppercase;
+                }
+
+                h3 {
+                  font-weight: 400;
+                  font-family: TTCOMMONS, sans-serif;
+                  font-size: 18px;
+                  padding-top: 22px;
+                  line-height: 21px;
+                  color: #ffffff;
+                  opacity: 0.5;
+                }
+
+                &_circle {
+                  width: 82px;
+                  height: 82px;
+                  border-radius: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: #dc2c2c;
+
+                  img {
+                    width: 54px;
+                    height: 54px;
+                  }
+                }
+              }
+
+              &_card:not(:last-child) {
+                margin-right: 0.5em;
+              }
+            }
+          }
+        }
+      }
+
+      &__buttons {
+        max-width: 245px;
+        padding-top: 30px;
+
+        a {
+          width: 100%;
+          height: 49px;
+          justify-content: space-evenly;
+          font-weight: 500;
+        }
+
+        a:hover {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #dc2c2c;
+          box-shadow: 0 4px 25px rgba(0, 0, 0, 25%);
+        }
+      }
+
+      &__call-to-action {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        @include b('desktop') {
+          flex-direction: column;
+        }
+
+        &_text {
+          max-width: 1000px;
+          position: absolute;
+          padding: 0 15px;
+          margin: 0 auto;
+
+          @include b('desktop') {
+            position: initial;
+          }
+
+          h2 {
+            font-family: TTNORMS, sans-serif;
+            font-weight: 800;
+            font-size: 50px;
+            padding-bottom: 36px;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #ffffff;
+
+            @include b('desktop') {
+              font-size: 30px;
+              line-height: 40px;
+            }
+          }
+
+          h3 {
+            font-family: TTCOMMONS, sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 30px;
+            padding: 0 50px;
+            text-align: center;
+            color: #ffffff;
+
+            @include b('desktop') {
+              font-size: 20px;
+              line-height: 25px;
+              padding: 0;
+            }
+          }
+        }
+
+        &_picture {
+          width: 100%;
+          max-height: 916px;
+
+          &_bg {
+            object-fit: cover;
+            width: 100%;
+            max-height: 916px;
+
+            @include b('desktop') {
+              object-position: center;
+              height: 447px;
+            }
+          }
+        }
+      }
+
+      &__banner {
+        background: linear-gradient(107.47deg, rgba(30, 4, 4, 0.4) -19.1%, rgba(143, 0, 0, 0.4) 45.21%), #000000;
+        max-width: 1440px;
+        margin: -4px auto 174px auto;
+
+        @include b('tablet') {
+          margin-bottom: 50px;
+        }
+
+        &_container {
+          width: 70%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          padding: 78px 0;
+          align-items: center;
+
+          @include b(900) {
+            padding: 2em 1em;
+            flex-direction: column;
+            width: 90%;
+            align-items: normal;
+            margin: initial;
+          }
+        }
+
+        a,
+        p {
+          color: #ffffff;
+          font-family: TTNORMS, sans-serif;
+          font-weight: 700;
+        }
+
+        a {
+          font-size: 24px;
+          line-height: 28px;
+          color: #ffffff;
+          justify-content: space-evenly;
+        }
+
+        p {
+          font-size: 26px;
+          line-height: 31px;
+          max-width: 500px;
+          text-transform: uppercase;
+
+          @include b(900) {
+            font-size: 24px;
+            line-height: 28px;
+            padding-bottom: 30px;
+          }
+        }
+      }
+
+      &__about-us {
+        &_title {
+          font-family: TTNORMS, sans-serif;
+          font-weight: 800;
+          font-size: 34px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+
+          @include b('tablet') {
+            padding: 0 15px;
+          }
+        }
+
+        &_container {
+          padding-top: 83px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          overflow-x: auto;
+
+          @include b('tablet') {
+            padding-top: 40px;
+            padding-left: 15px;
+          }
+
+          &_item {
+            display: flex;
+            align-items: center;
+            width: 305px;
+            padding-bottom: 54px;
+
+            @include b(600) {
+              padding-bottom: 20px;
+              width: 250px;
+            }
+
+            &_img {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-width: 74px;
+              height: 74px;
+              background: linear-gradient(198.63deg, #ab231b -0.58%, #310909 83.87%);
+              border-radius: 12px;
+
+              @include b(600) {
+                min-width: 60px;
+                height: 60px;
+                border-radius: 10px;
+              }
+
+              img {
+                @include b(600) {
+                  width: 30px;
+                }
+              }
+            }
+
+            &_text {
+              padding-left: 21px;
+              font-family: TTNORMS, sans-serif;
+
+              @include b(600) {
+                padding-left: 0;
+                margin-left: 10px;
+              }
+
+              h2 {
+                font-family: TTNORMS, sans-serif;
+                font-weight: 800;
+                font-size: 18px;
+                line-height: 21px;
+                text-transform: uppercase;
+                color: #ffffff;
+
+                @include b(600) {
+                  font-size: 16px;
+                }
+              }
+
+              h3 {
+                font-family: sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #ffffff;
+                opacity: 0.5;
+
+                @include b(550) {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__sites {
+        display: block;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        &_title {
+          font-family: TTNORMS, sans-serif;
+          font-weight: 800;
+          font-size: 34px;
+          line-height: 60px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+
+          @include b('tablet') {
+            display: none;
+          }
+        }
+
+        &_container {
+          display: flex;
+          padding-top: 40px;
+          margin: 0 auto;
+          justify-content: space-between;
+          max-width: 100%;
+          overflow-x: auto;
+
+          @include b('tablet') {
+            width: 100%;
+          }
+
+          &_item {
+            min-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(30.15deg, #191111 14.13%, #272525 64.22%);
+            border-radius: 4px;
+            padding-bottom: 1em;
+
+            &:not(:last-child) {
+              margin-right: 60px;
+            }
+
+            @include b('tablet') {
+              min-width: 320px;
+            }
+
+            h3 {
+              font-family: TTNORMS, sans-serif;
+              font-style: normal;
+              font-weight: 800;
+              font-size: 24px;
+              padding: 16px 0 35px 0;
+              line-height: 60px;
+              text-align: center;
+              text-transform: uppercase;
+              color: #ffffff;
+
+              @include b('tablet') {
+                padding: 6px 0;
+              }
+            }
+
+            a {
+              font-family: TTNORMS, sans-serif;
+              font-weight: 700;
+              max-width: 200px;
+              color: #ffffff;
+              border-color: #dc2c2c;
+              height: 52px;
+              justify-content: space-evenly;
+            }
+
+            a:hover {
+              background-color: #2a2730;
+            }
+
+            picture {
+              position: absolute;
+              width: 200px;
+            }
+
+            &_img {
+              position: relative;
+              margin-top: 3em;
+
+              @include b('tablet') {
+                margin-top: 1em;
+              }
+
+              div {
+                width: 112px;
+                height: 112px;
+                border-radius: 100%;
+                background: linear-gradient(39.38deg, #ed4e39 -22.42%, #2c51d5 73.65%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .button {
+      margin-top: 0;
+      label {
+        white-space: nowrap;
+      }
+      &White {
+        color: var(--button-white-color);
+        border: 2px solid var(--button-white-border-color);
+        background-color: var(--button-white-background-color);
+        label {
+          color: white;
+        }
+
+        &.btn-border {
+          color: var(--button-white-border-text-color);
+        }
+        border-radius: 46px;
+      }
+    }
+
+    // new
+  }
+}

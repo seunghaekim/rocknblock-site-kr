@@ -1,0 +1,21 @@
+extends layouts/index
+
+include sections/blocks
+include sections/crowdsale
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-crowdsale
+		+about
+		+WhatIsCrowdSale
+		+HowToStart
+		+DevServices
+		+WhyChooseUs
+		+WhyWeUnique
+		+bottom-slide-v2
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer
