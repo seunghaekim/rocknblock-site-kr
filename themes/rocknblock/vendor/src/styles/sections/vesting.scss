@@ -435,7 +435,10 @@
         }
 
         .background {
-          background-image: url('/assets/img/vesting/bgBusinesses.png');
+          // for gulp
+          // background-image: url('/assets/img/vesting/bgBusinesses.png');
+          // for cms
+          background-image: url('../images/site/vesting/bgBusinesses.png');
           background-size: cover;
           width: 1120px;
           height: 588px;
@@ -496,7 +499,10 @@
         }
 
         .businessesImg {
-          background-image: url('../img/vesting/businessesImgDesctop.png');
+          // for gulp
+          // background-image: url('../img/vesting/businessesImgDesctop.png');
+          // for cms
+          background-image: url('../images/site/vesting/businessesImgDesctop.png');
           background-size: cover;
           width: 1100px;
           height: 640px;
@@ -520,7 +526,10 @@
             height: 450px;
           }
           @media (max-width: 600px) {
-            background-image: url('../img/vesting/businessesImgMobile.png');
+            // for gulp
+            // background-image: url('../img/vesting/businessesImgMobile.png');
+            // for cms
+            background-image: url('../images/site/vesting/businessesImgMobile.png');
             height: 600px;
           }
           @media (max-width: 500px) {
@@ -727,7 +736,10 @@
 
         .background {
           position: absolute;
-          background-image: url('../img/vesting/longTermDesctop.png');
+          // for gulp
+          // background-image: url('../img/vesting/longTermDesctop.png');
+          // for cms
+          background-image: url('../images/site/vesting/longTermDesctop.png');
           width: 1140px;
           height: 589px;
           left: calc(50% - 230px);
@@ -753,7 +765,10 @@
 
           @media (max-width: 700px) {
             position: relative;
-            background-image: url('../img/vesting/longTermMobile.png');
+            // for gulp
+            // background-image: url('../img/vesting/longTermMobile.png');
+            // for cms
+            background-image: url('../images/site/vesting/longTermMobile.png');
             background-size: cover;
             background-position: 50% 0;
             width: 100%;
