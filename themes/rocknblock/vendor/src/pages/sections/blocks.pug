@@ -289,6 +289,8 @@ mixin bottom-slide-v2
   - var slides = [{image: 'icon-site1',title: 'NFT Marketplace',link: '/marketplace',},{image: 'icon-site2',title: 'Farming',link: '/farming',},{image: 'icon-site3',title: '10k nft generator',link: '/10knft',},{image: 'icon-site4',title: 'Crowdsale',link: '/crowdsale',},{image: 'icon-site5',title: 'Vesting',link: '/vesting',},{image: 'icon-site6',title: 'Staking',link: '/staking',}];
 
   .sliderWrapper.slider-v2
+    .block-header
+      h2.primary-header Popular services
     .swiper.swiper-slider
       .swiper-wrapper
         each slide in slides.length ? slides : ['No values']
