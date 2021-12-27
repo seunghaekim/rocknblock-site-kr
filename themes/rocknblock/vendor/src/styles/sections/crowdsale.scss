@@ -102,6 +102,7 @@
           top: -113px;
           -o-object-fit: none;
           object-fit: none;
+          left: 0;
 
           img {
             height: 968px;
@@ -283,7 +284,8 @@
       }
 
       div {
-        overflow-x: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
         max-width: 100%;
       }
 
@@ -361,6 +363,10 @@
         padding: 40px 20px 33px 20px;
       }
 
+      @include b('tablet') {
+        padding: 40px 0;
+      }
+
       &__title {
         font-family: TTNorms, sans-serif;
         font-style: normal;
@@ -373,9 +379,13 @@
         padding-bottom: 40px;
 
         @include b('desktop') {
-          font-size: 35px;
+          font-size: 30px;
           line-height: 40px;
           text-align: center;
+        }
+
+        @include b('tablet') {
+          padding: 0 15px 40px 15px;
         }
 
         @include b('350') {
@@ -404,6 +414,10 @@
           text-align: center;
         }
 
+        @include b('tablet') {
+          padding: 0 15px;
+        }
+
         @include b('350') {
           font-size: 18px;
           line-height: 22px;
@@ -422,7 +436,13 @@
 
         @include b('desktop') {
           overflow-x: auto;
-          padding-bottom: 83px;
+          padding-bottom: 20px;
+          margin-bottom: 50px;
+        }
+
+        @include b('tablet') {
+          display: flex;
+          grid-gap: 0;
         }
 
         &_item {
@@ -431,6 +451,10 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
+
+          @include b('tablet') {
+            min-width: 180px;
+          }
 
           div {
             display: flex;
@@ -519,8 +543,17 @@
         padding-left: 200px;
 
         @include b('1350') {
-          display: none;
+          padding-left: 5%;
         }
+
+        @include b(1000) {
+          padding: 0 15px;
+          max-width: 650px;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+        }
+
         h2 {
           font-family: TTNorms, sans-serif;
           font-style: normal;
@@ -530,6 +563,11 @@
           max-width: 550px;
           text-transform: uppercase;
           padding-bottom: 37px;
+
+
+          @include b(1000) {
+            max-width: 100%;
+          }
 
           @include b('tablet') {
             font-size: 40px;
@@ -555,6 +593,11 @@
           line-height: 30px;
           max-width: 500px;
 
+
+          @include b(1000) {
+            max-width: 100%;
+          }
+
           @include b('tablet') {
             font-size: 22px;
             line-height: 25px;
@@ -571,6 +614,7 @@
       &__img {
         display: flex;
         position: absolute;
+        
         &_1 {
           height: 757px;
           object-fit: none;
@@ -582,8 +626,16 @@
         &_2 {
           position: absolute;
           right: 107px;
-          z-index: 1;
+          z-index: 0;
           top: 67px;
+
+          @include b(1360) {
+            right: 30px;
+          }
+
+          @include b(1000) {
+            display: none;
+          }
 
           @include b('tablet') {
             right: 0;

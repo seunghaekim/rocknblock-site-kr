@@ -85,6 +85,7 @@
           margin-top: 30px;
           max-width: 180px;
           font-family: TTCommons;
+          height: 45px;
 
           @media (max-width: 900px) {
             margin: auto;
@@ -213,7 +214,7 @@
             }
 
             @include b('mobile') {
-              padding: 0 20px 400px;
+              padding: 15px;
             }
           }
 
@@ -232,11 +233,14 @@
               order: 2;
             }
 
+            @include b(1300) {
+              margin: 15px auto;
+            }
+
             @include b('mobile') {
-              position: absolute;
-              margin-top: 120px;
-              height: 400px;
-              width: 500px;
+              position: relative;
+              height: auto;
+              width: auto;
             }
           }
 
@@ -673,16 +677,16 @@
         .button {
           margin: auto;
           margin-top: 38px;
-          font-family: TT Norms;
+          font-family: TTNorms;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 500;
           font-size: 15px;
           line-height: 18px;
           text-transform: uppercase;
-          max-width: 340px;
+          max-width: 350px;
 
           @include b('mobile') {
-            width: 100%;
+            width: 90%;
             text-align: left;
           }
         }

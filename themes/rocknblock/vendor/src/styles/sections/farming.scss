@@ -107,7 +107,7 @@
       overflow: hidden;
 
       @include b('tablet') {
-        padding-top: 110px;
+        padding-top: 50px;
         min-height: 900px;
       }
 
@@ -295,6 +295,12 @@
         padding-top: 60px;
       }
 
+      .content {
+        @include b('tablet') {
+          padding: 0;
+        }
+      }
+
       .card {
         border-radius: 20px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #2c2c33;
@@ -333,8 +339,18 @@
       }
     }
 
+    .sectionRole__title {
+      @include b('tablet') {
+        padding: 0 15px;
+      }
+    }
+
     .sectionRole__description {
       margin-top: 16px;
+
+      @include b('tablet') {
+        padding: 0 15px;
+      }
     }
 
     .sectionRole__platformsWrapper {
@@ -347,6 +363,10 @@
 
       @include b('desktop') {
         width: 100%;
+      }
+
+      @include b('tablet') {
+        margin: 20px 0px;
       }
 
       @include b('mobile') {
@@ -476,7 +496,12 @@
     .sectionBenefits {
       position: relative;
       z-index: 3;
-      margin-top: 165px;
+      margin-top: 150px;
+
+      @include b('tablet') {
+        margin-top: 100px;
+      }
+      
 
       .benefit {
         background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
@@ -634,13 +659,19 @@
       padding-top: 460px;
 
       @include b('mobile') {
-        padding-top: 245px;
+        padding-top: 314px;
       }
     }
 
     .sectionBuild__paragraph {
       font-size: 22px;
       margin-top: 37px;
+
+      @include b(830) {
+        br {
+          display: none;
+        }
+      }
     }
 
     .sectionBuild__imageWrapper {
@@ -655,7 +686,7 @@
 
       @include b('mobile') {
         height: 350px;
-        top: -135px;
+        top: -65px;
       }
     }
 
@@ -664,12 +695,14 @@
     }
 
     .sectionBuild__link {
+      @extend .button;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       height: 50px;
+      font-weight: 500;
       border-radius: 25px;
-      width: 266px;
+      max-width: 280px;
       background-color: var(--color-alizarin-crimson);
       color: var(--color-white);
       margin: 50px auto 0;
@@ -693,9 +726,13 @@
     }
 
     .sectionFaq {
-      margin-top: 140px;
+      margin-top: 100px;
       position: relative;
       z-index: 1;
+
+      @include b('tablet') {
+        margin-top: 70px;
+      }
 
       .faq {
         background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);

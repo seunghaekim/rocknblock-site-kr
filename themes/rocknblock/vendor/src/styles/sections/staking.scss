@@ -24,6 +24,13 @@
           position: relative;
           padding-bottom: 55px;
           height: 620px;
+          margin-top: 100px;
+
+          @include b('tablet') {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 0px;
+          }
 
           .bg-1,
           .bg-2 {
@@ -66,6 +73,13 @@
             }
           }
 
+          .pd15px {
+            @include b('tablet') {
+              margin-top: -115px;
+            }
+          }
+    
+
           picture {
             position: absolute;
             left: 500px;
@@ -73,14 +87,17 @@
             width: 100%;
             max-width: 600px;
             z-index: -10;
+            top: -50px;
+
+            @include b('tablet') {
+              grid-row: 1;
+              position: relative;
+              top: 0;
+            }
 
             @include b(1100) {
               left: auto;
               right: 0;
-            }
-
-            @include b('tablet') {
-              top: -18%;
             }
 
             img {

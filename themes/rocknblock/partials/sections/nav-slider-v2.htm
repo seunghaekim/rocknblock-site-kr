@@ -6,7 +6,7 @@ description = "Section links slider v2"
 	</div>
 	<div class="swiper swiper-slider">
 		<div class="swiper-wrapper">
-		{% if this.page.url != '/marketplace' %}
+			{% if this.page.url != '/marketplace' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -21,8 +21,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
-		{% endif %}
-		{% if this.page.url != '/farming' %}
+			{% endif %}
+			{% if this.page.url != '/farming' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -37,8 +37,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
-		{% endif %}
-		{% if this.page.url != '/10knft' %}
+			{% endif %}
+			{% if this.page.url != '/10knft' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -53,8 +53,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
-		{% endif %}
-		{% if this.page.url != '/crowdsale' %}
+			{% endif %}
+			{% if this.page.url != '/crowdsale' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -69,8 +69,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
-		{% endif %}
-		{% if this.page.url != '/vesting' %}
+			{% endif %}
+			{% if this.page.url != '/vesting' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -85,8 +85,8 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
-		{% endif %}
-		{% if this.page.url != '/staking' %}
+			{% endif %}
+			{% if this.page.url != '/staking' %}
 			<div class="swiper-slide slide">
 				<article class="site">
 					<figure class="site__imageWrapper">
@@ -101,7 +101,23 @@ description = "Section links slider v2"
 					</a>
 				</article>
 			</div>
-		{% endif %}
+			{% endif %}
+			{% if this.page.url != '/bridge' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site7.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site7.png'| theme }}" alt="Bridge" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/staking">Bridge <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
 		</div>
 	</div>
 </div>

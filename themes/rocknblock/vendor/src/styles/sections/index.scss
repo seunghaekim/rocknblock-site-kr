@@ -267,10 +267,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 0 30px;
 
     @include b(960) {
       margin: 0 auto;
       width: 50%;
+    }
+
+    @include b(650) {
+      padding: 0;
     }
 
     @include b('mobile') {
@@ -284,7 +289,7 @@
     &__primary {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: flex-start;
       align-items: center;
 
       @include b(650) {
@@ -303,12 +308,12 @@
 
       @include b('tablet') {
         margin-right: 10px;
-        font-size: 40px;
+        // font-size: 30px;
         line-height: 47px;
       }
 
       @include b('mobile') {
-        font-size: 35px;
+        font-size: 30px;
         line-height: 42px;
       }
     }
@@ -321,16 +326,27 @@
       line-height: 21px;
       text-transform: uppercase;
       font-feature-settings: 'liga' off;
+      margin-left: 15px;
+
+      @include b(650) {
+        margin-left: 0;
+        font-size: 16px;
+      }
     }
 
     &__secondary {
-      text-align: center;
+      text-align: left;
       font-style: normal;
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
       font-feature-settings: 'liga' off;
       opacity: 0.5;
+
+      @include b(650) {
+        text-align: center;
+        margin-top: 10px;
+      }
     }
 
     //рамки
@@ -599,7 +615,7 @@
 
 .our-partners {
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
   scroll-margin-top: 120px;
 
   .primary-header {
@@ -640,6 +656,10 @@
       filter: contrast(0);
       overflow: hidden;
       transition: 0.4s ease;
+
+      @include b(700) {
+        filter: contrast(100%)
+      }
 
       &:hover {
         filter: contrast(100%);
@@ -1139,46 +1159,41 @@ header {
     z-index: 1;
     width: 100%;
     max-width: 550px;
-    height: 322px;
     overflow: hidden;
     background-color: #1d1b21;
     border-radius: 30px;
-
-    // .background-img-left {
-    //   top: 216px;
-    //   left: 0;
-    // }
-
-    // .background-img-right {
-    //   top: 134px;
-    //   left: 429px;
-    // }
+    margin: 0 auto;
+    padding: 30px 15px;
 
     &__title {
       width: 100%;
-      max-width: 400px;
-      margin-top: 50px;
+      max-width: 100%;
+      padding: 0 15px;
 
       @include text-gradient(linear-gradient(87.05deg, #ffffff 54.97%, #171628 152.38%));
 
       font-style: normal;
       font-weight: 800;
-      font-size: 40px;
+      font-size: 28px;
       line-height: 47px;
       text-align: center;
       font-feature-settings: 'liga' off;
     }
 
+    &__text {
+      margin: 10px 0;
+    }
+
     &__button {
       &-ok {
         outline: 0 none;
-        margin-top: 35px;
-        width: 183px;
-        height: 58px;
+        margin-top: 20px;
+        max-width: 150px;
+        height: 45px;
         font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 28px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
         text-align: center;
 
         &:hover {
