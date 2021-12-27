@@ -233,7 +233,10 @@
               opacity: 0.5;
 
               @include b('tablet') {
-                text-align: left;
+                padding: 0 15px;
+                line-height: 1.2;
+                font-size: 20px;
+                margin-top: 20px;
                 padding: 0 15px;
               }
             }
