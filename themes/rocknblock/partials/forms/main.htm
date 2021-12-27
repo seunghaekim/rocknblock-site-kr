@@ -13,15 +13,8 @@ description = "Main form"
 			<img loading="lazy" src="{{ 'assets/images/site/background/contact.png'| theme }}" alt="contact" />
 		</picture>
 	</div>
-	
-			<div style="margin: 0 auto;" class="contact-us__popup popup">
-			<h3 class="popup__title">Thank you for your request!</h3>
-			<span>We will be in touch with you shortly.</span>
-			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="feedback::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
-		</div>
-
 	{% if success_form == "1" %}
-		<div style="margin: 0 auto;" class="contact-us__popup popup">
+		<div class="contact-us__popup popup">
 			<h3 class="popup__title">Thank you for your request!</h3>
 			<span>We will be in touch with you shortly.</span>
 			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="feedback::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
