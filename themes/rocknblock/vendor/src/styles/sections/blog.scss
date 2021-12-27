@@ -44,9 +44,14 @@
       height: 45px;
       width: max-content;
       padding: 0 20px;
+      top: 0px;  
 
       img {
         margin-left: 15px;
+      }
+
+      &:hover {
+        top: -5px;
       }
     }
   }

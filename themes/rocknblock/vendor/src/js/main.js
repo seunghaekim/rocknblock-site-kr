@@ -83,6 +83,10 @@ $(document).ready(() => {
   const sliderBottom = new Swiper('.swiper-slider', {
     slidesPerView: 'auto',
     loop: true,
+    navigation: {
+      nextEl: '.nav-next',
+      prevEl: '.nav-prev',
+    },
   });
 
   if (document.getElementsByClassName('blog-select-nav').length !== 0) {

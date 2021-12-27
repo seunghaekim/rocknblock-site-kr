@@ -217,7 +217,7 @@ mixin team
       input#tab-btn-1(type='radio' name='tab-btn' checked)
       label.tabs-label(for='tab-btn-1') Development
       input#tab-btn-2(type="radio" name="tab-btn")
-      label.tabs-label(for='tab-btn-2') Managment
+      label.tabs-label(for='tab-btn-2') Management
       .scroll
         .team__development-tab.team__content.content
           .tab-content.content-1.content-tab
@@ -301,6 +301,9 @@ mixin bottom-slide-v2
                 a.site__link(href=`${slide.link}`)= `${slide.title}`
                   i.site__linkIcon
                     img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      .navigation
+        img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
+        img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")
 
 mixin contact-us(title)
   #contact-us.contact-us.container
