@@ -39,8 +39,9 @@ description = "Bridge landing form"
  	{{ form_ajax('feedback::onForm', {
 	    class: 'contact-us__form',
 	    "data-request-loading": "#loading-form",
-       update: { 'forms/bridge': '#contact-us' }
-      }) }}
+       update: { 'forms/bridge': '#contact-us'},
+       'data-request-validate': true
+       }) }}
       <div id="loading-form">
       	<div class="load-form">
       		<img class="load-form-icon" src="{{ 'assets/images/site/icon-loader.svg'| theme }}" alt="rocknblock loading" />
@@ -65,6 +66,7 @@ description = "Bridge landing form"
                 </select>
             </div>
         </div>
+        <div class="form-info-text" style="color:red;opacity: 1;" data-validate-for="contact"></div>
         <div class="form-info-text">
 			<span>Note. If you choose Whatsapp please write your country code. (Ex: +1-xxxxxxx).</span>
         </div>

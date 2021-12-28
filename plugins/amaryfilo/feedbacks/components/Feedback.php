@@ -3,6 +3,9 @@
 use Cms\Classes\ComponentBase;
 use Request;
 use Mail;
+use Winter\Storm\Exception\ValidationException;
+
+use Illuminate\Support\Facades\Validator;
 
 use amaryfilo\Feedbacks\Models\Feedback as FeedbackModel;
 
@@ -25,6 +28,19 @@ class Feedback extends ComponentBase
 
     public function onForm()
     {
+        $messages = [
+            'contact.email' => "E-mail address is incorrect.",
+            'contact.*' => "Phone number is incorrect. Ex.: +x-xxxxxxxxxx ",
+        ];
+
+        $rules = 'required';
+        if(post('type') === 'email') $rules = 'required|email';
+        elseif (post('type') === 'whatsapp') $rules = 'required|regex:/^[+][0-9]{1,4}[-]{0,1}[0-9]{10,15}$/';
+
+        $validator = Validator::make(Request::all(), ['contact'=> $rules], $messages);
+
+        if($validator->fails()) throw new ValidationException($validator);
+
         $data = [
             'name' => post('name'),
             'contact' => post('contact'),
