@@ -5,7 +5,7 @@ Swiper.use([Navigation]);
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
-    .register('/plugins/sw.js')
+    .register('/sw.js?v=3')
     .then(function (registration) {
       console.log('ServiceWorker registration successful with scope:', registration.scope);
     })

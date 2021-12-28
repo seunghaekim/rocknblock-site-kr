@@ -5,10 +5,11 @@ var config = {
   version: "achilles",
   staticCacheItems: [
     // "/img/*.png",
-    "/css/style.min.css",
-    "/js/main.min.js",
+    // "/",
+    // "/themes/rocknblock/assets/images/",
+    "/themes/rocknblock/assets/css/style.min.css",
+    "/themes/rocknblock/assets/javascript/main.min.js",
     // "/offline/",
-    "/",
   ],
   cachePathPattern: /^\/(?:(20[0-9]{2}|about|blog|css|images|js)\/(.+)?)?$/,
   // offlineImage:
