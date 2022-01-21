@@ -1,0 +1,22 @@
+extends layouts/index
+
+include sections/blocks
+include sections/farming
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-farming
+		+hero
+		+whatis
+		+role
+		+how
+		+benefits
+		+build
+		+faq
+		+bottom-slide-v2
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

@@ -1,9 +1,11 @@
-import $ from '../plugins/jquery/dist/jquery.min';
-import Swiper from 'swiper';
+import $ from 'cash-dom';
+import Swiper, { Navigation } from 'swiper';
+
+Swiper.use([Navigation]);
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker
-    .register('/plugins/sw.js')
+    .register('/sw.js?v=3')
     .then(function (registration) {
       console.log('ServiceWorker registration successful with scope:', registration.scope);
     })
@@ -15,6 +17,19 @@ if (navigator.serviceWorker) {
 $(document).ready(() => {
   // eslint-disable-next-line no-console
   console.log(`document ready`);
+
+  const scrollBtn = $('#btnScrollToTop')[0];
+
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  $(window).on('scroll', function () {
+    scrollBtn ? scrollTopBtn() : null;
+  });
+
+  const scrollTopBtn = () => (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? (scrollBtn.style.display = 'block') : (scrollBtn.style.display = 'none'));
+  // const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   Array.from(document.getElementsByClassName('icon-burger')).forEach((el) => {
     el.addEventListener('click', () => {
@@ -68,16 +83,38 @@ $(document).ready(() => {
   const sliderBottom = new Swiper('.swiper-slider', {
     slidesPerView: 'auto',
     loop: true,
+    navigation: {
+      nextEl: '.nav-next',
+      prevEl: '.nav-prev',
+    },
   });
 
-  Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
-    el.addEventListener('click', () => {
-      document.getElementsByClassName('active')[0].classList.remove('active');
-      el.classList.add('active');
-      filterSelection(el.dataset.filter);
-      window.dispatchEvent(new Event('resize'));
+  if (document.getElementsByClassName('blog-select-nav').length !== 0) {
+    Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
+      el.addEventListener('click', () => {
+        document.getElementsByClassName('active')[0].classList.remove('active');
+        el.classList.add('active');
+        filterSelection(el.dataset.filter);
+        window.dispatchEvent(new Event('resize'));
+      });
     });
+
+    const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
+  }
+
+  const sliderPorfolio = new Swiper('.swiper-portfolio', {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 15,
   });
 
-  const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
+  const sliderBusiness = new Swiper('.swiper-business', {
+    slidesPerView: 'auto',
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.nav-next',
+      prevEl: '.nav-prev',
+    },
+  });
 });

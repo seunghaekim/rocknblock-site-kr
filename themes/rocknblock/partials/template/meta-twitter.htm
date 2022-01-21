@@ -3,7 +3,7 @@ description = "Twitter Meta tag"
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@rocknblock">
 <meta name="twitter:site" content="https://rocknblock.io/">
-<meta name="twitter:url" content="https://rocknblock.io{{this.page.url}}">
+<meta name="twitter:url" content="{{ this.pageUrl| page }}">
 <meta name="twitter:image" content="{{ 'assets/images/site/share.png'|theme }}">
-<meta name="twitter:title" content="{{this.page.meta_title}} ">
+<meta name="twitter:title" content="{{this.page.meta_title}}">
 <meta name="twitter:description" content="{{this.page.meta_description}}">

@@ -1,0 +1,189 @@
+mixin hero 
+  section.contentWrapper.sectionFarming
+    .contentInner
+      section.content
+        h1.title.title_theme_h1.title_align_center.title_transform_uppercase.sectionFarming__title
+          span.text.text_color_alizarinCrimson Yield Farming
+          br
+          | Development Services
+        .sectionFarming__imageWrapper
+          img.sectionFarming__image(src="../../img/farming/img-farming.png" alt="Yield Farming Development Services")
+
+mixin whatis
+  section.contentWrapper.sectionWhatIs
+    .contentInner
+      section.content
+        h2.title.title_theme_h1.title_align_center.title_transform_uppercase.sectionWhatIs__title 
+          | What is
+          br
+          | Yield
+          span.text.text_color_alizarinCrimson Farming
+          | ?
+        p.paragraph.sectionWhatIs__description.paragraph_align_center
+          | Income farming is the practice of placing or locking in cryptocurrency in
+          br
+          | exchange for rewards. While the expectation of return on investment is
+          br
+          | nothing new, the general concept of "yield farming" emerged from the
+          br
+          | decentralized financial sector.
+        .sectionWhatIs__imageRoadWrapper
+          img.sectionWhatIs__imageRoad(src="../../img/farming/img-road.png" alt="What is Yield Farming")
+        .sectionWhatIs__imageRaysWrapper
+          img.sectionWhatIs__imageRays(src="../../img/farming/img-rays.png" alt="What is Yield Farming")
+
+mixin role
+  section.contentWrapper.sectionRole
+    .contentInner
+      section.content
+        h2.title.title_theme_h2.title_align_center.title_transform_uppercase.sectionRole__title 
+          | The Role of Liquidity
+          br
+          | provider in Yield Farming:
+        p.paragraph.paragraph_align_center.sectionRole__description
+          | Yield Farming is not achievable without the liquidity providers who stake
+          | their deposit in
+          br
+          | liquidity pools. The pools act as a smart contract where a buyer and
+          | seller agreement is
+          br
+          | coded and made available in the decentralized blockchain platform. Some
+          | of the leading
+          br
+          | mining platforms are
+        ul.sectionRole__platformsWrapper
+          li.sectionRole__platform
+            article.card
+              figure.card__logotypeWrapper
+                img.card__logotype(src="../../img/farming/icon-compound.png" alt="Compound")
+              img.card__logotypeName(src="../..//img/farming/logo-compound.png" alt="Compound")
+          li.sectionRole__platform
+            article.card
+              figure.card__logotypeWrapper
+                img.card__logotype(src="../../img/farming/icon-yearn.png" alt="Yearn")
+              img.card__logotypeName(src="../..//img/farming/logo-yearn.png" alt="Yearn")
+          li.sectionRole__platform
+            article.card
+              figure.card__logotypeWrapper
+                img.card__logotype(src="../../img/farming/icon-dao.png" alt="Dao Maker")
+              img.card__logotypeName(src="../..//img/farming/logo-dao.png" alt="Dao Maker")
+          li.sectionRole__platform
+            article.card
+              figure.card__logotypeWrapper
+                img.card__logotype(src="../../img/farming/icon-uniswap.png" alt="Uniswap")
+              img.card__logotypeName(src="../..//img/farming/logo-uniswap.png" alt="Uniswap")
+        .sectionRole__more
+          .sectionRole__moreText and more
+
+mixin how 
+  section.contentWrapper.sectionWork
+    .contentInner
+      section.content
+        h2.title.title_theme_h1.title_align_center.title_transform_uppercase.sectionWork__title 
+          | How does DeFi yield
+          br
+          | farming work?
+        .sectionWork__imageWrapper
+          picture.sectionWork__picture
+            source.sectionWork__image(srcSet="../../img/farming/img-work-mobile.png" media="(max-width: 991px)")
+            img.sectionWork__image(src="../../img/farming/img-work-desktop.png" alt="How does DeFi yield farming work?")
+
+mixin benefits 
+  section.contentWrapper.sectionBenefits
+    .contentInner
+      section.content
+        h2.title.title_theme_h1.title_align_left.title_transform_uppercase.sectionBenefits__title 
+          | What are the
+          br
+          | benefits?
+        p.paragraph.paragraph_align_left.sectionBenefits__paragraph.sectionBenefits__paragraph_indent_bottom
+          | The benefits of yield farming are obvious - profit. Farmers who start a
+          | new project early can be rewarded with tokens, the value of which can rise
+          | quickly.
+        p.paragraph.paragraph_align_left.sectionBenefits__paragraph
+          | If they sell these tokens at the right time, a significant profit can be
+          | made. These profits can be reinvested in other DeFi projects to generate
+          | even more income.
+        .sectionBenefits__imageWrapper
+          img.sectionBenefits__image(src="../../img/farming/img-flower.png" alt="What are the benefits?")
+        section.sectionBenefits__question
+          h4.sectionBenefits__questionTitle How to calculate returns in DeFi yield farming?
+          p
+            | When it comes to calculating returns for liquidity providers, the
+            | following metrics play a crucial role.
+        ul.sectionBenefits__benefitsWrapper
+          li.sectionBenefits__benefit
+            article.benefit
+              figure.benefit__imageWrapper
+                img.benefit__image(src="../../img/farming/icon-tvl.png" alt="Total Value Locked (TVL)")
+              h4.benefit__title Total Value
+                br
+                | Locked (TVL)
+              p.benefit__description TVL is a parametric value that measures crypto locked in DeFi lending and other marketplaces. Tracking the total value of cryptocurrencies locked in smart contracts of various platforms provides a complete overview of their performance. 
+          li.sectionBenefits__benefit
+            article.benefit
+              figure.benefit__imageWrapper
+                img.benefit__image(src="../../img/farming/icon-apy.png" alt="Annual Percentage Yield (APY)")
+              h4.benefit__title Annual Percentage
+                br
+                | Yield (APY)
+              p.benefit__description It represents the annual rate of return imposed on borrowers and paid to providers subsequently.
+          li.sectionBenefits__benefit
+            article.benefit
+              figure.benefit__imageWrapper
+                img.benefit__image(src="../../img/farming/icon-apr.png" alt="Annual Percentage Rate (APR)")
+              h4.benefit__title Annual Percentage 
+                br
+                | Rate (APR)
+              p.benefit__description It represents the annual rate of return imposed on the capital borrowers but paid to the capital providers.
+
+mixin build
+  section.contentWrapper.sectionBuild
+    .contentInner
+      section.content
+        .sectionBuild__imageWrapper
+          img.sectionBuild__image(src="../../img/farming/img-coin.png" alt="How to build a DeFi yield farming dApp?")
+        h2.title.title_theme_h1.title_align_center.title_transform_uppercase 
+          | How to build a DeFi
+          br
+          span.text.text_color_alizarinCrimson yield farming
+          | dApp?
+        p.paragraph.paragraph_align_center.sectionBuild__paragraph
+          | As a leading DeFi Development Company, Rock'n'Block have experts in
+          | delivering a
+          br
+          | complete Yield Farming development services & solutions to people across
+          | the globe!
+          br
+          | We offer the outstanding features and functionalities and assuring you to
+          | provide
+          br
+          | highly innovative and immutable DeFi solutions, the team of blockchain
+          | developers
+          br
+          | helps offer you the best services to launch your own Yield Farming
+          | platform.
+        a.sectionBuild__link(href="#contact-us") Get a Free Quote
+          img(loading='lazy' src='../../img/farming/icon-arrow.png' alt='arrow')
+
+mixin faq 
+  section.contentWrapper.sectionFaq
+    .contentInner
+      .sectionFaq__inner
+        section.content
+          h2.title.title_theme_h1.title_align_center.title_transform_uppercase Faq
+          ul.sectionFaq__questionsWrapper
+            li.sectionFaq__question
+              article.faq
+                h4.faq__title How much capital do I need to get started?
+                p.faq__description There are no minimum capital requirements to partake in any of these opportunities. With that being said, meaningful returns are largely earned with capital contributions starting from ~$1000 in value. You should also take into account the transaction (“gas”) costs of the strategy you wish to implement.
+            li.sectionFaq__question
+              article.faq
+                h4.faq__title Are these passive income opportunities safe?
+                p.faq__description All of these opportunities are using highly reputable DeFi products. All smart contracts have been audited which largely mitigates risk. However, with any DeFi product, there is always a very small chance of loss – meaning that no user should use more capital than they would be willing to use.
+            li.sectionFaq__question.sectionFaq__question_width_full
+              article.faq
+                h4.faq__title Are these all the passive income opportunities in DeFi?
+                p.faq__description Absolutely not. We’ve chosen to cover a suite of tutorials which we find easy enough to grasp as a non-technical user with low barriers to entry. This list will be updated over time to include more income opportunities which you should know about.
+      .ellipseContainer
+        .ellipse

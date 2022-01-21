@@ -1,0 +1,270 @@
+include blocks
+
+mixin hero()
+  section.hero-nft 
+    .container 
+      .block
+        h1.title NFT MARKETPLACE Development Services
+        .secondText
+          | We help you launch your own NFT marketplace that gives your customers a
+          | seamless buying experience.
+        img.img(src="../../img/nft/redParallelogram.svg" alt="redParallelogram-img")
+        a.button(href="#contact-us") Get free consultation
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+    .background(style="background-image: url('../../img/nft/consultationBG.png');")
+    .imgStatue(style="background-image: url('../../img/nft/image450.png');")
+
+mixin portfolio()
+  - var slides = ['../../img/nft/sliderPortfolio/slide1.png','../../img/nft/sliderPortfolio/slide2.png','../../img/nft/sliderPortfolio/slide3.png','../../img/nft/sliderPortfolio/slide4.png','../../img/nft/sliderPortfolio/slide5.png'];
+
+  section.portfolio 
+    .block
+      h2.title PORTFOLIO
+      .portfolioSlider
+        .swiper.swiper-portfolio
+          .swiper-wrapper
+            each slide in slides.length ? slides : ['No values']
+              .swiper-slide.slide
+                img(src=slide alt="portfolio")
+
+mixin what-is-nft()
+  section.what-is-nft
+    .block
+      .imgGradient
+      .imgGroup.imgGroupLeft(style="background-image: url('../../img/nft/groupLeft.png');")
+      +webpImg('lazy',`../../img/nft/groupRight`,'png','what is nft','imgGroup imgGroupRight')
+      .title What is an
+        .redText NFT Marketplace?
+      p.secondText
+        | The NFT Marketplace is an adaptive online platform that provides access to offers to sell and buy non-circulating tokens powered by NFT technology. Popular objects include various texts, digital images, and artworks, game characters, financial instruments, and domain names. 
+        | A competently designed marketplace will enable a close connection between the seller and the interested user, providing a place to place trade offers. Users will have at their disposal a digital catalog and a personal account, with the help of which it will be possible to carry out the most | secure and expedited transactions.
+      .ellipse ellipse
+      +webpImg('lazy',`../../img/nft/image448`,'png','what is nft','imgStatue')
+      img.redParalleogram(src="../../img/nft/redParallelogram.svg" alt="redParallelogram-img")
+      +webpImg('lazy',`../../img/nft/laptop`,'png','what is nft','imgLaptop')
+
+mixin features()
+  section.features
+    .container 
+      .block
+        h2.title Features of NFT Marketplace
+        .secondText Check the various features that will help your platform users.
+        .cardsContainer
+          .card.cardHorizontal
+            img.img(src="../../img/nft/cardScarcity.svg" alt="Scarcity")
+            .cardInfo
+              h2.cardTitle Scarcity
+              .cardDescription The value of the NFTs is always increasing due to their scarce nature. The developers program the platform in a way that only a certain amount of NFTs are produced.
+          .card.cardHorizontal
+            img.img(src="../../img/nft/cardUniqueness.svg" alt="Uniqueness")
+            .cardInfo
+              h2.cardTitle Uniqueness
+              .cardDescription Since NFTs are unique, they are not interchangeable. Thus, the information regarding the NFTs cannot be altered and it provides the certification for the authenticity of the digital assets.
+          .card.cardVertical
+            img.img(src="../../img/nft/cardTransparency.svg" alt="Transparency")
+            .cardInfo
+              h2.cardTitle Transparency
+              .cardDescription Since NFTs are developed on a decentralized ecosystem, the information and data regarding the transactions are verified publicly. Hence NFT provides high-level transparency
+
+mixin standarts()
+  section.standarts
+    .block
+      .ellipse ellipse
+      .title NFT Standards
+      .cardsContainers
+        .card
+          img.img(src="../../img/nft/721.svg" alt="ERC 721")
+          .cardInfo
+            .cardTitle ERC 721 
+              .titleRed Single
+            .cardDescription if you want your collectible to be one of a kind
+        .card
+          img.img(src="../../img/nft/721.svg" alt="TRC 721")
+          .cardInfo
+            .cardTitle TRC 721 
+              .titleRed Single
+            .cardDescription if you want your collectible to be one of a kind
+        .card
+          img.img(src="../../img/nft/1155.svg" alt="ERC 1155")
+          .cardInfo
+            .cardTitle ERC 1155 
+              .titleRed Multiple
+            .cardDescription if you want to sell one collectible multiple times
+      .cardsImg(style="background-image: url('../../img/nft/cardGroup.png');")
+
+mixin order()
+  section.order
+    .block
+      .imgGroup
+        .ellipse
+        .orderDevelopmentImg(style="background-image: url('../../img/nft/orderDevelopmentImg.png');")
+      //- img.infoBG(src="../../img/nft/infoBG.png" alt="info bg")
+      +webpImg('lazy',`../../img/nft/infoBG`,'png','wave background','infoBG')
+      .info
+        h2.title Order development of NFT Marketplace
+        .secondText
+          | Our company develops an NFT marketplace on a turnkey basis. The
+          | specialists comprehensively assess the client's needs and create based
+          | on the set task a fully ready-to-launch platform with a good design
+          | and simple controls that will be understandable even to novice users
+          | of the market.
+          br
+          br
+          | We assess the user's needs for a quick payback on the platform and use
+          | clear tools to place offers to buy and sell non-mutually exchangeable
+          | tokens.
+        a.button(href="#contact-us") Contact Us
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin working()
+  section.working
+    .block
+      h2.title Working Of NFT Marketplace
+      .secondText
+        | Our team will help you define a stand-out creative direction and will
+        | translate it into visual assets that will resonate with your audience.
+        | Package offerings include.
+      .cardsContainerWrapper
+        .cardsContainer
+          div.card.transparentCard
+            h2.cardTitle Standard
+            img.lineIcon(src="../../img/nft/Vector66.svg" alt="line icon")
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Mint 721 NFT-tokens
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Mint 1155 NFT-tokens
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Sell / Buy / Auction
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Likes
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Following
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Stories
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Export from OpenSea
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name 3d NFTs
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Time Auction
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Export from everywhere
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Perks
+          div.card.currentCard
+            h2.cardTitle Advanced
+            img.lineIcon(src="../../img/nft/line.svg" alt="line icon")
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Mint 721 NFT-tokens
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Mint 1155 NFT-tokens
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Sell / Buy / Auction
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Likes
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Following
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Stories
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Export from OpenSea
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name 3d NFTs
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Time Auction
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Export from everywhere
+            .option
+              img.checkIcon(src="../../img/nft/Cancel.svg" alt='Cancel')
+              .name Perks
+          div.card.transparentCard
+            h2.cardTitle Premium
+            img.lineIcon(src="../../img/nft/Vector66.svg" alt="line icon")
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Mint 721 NFT-tokens
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Mint 1155 NFT-tokens
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Sell / Buy / Auction
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Likes
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Following
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Stories
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Export from OpenSea
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name 3d NFTs
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Time Auction
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Export from everywhere
+            .option
+              img.checkIcon(src="../../img/nft/Check_fill.svg" alt='checked')
+              .name Perks
+      a.button(href="#contact-us") Get expert consultation
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+
+mixin why-choose()
+  section.why-choose
+    .block
+      h2.title Why Choose Rock'n'Block for NFT Marketplace Development?
+      .secondText Here are your benefits of doing business with us.
+      .sliderContainerWrapper
+        .leftShadowBlock
+        .rightShadowBlock
+        .swiper.sliderContainer.swiper-business
+          +webpImg('lazy',`../../img/nft/Line2`,'png','line background','redLine')
+          .swiper-wrapper
+            .swiper-slide.blockSlide
+              .slideTitle 250+ Projects
+              .slideDescription created on a turn-key basis
+            .swiper-slide.blockSlide
+              .slideTitle 1 Bn+ dollars
+              .slideDescription capitalization of the projects we have built
+            .swiper-slide.blockSlide
+              .slideTitle 15 000+
+              .slideDescription smart contracts deployed
+            .swiper-slide.blockSlide
+              .slideTitle 15+ years
+              .slideDescription of development experience
+            .swiper-slide.blockSlide
+              .slideTitle 100+ Team
+              .slideDescription members (mostly developers)
+          +webpImg('lazy',`../../img/nft/Line16`,'png','line background','redLine')
+          .navigation
+            img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
+            img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")
