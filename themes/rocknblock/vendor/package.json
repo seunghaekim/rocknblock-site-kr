@@ -12,7 +12,17 @@
     "eslint-fix": "eslint ./src/js/** --fix"
   },
   "keywords": [],
-  "author": "Denys Vykhrystiuk",
+  "author": {
+    "name": "Amary Filo",
+    "url": "https://github.com/amaryfilo",
+    "email": "amaryfilo@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Amary Filo",
+      "email": "amaryfilo@gmail.com"
+    }
+   ],
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",
