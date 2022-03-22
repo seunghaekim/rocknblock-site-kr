@@ -66,7 +66,7 @@ class Feedback extends ComponentBase
         
         if(post('type') === 'email') Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', ['name' => post('name')]);
         
-        $this->toPipeDrive($data);
+        # $this->toPipeDrive($data);
         
     }
 
