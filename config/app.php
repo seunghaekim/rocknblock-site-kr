@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => env('APP_URL', 'https://rocknblock.co.kr'),
 
     /*
     |--------------------------------------------------------------------------
@@ -102,7 +102,7 @@ return [
     |      'trustedProxies' => ['192.168.1.1', '192.168.1.2']
     */
 
-    'trustedProxies' => null,
+    'trustedProxies' => '*',
 
     /*
     |--------------------------------------------------------------------------
@@ -135,7 +135,7 @@ return [
     |   - Amazon ELB users should always use the "HEADER_X_FORWARDED_AWS_ELB" option.
     */
 
-    'trustedProxyHeaders' => Illuminate\Http\Request::HEADER_X_FORWARDED_ALL,
+    'trustedProxyHeaders' => Illuminate\Http\Request::HEADER_X_FORWARDED_AWS_ELB,
 
     /*
     |--------------------------------------------------------------------------
@@ -201,7 +201,7 @@ return [
     |
     */
 
-    'key' => 'PUhlGCbLVdYjj0iW3mzopXcxqekhfZVh',
+    'key' => env('APP_KEY', ''),
 
     'cipher' => 'AES-256-CBC',
 

@@ -393,7 +393,7 @@ return [
     'event_log' => [
         'hint' => 'Tento záznam zobrazuje zoznam potencionálnch chýb v aplikácií, ako napríklad výnimky a ladiace informácie.',
         'menu_label' => 'Záznam udalostí',
-        'menu_description' => 'Zobraziť záznam systémových správ s časom a detaiamaryfilo.',
+        'menu_description' => 'Zobraziť záznam systémových správ s časom a detailami.',
         'empty_link' => 'Zmazať záznam udalostí',
         'empty_loading' => 'Mazanie záznamu udalostí...',
         'empty_success' => 'Záznam udalostí zmazaný',

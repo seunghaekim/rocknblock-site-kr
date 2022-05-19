@@ -268,7 +268,7 @@ return [
         'title' => 'Gépház',
         'name' => 'Honlap állapota',
         'menu_label' => 'Gépház',
-        'menu_description' => 'A rendszer frissítése, vaamaryfilont a bővítmények kezelése.',
+        'menu_description' => 'A rendszer frissítése, valamint a bővítmények kezelése.',
         'return_link' => 'Vissza a gépházhoz',
         'check_label' => 'Frissítések keresése',
         'retry_label' => 'Újra próbál',

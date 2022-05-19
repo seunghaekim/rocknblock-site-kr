@@ -48,7 +48,7 @@ return [
         'sqlite' => [
             'driver'                  => 'sqlite',
             // 'url'                  => env('DATABASE_URL'),
-            'database'                => base_path('storage/database.sqlite'),
+            'database' => env('DB_DATABASE', '/home/ubuntu/rocknblock-site-kr/storage/database.sqlite'),
             'prefix'                  => '',
             'foreign_key_constraints' => true,
         ],
@@ -135,9 +135,9 @@ return [
 
         'default' => [
             // 'url'   => env('REDIS_URL'),
-            'host'     => '127.0.0.1',
-            'password' => null,
-            'port'     => 6379,
+            'host' => env('REDIS_HOST', '127.0.0.1'),
+            'password' => env('REDIS_PASSWORD', null),
+            'port' => env('REDIS_PORT', 6379),
             'database' => 0,
         ],
 
@@ -158,6 +158,6 @@ return [
     |
     */
 
-    'useConfigForTesting' => false,
+    'useConfigForTesting' => env('DB_USE_CONFIG_FOR_TESTING', false),
 
 ];

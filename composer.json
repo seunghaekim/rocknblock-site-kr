@@ -84,5 +84,11 @@
             "replace": false,
             "merge-dev": false
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": true,
+            "composer/installers": true
+        }
     }
 }
