@@ -1,5 +1,8 @@
 <?php namespace Amaryfilo\Blog;
 
+use Amaryfilo\Blog\Components\ArticleAll;
+use Amaryfilo\Blog\Components\ArticlePreview;
+use Amaryfilo\Blog\Components\Articles;
 use Event;
 use Backend;
 use System\Classes\PluginBase;
@@ -77,9 +80,9 @@ class Plugin extends PluginBase
         //return []; // Remove this line to activate
 
         return [
-            'Amaryfilo\Blog\Components\Articles' => 'article',
-            'Amaryfilo\Blog\Components\Articleall' => 'articleall',
-            'Amaryfilo\Blog\Components\Articlepreview' => 'articlepreview',
+            Articles::class => 'article',
+            ArticleAll::class => 'articleall',
+            ArticlePreview::class => 'articlepreview',
         ];
     }
 
@@ -121,12 +124,12 @@ class Plugin extends PluginBase
                         'label'       => 'Статьи',
                         'icon'        => 'icon-list-alt',
                         'url'         => \Backend::url('amaryfilo/blog/articles'),
-                    ],     
+                    ],
                     'category' => [
                         'label'       => 'Категории',
                         'icon'        => 'icon-list',
                         'url'         => \Backend::url('amaryfilo/blog/category'),
-                    ], 
+                    ],
                 ],
             ],
         ];
