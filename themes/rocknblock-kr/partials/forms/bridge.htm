@@ -16,17 +16,17 @@ description = "Bridge landing form"
 
 	{% if success_form == "1" %}
 		<div style="margin: 0 auto;" class="contact-us__popup popup">
-			<h3 class="popup__title">Thank you for your request!</h3>
-			<span>We will be in touch with you shortly.</span>
+			<h3 class="popup__title">문의해 주셔서 감사합니다.</h3>
+			<span>최대한 빠르게 답변을 드리겠습니다.</span>
 			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="feedback::onFormDone" data-request-update="forms/bridge: '#contact-us'">OK</button>
 		</div>
 	{% else %}
     	<div class="block-header">
-    		<h2 class="primary-header">Estimate your project now!</h2>
-    		<h3 class="secondary-header">Get free consultation and build your blockchain project with our highly qualified team!</h3>
+    		<h2 class="primary-header">지금 바로 당신의 프로젝트를 문의해 보세요!</h2>
+    		<h3 class="secondary-header">Rock'n'Block의 전문가들과 무료 상담을 받고 블록체인 프로젝트를 시작해보세요!</h3>
     	</div>
     	<div class="form-social-links">
-         <a href="https://t.me/AlexRNB" target="_blank" rel="nofollow noreferrer">
+         <a href="https://t.me/rocknblockpm" target="_blank" rel="nofollow noreferrer">
              <img src="{{ 'assets/images/site/social/telegram.svg'| theme }}" alt="telegram" />
          </a>
          <a href="https://api.whatsapp.com/send?phone=79119222390" target="_blank" rel="nofollow noreferrer">
@@ -34,7 +34,7 @@ description = "Bridge landing form"
          </a>
      </div>
      <div class="form-info-text">
-			<span>Start a chat with us or fill this form</span>
+			<span>채팅 또는 아래 양식을 작성해 주세요</span>
      </div>
  	{{ form_ajax('feedback::onForm', {
 	    class: 'contact-us__form',
@@ -49,30 +49,27 @@ description = "Bridge landing form"
       	</div>
       </div>
         <input class="contact-us__form__input" id="contact-us-input" type="text" name="id" placeholder="Name" value="bridge" required hidden="hidden" />
-		<label class="visually-hidden" hidden="hidden" for="contact-us-input">Enter your name</label>
-		<input class="contact-us__form__input" id="contact-us-input" type="text" name="name" placeholder="Name" required />
-		<label class="visually-hidden" hidden="hidden" for="contact-us-input">Enter link to your token contract</label>
-		<input class="contact-us__form__input" id="contact-us-input" type="text" name="tokenContract" placeholder="Enter link to your token contract" required />
-		<label class="visually-hidden" hidden="hidden" for="contact-us-input">What blockchains you're willing to bridge</label>
-		<input class="contact-us__form__input" id="contact-us-input" type="text" name="blockchain" placeholder="What blockchains you're willing to bridge" required />
+		<label class="visually-hidden" hidden="hidden" for="contact-us-input">이름을 적어주세요.</label>
+		<input class="contact-us__form__input" id="contact-us-input" type="text" name="name" placeholder="이름을 적어주세요" required />
+		<label class="visually-hidden" hidden="hidden" for="contact-us-input">토큰 컨트랙트 주소를 입력해주세요.</label>
+		<input class="contact-us__form__input" id="contact-us-input" type="text" name="tokenContract" placeholder="토큰 컨트랙트 주소를 입력해주세요" required />
+		<label class="visually-hidden" hidden="hidden" for="contact-us-input">브릿지를 원하는 체인을 입력해주세요.</label>
+		<input class="contact-us__form__input" id="contact-us-input" type="text" name="blockchain" placeholder="브릿지를 원하는 체인을 입력해주세요" required />
 		<div class="form-group">
-		    <label hidden="hidden" for="contact-us-input-2">Yout contact</label>
-		    <input class="contact-us__form__input" id="contact-us-input-2" name="contact" placeholder="Your contact" required />
+		    <label hidden="hidden" for="contact-us-input-2">연락처를 입력해주세요.</label>
+		    <input class="contact-us__form__input" id="contact-us-input-2" name="contact" placeholder="연락처를 입력해주세요" required />
     		<div class="select-social">
                 <select class="lm_input t-phone" name="type" required>
                     <option value="telegram" default>Telegram</option>
                     <option value="email">E-mail</option>
-                    <option value="whatsapp">Whatsapp</option>
+                    <option value="whatsapp">Kakaotalk</option>
                 </select>
             </div>
         </div>
         <div class="form-info-text" style="color:red;opacity: 1;" data-validate-for="contact"></div>
-        <div class="form-info-text">
-			<span>Note. If you choose Whatsapp please write your country code. (Ex: +1-xxxxxxx).</span>
-        </div>
-		<p class="terms">By using the service, you accept the <a href="/terms-of-service" target="_blank">Terms of Service</a>
+		<p class="terms">서비스를 사용함으로써 귀하는 <a href="/terms-of-service" target="_blank">이용약관</a>에 동의하게 됩니다.
 		</p>
-		<button class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit">Submit request</button>
+		<button class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit">요청 하기</button>
       {{ form_close() }}
     {% endif %}
 </div>
