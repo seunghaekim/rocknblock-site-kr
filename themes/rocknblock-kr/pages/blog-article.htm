@@ -1,0 +1,22 @@
+title = "Blog article"
+url = "/blog/:slug"
+layout = "rocknblock-blog"
+meta_title = "Rock'n'Block | Blog"
+meta_description = "Rock'n'Block Blog."
+is_hidden = 0
+seo_keywords = "blockchain, develop, rocknblock, crypto, cryptocurrency"
+robot_index = "index"
+robot_follow = "follow"
+
+[article]
+slug = "{{ :slug }}"
+==
+<section class="pg pg-article">
+  {% component 'article' %}
+</section>
+
+<section class="form">
+    <div class="container">
+        {% partial 'forms/main' %}
+    </div>
+</section>

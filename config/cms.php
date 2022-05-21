@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'activeTheme' => 'rocknblock',
+    'activeTheme' => 'rocknblock-kr',
 
     /*
     |--------------------------------------------------------------------------

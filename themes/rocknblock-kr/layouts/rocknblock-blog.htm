@@ -1,0 +1,43 @@
+description = "Blog template"
+
+[feedback]
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- SEO:Head-top -->
+    	{% partial "seo/head-top" %}
+    	
+    	{% partial "template/meta" %}
+    	{% placeholder head %}
+    	{% styles %}
+    	
+    	<!-- SEO:Head-bottom -->
+    	{% partial "seo/head-bottom" %}
+    </head>
+    <body>
+        <!-- SEO:Body-top -->
+        {% partial "seo/body-top" %}
+        
+    	<!-- Header -->
+    	<header id="layout-header">
+    		{% partial 'site/header' %}
+    	</header>
+    
+    	<!-- Content -->
+    	<main id="layout-content">
+    		{% page %}
+    	</main>
+    
+    	<!-- Footer -->
+    	<footer id="layout-footer">
+    		{% partial 'site/footer' %}
+    	</footer>
+    
+    	{% partial "template/styles-scripts" %}
+    	{% scripts %}
+    	
+    	<!-- SEO:Body-bottom -->
+    	{% partial "seo/body-bottom" %}
+    </body>
+</html>

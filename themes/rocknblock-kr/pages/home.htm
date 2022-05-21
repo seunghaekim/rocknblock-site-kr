@@ -1,0 +1,27 @@
+title = "Mainpage"
+url = "/"
+layout = "rocknblock"
+description = "Rocknblock mainpage"
+meta_title = "Rock'n'Block | Blockchain Development"
+meta_description = "Blockchain implementation. We are engaged in custom development and implementation of software based on blockchain technologies for business and startups."
+is_hidden = 0
+seo_keywords = "blockchain, develop, rocknblock, crypto, cryptocurrency"
+robot_index = "index"
+robot_follow = "follow"
+
+[articlepreview]
+maxItems = 0
+==
+<section class="pg pg-main">
+    {% partial 'sections/hero' %}
+    {% partial 'sections/nav-slider-v2' %}
+    {% partial 'sections/why-us' %}
+    {% partial 'sections/areas-of-expertise' %}
+    {% partial 'sections/what-we-do-best' %}
+    {% partial 'sections/cases' %}
+    {% partial 'sections/team' %}
+    {% partial 'sections/partners' %}
+    {% component 'articlepreview' %}
+    {% partial 'sections/clients-feedback' %}
+    {% partial 'forms/main' %}
+</section>

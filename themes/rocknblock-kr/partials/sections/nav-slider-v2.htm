@@ -1,0 +1,124 @@
+description = "Section links slider v2"
+==
+<div class="sliderWrapper slider-v2">
+	<div class="block-header">
+		<h2 class="primary-header">Popular services</h2>
+	</div>
+	<div class="swiper swiper-slider">
+		<div class="swiper-wrapper">
+			{% if this.page.url != '/marketplace' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site1.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site1.png'| theme }}" alt="NFT Marketplace" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/marketplace">NFT Marketplace <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/farming' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site2.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site2.png'| theme }}" alt="Farming" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/farming">Farming <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/10knft' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site3.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site3.png'| theme }}" alt="10k nft generator" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/10knft">10k nft generator <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/crowdsale' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site4.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site4.png'| theme }}" alt="Crowdsale" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/crowdsale">Crowdsale <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/vesting' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site5.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site5.png'| theme }}" alt="Vesting" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/vesting">Vesting <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/staking' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site6.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site6.png'| theme }}" alt="Staking" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/staking">Staking <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/bridge' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site7.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site7.png'| theme }}" alt="Bridge" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/bridge">Bridge <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+		</div>
+		<div class="navigation"><img class="navIcon nav-prev" src="{{ 'assets/images/site/nft/toLeft.svg'| theme }}" alt="nav left" /><img class="navIcon nav-next" src="{{ 'assets/images/site/nft/toRight.svg'| theme }}" alt="nav right" /></div>
+	</div>
+</div>

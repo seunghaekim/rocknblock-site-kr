@@ -1,0 +1,27 @@
+{
+    "name": "rocknblock/main-theme",
+    "type": "rocknblock-theme",
+    "description": "Rocknblock main theme",
+    "keywords": [
+        "rocknblock",
+        "rnb",
+        "theme"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amary Filo",
+            "email": "amaryfilo@gmail.com",
+            "role": "Founder"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
