@@ -7,7 +7,7 @@ services:
       dockerfile: _docker/app/Dockerfile
     container_name: app
     ports:
-      - "60080:80"
+      - "10080:80"
     volumes:
       - ./:/var/www/html
     networks:
