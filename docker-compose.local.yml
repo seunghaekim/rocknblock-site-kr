@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: _docker/app/Dockerfile
+    container_name: app
+    ports:
+      - "60080:80"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - rocknblock
+
+networks:
+  rocknblock:
+    driver: bridge
