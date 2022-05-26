@@ -13,13 +13,13 @@ description = "Website footer section"
 	</div>
 	<div class="company-info">
 		<ul>
-			<li>골든라이온그룹 주식회사</li>
-			<li><span class="label">대표자</span><span class="value">최세훈</span></li>
-			<li><span class="label">회사 주소</span><span class="value">서울시 강동구 고덕로 40, 5층</span></li>
-			<li><span class="label">사업자 등록번호</span><span class="value">869-86-01080</span></li>
-			<li><span class="label">개인정보담당자</span><span class="value">김재중</span></li>
-			<li><span class="label">대표 전화</span><span class="value">02-2088-8450</span></li>
-			<li><span class="label">이메일 문의</span><a class="value">info@rocknblock.co.kr</a></li>
+			<li><span class="label item">골든라이온그룹 주식회사</span></li>
+			<li><span class="label item">대표자</span><span class="value item">최세훈</span></li>
+			<li><span class="label item">회사 주소</span><span class="value item">서울시 강동구 고덕로 40, 5층</span></li>
+			<li><span class="label item">사업자 등록번호</span><span class="value item">869-86-01080</span></li>
+			<li><span class="label item">개인정보담당자</span><span class="value item">김재중</span></li>
+			<li><span class="label item">대표 전화</span><span class="value item">02-2088-8450</span></li>
+			<li><span class="label item">이메일 문의</span><a class="value item" href="mailto:info@rocknblock.co.kr">info@rocknblock.co.kr</a></li>
 		</ul>
 	</div>
 </div>
@@ -27,3 +27,24 @@ description = "Website footer section"
 <div id="btnScrollToTop">
 	<img src="{{ 'assets/images/site/icons/icon-arrow-top-mask.svg'| theme }}" alt="arrow top">
 </div>
+
+<style>
+.company-info {
+  font-size: 0.9em;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.company-info li {
+	display: inline-block;
+	margin: 0.4em;
+}
+
+.company-info .label {
+	font-weight: 900;
+}
+
+.company-info .item { margin: 0 0.4em; }
+</style>
