@@ -13,27 +13,38 @@ description = "Bridge landing form"
 			<img loading="lazy" src="{{ 'assets/images/site/background/contact.png'| theme }}" alt="contact" />
 		</picture>
 	</div>
-
-    	<div class="block-header">
-    		<h2 class="primary-header">지금 바로 당신의 프로젝트를 문의해 보세요!</h2>
-    		<h3 class="secondary-header">Rock'n'Block의 전문가들과 무료 상담을 받고 블록체인 프로젝트를 시작해보세요!</h3>
-    	</div>
-		<div class="contacts">
-			<div class="contacts__info">
-				<div class="contacts__info__item">
-					<div class="contacts__info__item__img"><img src="{{ 'assets/images/site/icons/icon-footer-mail-mask.svg' | theme }}" alt="mail icon" /></div><a class="contacts__info__item__content" href="mailto:info@rocknblock.co.kr">info@rocknblock.co.kr</a>
+	<div class="block-header">
+		<h2 class="primary-header">지금 바로 당신의 프로젝트를 문의해 보세요!</h2>
+		<h3 class="secondary-header">Rock'n'Block의 전문가들과 무료 상담을 받고 블록체인 프로젝트를 시작해보세요!</h3>
+	</div>
+	<div class="contacts">
+		<div class="contacts__info">
+			<div class="contacts__info__item">
+				<div class="contacts__info__item__img">
+					<img src="{{ 'assets/images/site/icons/icon-footer-mail-mask.svg' | theme }}" alt="mail icon" />
 				</div>
-				<div class="contacts__info__item">
-					<div class="contacts__info__item__img"><img src="{{ 'assets/images/site/icons/icon-footer-phone-mask.svg' | theme }}" alt="phone icon" /></div><a class="contacts__info__item__content" href="tel:02-2088-8540">02-2088-8450</a>
+				<a class="contacts__info__item__content" href="mailto:info@rocknblock.co.kr">info@rocknblock.co.kr</a>
+			</div>
+			<div class="contacts__info__item">
+				<div class="contacts__info__item__img">
+					<img src="{{ 'assets/images/site/icons/icon-footer-phone-mask.svg' | theme }}" alt="phone icon" style="margin: 17px;" />
 				</div>
+				<a class="contacts__info__item__content" href="tel:02-2088-8540">02-2088-8450</a>
 			</div>
 		</div>
-    	<div class="form-social-links">
-			<a href="https://t.me/rocknblockpm" target="_blank" rel="nofollow noreferrer">
-				<img src="{{ 'assets/images/site/social/telegram.svg'| theme }}" alt="telegram" />
-			</a>
-			<a href="http://pf.kakao.com/_iexdxkb" target="_blank" rel="nofollow noreferrer">
-				<img src="{{ 'assets/images/site/social/kakaotalk.svg'| theme }}" alt="kakaotalk" />
-			</a>
-		</div>
+	</div>
+	<div class="form-social-links">
+		<a href="https://t.me/rocknblockpm" target="_blank" rel="nofollow noreferrer">
+			<img src="{{ 'assets/images/site/social/telegram.svg'| theme }}" alt="telegram" />
+		</a>
+		<a href="http://pf.kakao.com/_iexdxkb" target="_blank" rel="nofollow noreferrer">
+			<img src="{{ 'assets/images/site/social/kakaotalk.svg'| theme }}" alt="kakaotalk" />
+		</a>
+	</div>
 </div>
+
+<style>
+	.contact-us.container .contacts { display: flex; justify-content: center; }
+	.contacts__info__item { text-align: center; margin: 20px 0;}
+
+</style>
