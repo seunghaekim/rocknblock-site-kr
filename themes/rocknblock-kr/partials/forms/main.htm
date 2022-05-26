@@ -13,61 +13,26 @@ description = "Main form"
 			<img loading="lazy" src="{{ 'assets/images/site/background/contact.png'| theme }}" alt="contact" />
 		</picture>
 	</div>
-	{% if success_form == "1" %}
-		<div class="contact-us__popup popup">
-			<h3 class="popup__title">문의해 주셔서 감사합니다.</h3>
-			<span>최대한 빠르게 답변을 드리겠습니다.</span>
-			<button class="btn btn-orange btn-rounded popup__button-ok" data-request="feedback::onFormDone" data-request-update="forms/main: '#contact-us'">OK</button>
-		</div>
-	{% else %}
-    	<div class="block-header">
-    		<h2 class="primary-header">지금 바로 당신의 프로젝트를 문의해 보세요!</h2>
-    		<h3 class="secondary-header">Rock'n'Block의 전문가들과 무료 상담을 받고 블록체인 프로젝트를 시작해보세요!</h3>
-    	</div>
-    	<div class="form-social-links">
-            <a href="https://t.me/rocknblockpm" target="_blank" rel="nofollow noreferrer">
-                <img src="{{ 'assets/images/site/social/telegram.svg'| theme }}" alt="telegram" />
-            </a>
-            <a href="http://pf.kakao.com/_iexdxkb" target="_blank" rel="nofollow noreferrer">
-                <img src="{{ 'assets/images/site/social/whatsapp.svg'| theme }}" alt="whatsapp" />
-            </a>
-        </div>
-        <div class="form-info-text">
-				<span>채팅 또는 아래 양식을 작성해 주세요</span>
-        </div>
 
-	{{ form_ajax('feedback::onForm', {
-	    class: 'contact-us__form',
-	    "data-request-loading": "#loading-form",
-        update: { 'forms/main': '#contact-us' },
-        'data-request-validate': true
-      }) }}
-      <div id="loading-form">
-      	<div class="load-form">
-      		<img class="load-form-icon" src="{{ 'assets/images/site/icon-loader.svg'| theme }}" alt="rocknblock loading" />
-      		<span>Please wait...</span>
-      	</div>
-      </div>
-        <input class="contact-us__form__input" id="contact-us-input" type="text" name="id" placeholder="Name" value="all" required hidden="hidden" />
-		<label class="visually-hidden" hidden="hidden" for="contact-us-input">이름을 적어주세요.</label>
-		<input class="contact-us__form__input" id="contact-us-input" type="text" name="name" placeholder="이름을 적어주세요" required />
-		<div class="form-group">
-		    <label hidden="hidden" for="contact-us-input-2">연락처를 입력해주세요</label>
-		    <input class="contact-us__form__input" id="contact-us-input-2" name="contact" placeholder="연락처를 입력해주세요" required />
-    		<div class="select-social">
-                <select class="lm_input t-phone" name="type" required>
-                    <option value="telegram" default>Telegram</option>
-                    <option value="email">E-mail</option>
-                    <option value="whatsapp">Kakaotalk</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-info-text" style="color:red;opacity: 1;" data-validate-for="contact"></div>
-		<label class="visually-hidden" hidden="hidden" for="contact-us-textarea">문의 내용을 적어주세요</label>
-		<textarea class="contact-us__form__input contact-us__form__input-textarea" name="idea" id="contact-us-textarea" rows="1" placeholder="문의 내용을 적어주세요" required></textarea>
-		<p class="terms">서비스를 사용함으로써 귀하는 <a href="/terms-of-service" target="_blank">이용약관</a>에 동의하게 됩니다.
-		</p>
-		<input class="contact-us__form__submit-btn btn btn-orange btn-rounded" type="submit" value="요청 하기" />
-      {{ form_close() }}
-    {% endif %}
+	<div class="block-header">
+		<h2 class="primary-header">지금 바로 당신의 프로젝트를 문의해 보세요!</h2>
+		<h3 class="secondary-header">Rock'n'Block의 전문가들과 무료 상담을 받고 블록체인 프로젝트를 시작해보세요!</h3>
+	</div>
+	<div class="contacts">
+		<div class="contacts__info">
+			<div class="contacts__info__item">
+				<div class="contacts__info__item__img"><img src="{{ 'assets/images/site/icons/icon-footer-mail-mask.svg' | theme }}" alt="mail icon" /></div><a class="contacts__info__item__content" href="mailto:info@rocknblock.co.kr">info@rocknblock.co.kr</a></div>
+			<div class="contacts__info__item">
+				<div class="contacts__info__item__img"><img src="{{ 'assets/images/site/icons/icon-footer-phone-mask.svg' | theme }}" alt="phone icon" /></div><a class="contacts__info__item__content" href="tel:02-2088-8540">02-2088-8450</a></div>
+		</div>
+	</div>
+	<div class="form-social-links">
+		<a href="https://t.me/rocknblockpm" target="_blank" rel="nofollow noreferrer">
+			<img src="{{ 'assets/images/site/social/telegram.svg'| theme }}" alt="telegram" />
+		</a>
+		<a href="http://pf.kakao.com/_iexdxkb" target="_blank" rel="nofollow noreferrer">
+			<img src="{{ 'assets/images/site/social/kakaotalk.svg'| theme }}" alt="kakaotalk" />
+		</a>
+	</div>
+</div>
 </div>
