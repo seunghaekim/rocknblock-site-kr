@@ -1,3 +1,8 @@
 * {
     word-break: keep-all;
 }
+
+.block-header .secondary-header,
+.about__description {
+    line-height: 130%;
+}
