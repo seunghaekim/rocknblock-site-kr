@@ -6,3 +6,11 @@
 .about__description {
     line-height: 130%;
 }
+
+.tabs .tabs-label {
+	width: calc(33.3333% - 3px);
+}
+
+.tabs #tab-btn-3:checked ~ .scroll .team__development-tab .content-3 {
+	display: flex;
+}
