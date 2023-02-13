@@ -2,15 +2,37 @@
     word-break: keep-all;
 }
 
+*, ::after, ::before {
+	font-family: Noto Sans KR, sans-serif;
+}
+
 .block-header .secondary-header,
 .about__description {
     line-height: 130%;
 }
 
 .tabs .tabs-label {
+	width: calc(50% - 2px);
+}
+
+.team .tabs .tabs-label {
 	width: calc(33.3333% - 3px);
 }
 
 .tabs #tab-btn-3:checked ~ .scroll .team__development-tab .content-3 {
 	display: flex;
+}
+
+.word-break__normal {
+	word-break: normal;
+}
+
+.about__description {
+	max-width: 416px;
+}
+
+@media (max-width: 428px) {
+	.pg-vesting .smartcontract .block .blockInfo .title {
+		font-size: 35px;
+	}
 }

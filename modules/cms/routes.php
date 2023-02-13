@@ -17,6 +17,14 @@ App::before(function ($request) {
      *
      */
     Event::fire('cms.beforeRoute');
+	
+	Route::get('naver69961024092b3928adeacef5a96fcac0.html', function () {
+		return File::get(public_path('public/naver69961024092b3928adeacef5a96fcac0.html'));
+	});
+	
+	Route::get('robots.txt', function () {
+		return File::get(public_path('public/robots.txt'));
+	});
 
     /*
      * The CMS module intercepts all URLs that were not
